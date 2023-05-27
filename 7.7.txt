@@ -1,0 +1,12 @@
+resistors = [1, 2, 3, 4, 5]
+
+total_resistance = 0
+
+for r in resistors:
+
+    total_resistance += 1/r
+
+total_resistance = 1/total_resistance
+
+print("Total resistance: ", total_resistance)
+

@@ -1,0 +1,20 @@
+sentence = input('Введите предложение: ')
+word_count = 0
+last_word_start = last_word_end = prev_word_start = None
+for i, char in enumerate(sentence):
+    if char == ' ':
+        word_count += 1
+        if word_count == 1:
+            continue
+        elif word_count == 2:
+            last_word_end = i
+        else:
+            prev_word_start = sentence[:last_word_end].rfind(' ') + 1
+            break
+else:
+    print('Ошибка: в предложении меньше 3 слов')
+if prev_word_start is None:
+    print(sentence[last_word_end+1:])
+else:
+    print(sentence[prev_word_start:last_word_end+1] + sentence[last_word_end+1:])
+

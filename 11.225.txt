@@ -1,0 +1,16 @@
+import random
+
+n = 20 # количество районов
+areas = [random.randint(10, 100) for i in range(n)] # площади засеянных полей в гектарах
+harvest = [random.randint(10, 50) for i in range(n)] # урожай в центнерах
+district_data = [{'area': area, 'harvest': harvest, 'average_harvest': harvest / area} for area, harvest in zip(areas, harvest)] # список словарей для хранения данных по каждому району
+
+# распечатка данных по районам
+for i in range(n):
+  print("Средняя урожайность в районе", i+1, ":", district_data[i]['average_harvest'], "ц/га")
+
+# расчет средней урожайности по области в целом
+total_harvest = sum(d['harvest'] for d in district_data)
+total_area = sum(d['area'] for d in district_data)
+total_average_harvest = total_harvest / total_area
+print("Средняя урожайность по области:", total_average_harvest, "ц/га")

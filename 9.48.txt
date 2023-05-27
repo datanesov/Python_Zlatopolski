@@ -1,0 +1,24 @@
+def prime_factors(n):
+    factor_dict = {}
+    divisor = 2
+    while divisor <= n:
+        if n % divisor == 0:
+            if divisor not in factor_dict:
+                factor_dict[divisor] = 1
+            else:
+                factor_dict[divisor] += 1
+            n //= divisor
+        else:
+            divisor += 1
+    return factor_dict
+
+def print_factors(n):
+    factor_dict = prime_factors(n)
+    print(f'Множители {n} = ', end='')
+    for factor, times in factor_dict.items():
+        for i in range(times):
+            print(f'{factor}', end=' ')
+    print()
+
+n = int(input('Введите натуральное число: '))
+print_factors(n)

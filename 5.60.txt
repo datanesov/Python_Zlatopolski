@@ -1,0 +1,8 @@
+p = int(input("Введите целое число: "))
+a = float(input("Введите вещественное число: "))
+result = 0
+for i in range(abs(p)):
+    result += a
+if p < 0:
+    result = -result
+print("Произведение равно: ", result)

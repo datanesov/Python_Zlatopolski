@@ -1,0 +1,18 @@
+n = int(input())
+a = list(map(int, input().split()))
+
+# а)
+count = sum(1 for i in range(n-1) if a[i] == a[i+1])
+print(count)
+
+# б)
+count = sum(1 for i in range(n-1) if a[i] == 0 and a[i+1] == 0)
+print(count)
+
+# в)
+count = sum(1 for i in range(n-1) if a[i] % 2 == 0 and a[i+1] % 2 == 0)
+print(count)
+
+# г)
+count = sum(1 for i in range(n-1) if a[i] % 10 == 5 and a[i+1] % 10 == 5)
+print(count)

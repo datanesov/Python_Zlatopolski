@@ -1,0 +1,10 @@
+word = "строка"
+new_word = ''
+for i in word:
+    if i == 'к':
+        new_word += 'ф'
+    elif i == 'а':
+        new_word += 'о'
+    else:
+        new_word += i
+print(new_word)

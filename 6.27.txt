@@ -1,0 +1,7 @@
+n = 100
+count = 0
+while count < 15:
+    if n % 19 == 0:
+        print(n)
+        count += 1
+    n += 1

@@ -1,0 +1,8 @@
+speeds = [120, 150, 130, 135, 140, 125, 115, 155, 145, 110, 130, 160]
+
+max_speed = max(speeds)
+
+for speed in speeds:
+    if speed < max_speed:
+        print("Скорость автомобиля, больше которой только максимальное значение скорости:", speed)
+        break

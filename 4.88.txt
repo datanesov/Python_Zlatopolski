@@ -1,0 +1,20 @@
+import math
+
+# Ввод данных
+birth_year = int(input("Введите год рождения: "))
+birth_month = int(input("Введите номер месяца рождения: "))
+current_year = int(input("Введите текущий год: "))
+current_month = int(input("Введите номер текущего месяца: "))
+
+# Вычисление возраста
+years = current_year - birth_year
+months = current_month - birth_month
+if months < 0:
+    years -= 1
+    months += 12
+total_months = years * 12 + months
+full_years = math.floor(total_months / 12)
+full_months = total_months % 12
+
+# Вывод результатов
+print("Возраст: {} лет, {} месяцев".format(full_years, full_months))

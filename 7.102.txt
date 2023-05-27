@@ -1,0 +1,8 @@
+students = [('John', 170), ('Emily', 165), ('Alex', 175), ('Kim', 160), ('Lisa', 180)]
+
+sorted_students = sorted(students, key=lambda x: x[1], reverse=True)
+
+if students == sorted_students:
+    print("Students are listed in descending order of height")
+else:
+    print("Students are NOT listed in descending order of height")

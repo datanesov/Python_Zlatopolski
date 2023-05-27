@@ -1,0 +1,5 @@
+number = float(input('Введите число:'))
+count_integer = len(str(int(number)))
+count_fraction = len(str(number - int(number)))-2
+print('Цифр в целой части:', count_integer)
+print('Цифр в дробной части:', count_fraction)

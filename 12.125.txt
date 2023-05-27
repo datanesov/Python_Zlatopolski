@@ -1,0 +1,12 @@
+def is_palindrome(string):
+    string = string.replace(' ', '')
+    return string == string[::-1]
+
+string1 = 'АРГЕНТИНА МАНИТ НЕГРА'
+print(is_palindrome(string1))
+
+string2 = 'ПОТ КАК ПОТОП'
+print(is_palindrome(string2))
+
+string3 = 'А РОЗА УПАЛА НА ЛАПУ АЗОРА'
+print(is_palindrome(string3))

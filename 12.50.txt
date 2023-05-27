@@ -1,0 +1,5 @@
+sentence = input("Введите предложение: ")
+symbol = input("Введите символ для поиска: ")
+for letter in sentence:
+    if letter == symbol:
+        print(symbol)

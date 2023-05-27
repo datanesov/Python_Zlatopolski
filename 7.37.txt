@@ -1,0 +1,28 @@
+class District:
+    def __init__(self, population, area):
+        self.population = population
+        self.area = area
+
+    def density(self):
+        return self.population / self.area
+
+# создаем объекты класса District для каждого района
+districts = []
+districts.append(District(12, 5))
+districts.append(District(15, 4))
+districts.append(District(10, 7))
+districts.append(District(8, 10))
+districts.append(District(25, 3))
+districts.append(District(18, 6))
+districts.append(District(13, 9))
+districts.append(District(21, 2))
+districts.append(District(7, 12))
+districts.append(District(16, 8))
+districts.append(District(19, 3))
+districts.append(District(11, 11))
+
+# находим среднюю плотность населения по области
+density = sum([district.density() for district in districts]) / len(districts)
+
+# выводим результат на экран
+print("Средняя плотность населения по области: ", density)

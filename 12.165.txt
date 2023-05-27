@@ -1,0 +1,7 @@
+text = input("Введите текст: ")
+max_count = 0
+for char in set(text):
+  count = text.count(char)
+  if count > max_count:
+    max_count = count
+print("Наибольшее количество идущих подряд одинаковых символов:", max_count)

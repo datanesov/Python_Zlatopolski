@@ -1,0 +1,6 @@
+x = float(input("Введите значение x: "))
+
+result = x**2 if 4 < x < 5.7 else 4
+
+print("f(x) =", result)
+

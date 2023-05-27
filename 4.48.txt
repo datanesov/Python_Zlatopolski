@@ -1,0 +1,13 @@
+a = int(input("Введите a: "))
+b = int(input("Введите b: "))
+
+divisor = 2
+
+while divisor <= min(a, b):
+    if a % divisor == 0 and b % divisor == 0:
+        print("Одно из чисел является делителем другого")
+        break
+    divisor += 1
+else:
+    print("Нет делителя")
+

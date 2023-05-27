@@ -1,0 +1,5 @@
+
+word = "слово"
+k = 4
+correct_word = word[:k-1][::-1] + word[k-1] + word[k:][::-1]
+print(correct_word)

@@ -1,0 +1,15 @@
+t = int(input("Введите натуральное число t: "))
+n = int(input("Введите число n: "))
+b = []
+for i in range(t):
+    b.append(int(input("Введите число: ")))
+summa = 0
+counter = 0
+for i in b:
+    if i%n == 0:
+        summa += i
+        counter += 1
+if counter != 0:
+    print("Среднее арифметическое чисел, кратных", n, "равно", summa/counter)
+else:
+    print("Среднее арифметическое не может быть определено, т.к. чисел, кратных", n, "нет в данном наборе.")

@@ -1,0 +1,19 @@
+a = int(input("Введите цифру a: "))
+b = int(input("Введите цифру b: "))
+n = int(input("Введите натуральное число: "))
+
+count_a = 0
+count_b = 0
+
+while n > 0:
+    digit = n % 10
+    if digit == a:
+        count_a += 1
+    elif digit == b:
+        count_b += 1
+    n //= 10
+
+if count_a < count_b:
+    print("Цифра а встречается реже, чем цифра b")
+else:
+    print("Цифра а не встречается реже, чем цифра b")

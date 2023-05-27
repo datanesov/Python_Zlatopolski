@@ -1,0 +1,20 @@
+# случай 1
+def remove_students_by_index(heights, index1, index2):
+    heights.pop(index1)
+    heights.pop(index2-1)
+    return heights
+
+# случай 2
+def remove_students_by_height(heights, height1, height2):
+    heights.remove(height1)
+    heights.remove(height2)
+    return heights
+
+def sort_heights(heights):
+    return sorted(heights, reverse=True)
+
+heights = [180, 175, 173, 169, 165, 163, 162, 160, 158, 155, 152, 151, 149, 146, 145, 144, 142, 140, 138, 135, 133, 132, 131, 130, 129]
+new_heights = remove_students_by_index(heights, 6, 15)
+sorted_heights = sort_heights(new_heights)
+print(sorted_heights)
+

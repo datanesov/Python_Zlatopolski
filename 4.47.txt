@@ -1,0 +1,12 @@
+import numpy as np
+
+a = float(input("Введите a: "))
+b = float(input("Введите b: "))
+c = float(input("Введите c: "))
+
+coeff = [a, b, c] # коэффициенты уравнения
+
+roots = np.roots(coeff) # вычисление корней
+
+print("Корни уравнения:", roots)
+

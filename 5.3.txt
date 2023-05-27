@@ -1,0 +1,27 @@
+# а)
+i = 20
+while i <= 35:
+    print(i)
+    i += 1
+
+# б)
+a = int(input("Введите число a: "))
+i = a
+while i <= 50:
+    print(i**2)
+    i += 1
+
+# в)
+b = int(input("Введите число b: "))
+i = 10
+while i <= b:
+    print(i**3)
+    i += 1
+
+# г)
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+i = a
+while i <= b:
+    print(i)
+    i += 1

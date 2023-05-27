@@ -1,0 +1,9 @@
+
+def sum(n):
+    if n == 1:
+        return 1
+    else:
+        return sum(n-1) + (n**2 + (n-1)**2)
+
+n = int(input("Введите натуральное число: "))
+print(f"Сумма: {sum(n)}")

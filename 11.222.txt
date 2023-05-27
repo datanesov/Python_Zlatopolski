@@ -1,0 +1,11 @@
+result = 1
+for i in range(2, 101):
+    result *= i
+
+digits = []
+while result > 0:
+    digits.append(result % 10)
+    result //= 10
+
+digits.reverse()
+print(digits)

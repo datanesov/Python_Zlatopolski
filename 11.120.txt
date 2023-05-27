@@ -1,0 +1,11 @@
+speeds = [120, 150, 110, 130, 140, 160, 170, 100, 180, 190, 200, 95, 105, 115, 125, 135, 145, 155, 165, 175, 185, 195, 205, 98, 108, 118, 128, 138, 148, 158, 168, 178, 188, 198, 208, 90, 92, 94, 96]
+
+max_speed = 0
+max_speed_index = 0
+for i in range(len(speeds)):
+    if speeds[i] > max_speed:
+        max_speed = speeds[i]
+        max_speed_index = i
+
+print("Самый быстрый автомобиль имеет порядковый номер", max_speed_index+1)
+

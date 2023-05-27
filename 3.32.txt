@@ -1,0 +1,7 @@
+a = int(input("Введите трехзначное число: "))
+result = (a - a % 10) // 10
+x = int(str(result) + str(a % 10))
+if x == 237:
+    print("Число x равно", a)
+else:
+    print("Неверный результат")

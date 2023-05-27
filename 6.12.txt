@@ -1,0 +1,9 @@
+numbers = set()
+while True:
+    num = int(input("Введите число: "))
+    numbers.add(num)
+    if num == 0:
+        break
+for num in numbers:
+    print("Вы ввели число:", num)
+

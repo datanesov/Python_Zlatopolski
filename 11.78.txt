@@ -1,0 +1,12 @@
+arr = [22, 35, 48, 51, 62, 75, 88, 95, 102, 115, 128, 135]
+even_count = 0
+ends_with_5_count = 0
+
+for num in arr:
+    if num % 2 == 0:
+        even_count += 1
+    if num % 10 == 5:
+        ends_with_5_count += 1
+        
+print("Количество четных элементов:", even_count)
+print("Количество элементов, оканчивающихся на 5:", ends_with_5_count)

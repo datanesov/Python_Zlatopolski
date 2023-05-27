@@ -1,0 +1,21 @@
+# a)
+my_list = [1, 2, 3, 4, 5]
+my_list = [100] + my_list
+print(my_list)
+# b)
+my_list = [1, 2, 3, 4, 5]
+
+# Заданное число
+num = 7
+
+my_list = [num] + my_list
+print(my_list)
+# c)
+my_list = [1, 2, 3, 4, 5]
+
+# Индекс, перед которым нужно добавить элемент
+index = 2
+num = 9
+
+my_list = my_list[:index] + [num] + my_list[index:]
+print(my_list)

@@ -1,0 +1,9 @@
+
+number = int(input("Введите натуральное число: "))
+num_list = [int(x) for x in str(number)] # преобразуем число в список цифр
+max_number = max(num_list)
+min_number = min(num_list)
+if num_list.index(max_number) < num_list.index(min_number):
+    print("Максимальная цифра расположена левее")
+else:
+    print("Минимальная цифра расположена левее")

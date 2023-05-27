@@ -1,0 +1,5 @@
+symbol = input("Введите символ: ")
+if symbol.isdigit():
+    print("Это цифра")
+else:
+    print("Это не цифра")

@@ -1,0 +1,8 @@
+a = 32
+b = -1
+B = a - b * 4
+if a > B:
+    c = 6 * b - 4 * a
+else:
+    c = a - b
+print('Значение c:', c)

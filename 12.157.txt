@@ -1,0 +1,3 @@
+text = input('Введите текст:')
+max_len = max(len(s) for s in re.findall('\d+', text))
+print('Наибольшее количество идущих подряд цифр:', max_len)

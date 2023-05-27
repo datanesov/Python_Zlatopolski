@@ -1,0 +1,10 @@
+word = "вирус"
+new_word = ''
+for i in word:
+    if i == 'в':
+        new_word += 'ф'
+    elif i == 'с':
+        new_word += 'к'
+    else:
+        new_word += i
+print(new_word)

@@ -1,0 +1,19 @@
+cars = {
+  'car1': {'price': 10000, 'type': 'легковой'},
+  'car2': {'price': 15000, 'type': 'легковой'},
+  'car3': {'price': 12000, 'type': 'легковой'},
+  'car4': {'price': 20000, 'type': 'легковой'},
+  'car5': {'price': 18000, 'type': 'легковой'},
+  'car6': {'price': 25000, 'type': 'легковой'},
+  'car7': {'price': 22000, 'type': 'легковой'},
+  'car8': {'price': 30000, 'type': 'легковой'},
+  'car9': {'price': 28000, 'type': 'легковой'},
+  'car10': {'price': 35000, 'type': 'легковой'},
+  'car11': {'price': 33000, 'type': 'легковой'},
+  'car12': {'price': 42000, 'type': 'грузовой'},
+  'car13': {'price': 40000, 'type': 'грузовой'},
+  'car14': {'price': 48000, 'type': 'грузовой'},
+  'car15': {'price': 45000, 'type': 'грузовой'}
+}
+avg_cost = sum([cars[key]['price'] for key in cars if cars[key]['type'] == 'легковой']) / len([cars[key] for key in cars if cars[key]['type'] == 'легковой'])
+print(f'Средняя стоимость легковых автомобилей: {avg_cost}')

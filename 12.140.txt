@@ -1,0 +1,4 @@
+
+word = "слово"
+correct_word = word[-1] + word[0:-1]
+print(correct_word)

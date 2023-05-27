@@ -1,0 +1,20 @@
+number = int(input("Введите натуральное число: "))
+
+has_two = False
+has_five = False
+
+while number > 0:
+    last_digit = number % 10
+    if last_digit == 2:
+        has_two = True
+        if not has_five:
+            print("Цифра 2 расположена левее")
+            break
+    elif last_digit == 5:
+        has_five = True
+        if not has_two:
+            print("Цифра 5 расположена левее")
+            break
+    number //= 10
+else:
+    print("Цифры 2 и 5 отсутствуют в числе")

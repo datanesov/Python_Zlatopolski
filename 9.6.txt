@@ -1,0 +1,36 @@
+s1 = s2 = s3 = 0
+for i in range(15):
+    print("Введите результаты спортсмена", i+1, "в многоборье:")
+    mandatory = float(input("Обязательная программа: "))
+    short = float(input("Короткая программа: "))
+    free = float(input("Произвольная программа: "))
+    s1 += mandatory
+    s2 += short
+    s3 += free
+
+avg1 = s1/15
+avg2 = s2/15
+avg3 = s3/15
+
+print("Средний результат по обязательной программе:", avg1)
+print("Средний результат по короткой программе:", avg2)
+print("Средний результат по произвольной программе:", avg3)
+
+results = [[0 for j in range(3)] for i in range(15)]
+
+# ввод данных
+for i in range(15):
+    print("Введите результаты спортсмена", i+1)
+    for j in range(3):
+        results[i][j] = int(input("Введите баллы: "))
+
+# вычисление среднего значения по каждому спортсмену
+for i in range(15):
+    avg_score = sum(results[i]) / len(results[i])
+    print("Спортсмен", i+1, "средний балл:", avg_score)
+
+# вычисление среднего значения по каждой программе
+for j in range(3):
+    program_results = [results[i][j] for i in range(15)]
+    avg_score = sum(program_results) / len(program_results)
+    print("Программа", j+1, "средний балл:", avg_score)

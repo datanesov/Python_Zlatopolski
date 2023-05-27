@@ -1,0 +1,2 @@
+sentence = input("Введите предложение: ")
+print(f"{round(sentence.count('я')/len(sentence)*100, 2)}%")

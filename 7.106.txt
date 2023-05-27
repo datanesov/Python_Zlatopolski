@@ -1,0 +1,12 @@
+nums = [23, 16, 25, 10, 18, 30, 22, 17, 21, 19, 28, 26, 20, 27, 29, 15]
+total = 0
+count = 0
+
+for num in nums:
+    if num > 20:
+        total += num
+        count += 1
+
+average = total / count
+
+print("Среднее арифметическое чисел больше 20: ", average)

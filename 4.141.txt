@@ -1,0 +1,63 @@
+# Решение а) с помощью формулы Зеллера:
+
+```
+k = int(input("Введите номер дня: "))
+year_day = k % 7
+if year_day == 0:
+    print("Воскресенье")
+elif year_day == 1:
+    print("Понедельник")
+elif year_day == 2:
+    print("Вторник")
+elif year_day == 3:
+    print("Среда")
+elif year_day == 4:
+    print("Четверг")
+elif year_day == 5:
+    print("Пятница")
+else:
+    print("Суббота")
+```
+
+# Решение б) с помощью цикла и условия:
+
+```
+k = int(input("Введите номер дня: "))
+d = int(input("Введите день недели 1-7: "))
+i = 1
+week_days = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+while True:
+    if d == 1 and i == k:
+        print("Понедельник")
+        break
+    elif d == 2 and i % 7 == 1 and i >= k:
+        print("Вторник")
+        break
+    elif d == 3 and i % 7 == 2 and i >= k:
+        print("Среда")
+        break
+    elif d == 4 and i % 7 == 3 and i >= k:
+        print("Четверг")
+        break
+    elif d == 5 and i % 7 == 4 and i >= k:
+        print("Пятница")
+        break
+    elif d == 6 and i % 7 == 5 and i >= k:
+        print("Суббота")
+        break
+    elif d == 7 and i % 7 == 6 and i >= k:
+        print("Воскресенье")
+        break
+    i += 1
+```
+
+# Решение в) с помощью модуля calendar:
+
+```
+import calendar
+
+k = int(input("Введите номер дня: "))
+d = int(input("Введите день недели 1-7: "))
+weekday = calendar.weekday(calendar.year, 1, k)
+week_days = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+print(week_days[(weekday-d)%7])

@@ -1,0 +1,22 @@
+rainfall = [5, 2, 7, 3, 8, 4, 1, 9, 6, 2, 7, 3, 8, 4, 1, 9, 6, 2, 7, 3, 8, 4, 1, 9, 6, 2, 7, 3, 8, 4]
+
+first_decade = 0
+second_decade = 0
+third_decade = 0
+
+for i in range(len(rainfall)):
+  if i < 10:
+    first_decade += rainfall[i]
+  elif i < 20:
+    second_decade += rainfall[i]
+  else:
+    third_decade += rainfall[i]
+
+first_decade_avg = first_decade / 10
+second_decade_avg = second_decade / 10
+third_decade_avg = third_decade / 11
+
+print("Среднее количество осадков за первую декаду: " + str(first_decade_avg))
+print("Среднее количество осадков за вторую декаду: " + str(second_decade_avg))
+print("Среднее количество осадков за третью декаду: " + str(third_decade_avg))
+

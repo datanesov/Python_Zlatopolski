@@ -1,0 +1,9 @@
+lst = []
+count = 0
+while True:
+    n = float(input())
+    if n == 0:
+        break
+    if n not in lst:
+        count += 1
+        lst.append(n)

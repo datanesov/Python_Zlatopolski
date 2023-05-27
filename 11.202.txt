@@ -1,0 +1,8 @@
+arr = [10, 8, 6, 4, 2]
+a = 5
+
+try:
+    index = arr.index(next(x for x in arr if x < a))
+    print("Index of first element smaller than a:", index)
+except StopIteration:
+    print("No elements found")

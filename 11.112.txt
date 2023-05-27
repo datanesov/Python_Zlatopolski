@@ -1,0 +1,11 @@
+arr = [1, 5, 3, 7, 2, 8, 4, 9]
+max_num = max(arr)
+min_num = min(arr)
+diff = max_num - min_num
+max_index = arr.index(max_num)
+min_index = arr.index(min_num)
+print(f"Максимальный элемент: {max_num}")
+print(f"Минимальный элемент: {min_num}")
+print(f"Разность между максимальным и минимальным элементами: {diff}")
+print(f"Индекс максимального элемента: {max_index}")
+print(f"Индексы минимального и максимального элементов: {min_index}, {max_index}")

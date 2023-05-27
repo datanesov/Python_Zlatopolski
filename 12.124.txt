@@ -1,0 +1,6 @@
+sentence = 'Это предложение'
+new_sentence = ''
+for i in range(len(sentence)):
+    if sentence[i] != 'о' or i % 2 == 0:
+        new_sentence += sentence[i]
+print(new_sentence)

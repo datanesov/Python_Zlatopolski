@@ -1,0 +1,17 @@
+# a)
+for a in [True, False]:
+    for b in [True, False]:
+        res = not (a and b)
+        print(a, b, res)
+
+# б)
+for a in [True, False]:
+    for b in [True, False]:
+        res = not a or b
+        print(a, b, res)
+
+# в)
+for a in [True, False]:
+    for b in [True, False]:
+        res = a or not b
+        print(a, b, res)

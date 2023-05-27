@@ -1,0 +1,12 @@
+import random
+
+cards = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+players = []
+n = int(input("Введите количество игроков: "))
+
+for i in range(n):
+    player = random.sample(cards, 5)
+    players.append(player)
+
+for i in range(n):
+    print("Игрок", i+1, ":", players[i])

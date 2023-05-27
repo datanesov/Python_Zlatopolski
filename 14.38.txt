@@ -1,0 +1,15 @@
+def find_last_index(letter, sentence):
+    index = -1
+    for i in range(len(sentence)):
+        if sentence[i] == letter:
+            index = i
+    return index
+
+sentence1 = input("Введите первое предложение: ")
+sentence2 = input("Введите второе предложение: ")
+
+index1 = find_last_index('й', sentence1)
+index2 = find_last_index('й', sentence2)
+
+if index1 > index2:
+    print("В первом предложении буква 'й' имеет больший порядковый номер)

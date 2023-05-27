@@ -1,0 +1,15 @@
+n = int(input('Введите n: '))
+sum = 0
+
+def factorial(num):
+  if num <= 1:
+    return 1
+  else:
+    return num * factorial(num-1)
+
+for i in range(n+1):
+  if i != 0:
+    sum += 1/factorial(i)
+
+print(sum)
+

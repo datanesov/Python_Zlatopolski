@@ -1,0 +1,4 @@
+word = input("Введите слово: ")
+new_word = '*'*len(word) + word + '*'*len(word)
+print(new_word)
+

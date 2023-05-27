@@ -1,0 +1,15 @@
+def is_sorted(arr):
+    sorted_arr = sorted(arr)
+    if arr == sorted_arr:
+        return True, -1
+    else:
+        for i in range(len(arr)):
+            if arr[i] != sorted_arr[i]:
+                return False, i
+    return True, -1
+
+arr = [1, 2, 3, 4, 5]
+print(is_sorted(arr)) # True, -1
+
+arr = [1, 2, 3, 5, 4]
+print(is_sorted(arr)) # False, 3

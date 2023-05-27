@@ -1,0 +1,21 @@
+domino_sequence = [22, 45, 13, 36, 61, 15, 53, 31, 16, 62, 26, 65, 53, 31, 14, 42, 21, 15, 56, 66, 64, 41]
+
+# формируем все возможные комбинации костей домино
+all_combinations = []
+if input_type == 'a':
+    for i in range(6):
+        for j in range(i+1):
+            all_combinations.append(str(j) + str(i))
+elif input_type == 'б':
+    for i in range(6):
+        for j in range(6):
+            all_combinations.append(str(j) + str(i))
+
+# проверяем, что все элементы массива содержатся в комбинациях костей домино
+for element in domino_sequence:
+    if str(element) not in all_combinations:
+        print("Последовательность не соответствует правилам игры в домино")
+        break
+else:
+    print("Последовательность соответствует правилам игры в домино")
+

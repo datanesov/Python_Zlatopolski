@@ -1,0 +1,9 @@
+def is_increasing(n):
+    last_digit = 0
+    while n > 0:
+        digit = n % 10
+        if digit < last_digit:
+            return False
+        last_digit = digit
+        n //= 10
+    return True

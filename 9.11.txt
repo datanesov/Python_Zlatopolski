@@ -1,0 +1,36 @@
+
+# Создание словаря зарплат для каждого работника за каждый месяц
+salaries = {}
+for i in range(12):
+    for j in range(1, 4):
+        salary = int(input(f"Введите зарплату работника {i+1} за месяц {j}: "))
+        key = f"Работник {i+1}, месяц {j}"
+        salaries[key] = salary
+    
+# Определение наибольшей зарплаты для каждого работника и месяца
+max_salaries_worker = {}
+max_salaries_month = {}
+for i in range(12):
+    max_salary = max(salaries[f"Работник {i+1}, месяц 1"], salaries[f"Работник {i+1}, месяц 2"], salaries[f"Работник {i+1}, месяц 3"])
+    max_salaries_worker[f"Работник {i+1}"] = max_salary
+
+for j in range(1, 4):
+    salaries_month = []
+    for i in range(12):
+        key = f"Работник {i+1}, месяц {j}"
+        salaries_month.append(salaries[key])
+    max_salary = max(salaries_month)
+    max_index = salaries_month.index(max_salary)
+    max_salaries_month[f"Месяц {j}"] = f"Работник {max_index+1}"
+    
+# Вывод результатов
+print("Наибольшую зарплату каждый работник получал в следующие месяцы:")
+for worker, month in max_salaries_worker.items():
+    max_salary = max_salaries_worker[worker]
+    max_month = max(salaries, key=salaries.get)
+    print(f"{worker}: {max_month}")
+
+print("\nНаибольшую зарплату в каждый месяц получали следующие работники:")
+for month, worker in max_salaries_month.items():
+    print(f"{month}: {worker}")
+

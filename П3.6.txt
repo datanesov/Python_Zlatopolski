@@ -1,0 +1,15 @@
+X = False
+Y = False
+Z = True
+
+a = (not X) or (not Y) and (Z == False)
+b = (X == False) and (Y == False)
+c = (not (X and Z)) or Y
+d = X and ((Y == False) or Z)
+e = X or (not ((Y == False) and (Z == False)))
+
+print(a)
+print(b)
+print(c)
+print(d)
+print(e)

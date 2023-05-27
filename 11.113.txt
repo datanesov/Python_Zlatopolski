@@ -1,0 +1,5 @@
+import numpy as np 
+
+pages = np.random.randint(low=1, high=1000, size=100) 
+max_pages = np.max(pages) 
+print(f"Самая толстая книга содержит {max_pages} страниц")

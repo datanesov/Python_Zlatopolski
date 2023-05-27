@@ -1,0 +1,15 @@
+def is_power_of_five(n):
+    if n == 1:
+        return True
+    elif n % 5 == 0:
+        return is_power_of_five(n/5)
+    else:
+        return False
+        
+n = int(input("Enter the value of n:"))
+t_list = [int(x) for x in input("Enter the values of t1 to tp, separated by space:").split()]
+count = 0
+for t in t_list:
+    if is_power_of_five(t):
+        count += 1
+print("Number of power of five in the list:", count)

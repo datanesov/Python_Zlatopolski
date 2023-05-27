@@ -1,0 +1,15 @@
+
+directions1 = []
+directions2 = []
+
+for i in range(30):
+    dir1 = input("Введите направление ветра, зарегистрированное первым исследователем: ")
+    dir2 = input("Введите направление ветра, зарегистрированное вторым исследователем: ")
+    
+    directions1.append(dir1)
+    directions2.append(dir2)
+    
+all_directions = directions1 + directions2
+
+print("Результаты за месяц: ", all_directions)
+

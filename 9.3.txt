@@ -1,0 +1,16 @@
+
+table = [[0]*9 for i in range(9)]
+
+for i in range(0, 9):
+    for j in range(0, 9):
+        table[i][j] = (i+1)*(j+1)
+
+for row in table:
+    for item in row:
+        print(item, end="\t")
+    print()
+
+for i in range(0, 9):
+    for j in range(0, 9):
+        print(table[j][i], end="\t")
+    print()

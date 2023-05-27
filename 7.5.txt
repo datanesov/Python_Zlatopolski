@@ -1,0 +1,8 @@
+salary_list = [5000, 8000, 10000, 6000, 7500, 9000] # список зарплат
+
+total_salary = 0 # общая сумма зарплат
+
+for salary in salary_list: # для каждой зарплаты в списке
+    total_salary += salary # добавляем её к общей сумме
+
+print("Общая сумма зарплат:", total_salary) 

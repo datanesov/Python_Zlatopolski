@@ -1,0 +1,14 @@
+def is_palindrome(n):
+    s = str(n)
+    return s == s[::-1]
+
+a = 12345
+b = 67876
+
+is_a_palindrome = is_palindrome(a)
+is_b_palindrome = is_palindrome(b)
+
+if is_a_palindrome or is_b_palindrome:
+    print("Хотя бы один из чисел является палиндромом")
+else:
+    print("Оба числа не являются палиндромами")

@@ -1,0 +1,18 @@
+
+num = input("Введите число: ")
+is_monotonic = True
+
+for i in range(1, len(num)):
+    if int(num[i]) > int(num[i-1]):
+        if not is_monotonic:
+            is_monotonic = False
+            break
+    elif int(num[i]) < int(num[i-1]):
+        if is_monotonic:
+            is_monotonic = False
+            break
+
+if is_monotonic:
+    print("Цифры образуют монотонную последовательность")
+else:
+    print("Цифры не образуют монотонную последовательность")

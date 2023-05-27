@@ -1,0 +1,10 @@
+price = int(input("Введите стоимость товара в копейках: "))
+rubles = price // 100
+kopecks = price % 100
+if rubles == 0:
+    print("{0} копеек".format(kopecks))
+elif kopecks == 0:
+    print("{0} рублей".format(rubles))
+else:
+    print("{0} рублей {1} копеек".format(rubles, kopecks))
+

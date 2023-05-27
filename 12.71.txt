@@ -1,0 +1,7 @@
+sentence = input('Введите предложение: ')
+word_count = sentence.count(' ') + 1
+if word_count > 3:
+    print('Число слов больше трех')
+else:
+    print('Число слов меньше или равно трём')
+

@@ -1,0 +1,37 @@
+# a)
+X = True
+Y = True
+Z = False
+
+a = (not X) and Y
+b = X or (not Y)
+c = X or Y and Z
+
+print(a)
+print(b)
+print(c)
+# б)
+X = True
+Y = True
+Z = False
+
+a = (X == False) and Y
+b = X or (Y == False)
+c = X or Y and Z
+
+print(a)
+print(b)
+print(c)
+
+# в)
+X = True
+Y = True
+Z = False
+
+a = not X and Y
+b = X or not Y
+c = X or Y and not not Z
+
+print(a)
+print(b)
+print(c)

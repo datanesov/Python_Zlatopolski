@@ -1,0 +1,10 @@
+n = int(input("Введите количество чисел: "))
+a = []
+for i in range(n):
+    a.append(int(input("Введите число: ")))
+x = int(input("Введите значение x: "))
+negative_numbers = list(filter(lambda num: num < 0, a)) #создаем список отрицательных чисел с помощью filter
+if len(negative_numbers) > x:
+    print("Количество отрицательных чисел превышает x.")
+else:
+    print("Количество отрицательных чисел не превышает x.")

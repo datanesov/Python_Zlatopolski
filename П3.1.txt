@@ -1,0 +1,26 @@
+# Программа 1
+A = True
+B = False
+C = False
+result = A or B
+print(result)
+
+# Программа 2
+A = True
+B = False
+C = False
+if A or B:
+    print(True)
+else:
+    print(False)
+
+# Программа 3
+A = True
+B = False
+C = False
+result = False
+if A:
+    result = True
+elif B:
+    result = True
+print(result)

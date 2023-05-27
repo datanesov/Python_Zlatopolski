@@ -1,0 +1,18 @@
+
+def prime_divisors(n):
+    divisors = []
+    d = 2
+    while d * d <= n:
+        if n % d == 0:
+            divisors.append(d)
+            n //= d
+        else:
+            d += 1
+    if n > 1:
+        divisors.append(n)
+    return divisors
+
+n = int(input("Введите натуральное число: "))
+print("Простые делители числа", n, ":")
+for divisor in prime_divisors(n):
+    print(divisor, end=" ")

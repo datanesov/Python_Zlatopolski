@@ -1,0 +1,6 @@
+
+word = "Реальность"
+new_word = word.replace("i", "#", 1)
+new_word = new_word.replace("o", "i", 1)
+new_word = new_word.replace("#", "o", 1)
+print(new_word)

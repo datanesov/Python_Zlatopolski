@@ -1,0 +1,18 @@
+# а) сумма цифр 4-значного числа
+num = int(input("Введите 4-значное число: "))
+thousands = num // 1000
+hundreds = (num % 1000) // 100
+tens = (num % 100) // 10
+units = num % 10
+sum_digits = thousands + hundreds + tens + units
+print("Сумма цифр:", sum_digits)
+
+# б) сумма цифр 5-значного числа
+num = int(input("Введите 5-значное число: "))
+ten_thousands = num // 10000
+thousands = (num % 10000) // 1000
+hundreds = (num % 1000) // 100
+tens = (num % 100) // 10
+units = num % 10
+sum_digits = ten_thousands + thousands + hundreds + tens + units
+print("Сумма цифр:", sum_digits)

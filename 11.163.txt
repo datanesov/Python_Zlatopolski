@@ -1,0 +1,29 @@
+# a)
+arr = [1, -2, 3, -4, 5, -6]
+result = []
+for i in arr:
+    if i >= 0:
+        result.append(i)
+print(result)
+
+# b)
+
+arr = [1, 2, 3, 4, 5, 6]
+n = 3
+i = 0
+while i < len(arr):
+    if arr[i] > n:
+        arr.pop(i)
+    else:
+        i += 1
+print(arr)
+# c)
+
+arr = [1, 2, 3, 4, 5, 6]
+n1 = 2
+n2 = 4
+i = n1
+while i <= n2:
+    arr.pop(n1)
+    i += 1
+print(arr)

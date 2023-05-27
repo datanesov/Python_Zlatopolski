@@ -1,0 +1,11 @@
+numbers = [12, 45, 93, 240, 80, 57, 42, 0, 66, 10]
+
+# генерируем новый список, содержащий только числа, оканчивающиеся нулем
+numbers_ending_with_zero = [num for num in numbers if num % 10 == 0]
+
+# суммируем числа из нового списка
+sum_numbers = sum(numbers_ending_with_zero)
+
+# выводим сумму на экран
+print(f"Сумма чисел, оканчивающихся нулем: {sum_numbers}")
+

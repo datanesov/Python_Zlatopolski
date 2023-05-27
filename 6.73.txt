@@ -1,0 +1,17 @@
+def is_member_recursive(m, g, z):
+    if m == g:
+        return True
+    elif m < g:
+        return False
+    else:
+        return is_member_recursive(m/z, g, z)
+
+m = int(input("Введите число m: "))
+g = int(input("Введите первый член геометрической прогрессии: "))
+z = int(input("Введите знаменатель геометрической прогрессии: "))
+
+if is_member_recursive(m, g, z):
+    print("Число m является членом геометрической прогрессии")
+else:
+    print("Число m не является членом геометрической прогрессии")
+

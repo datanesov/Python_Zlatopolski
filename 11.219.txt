@@ -1,0 +1,7 @@
+n = int(input("Введите натуральное число: "))
+remains = set()
+while n > 0:
+    remains.add(n % 10)
+    n //= 10
+count = len(remains)
+print(f"В числе {n} количество различных цифр равно {count}")

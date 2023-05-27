@@ -1,0 +1,11 @@
+a = 6
+s = 0
+
+s_values = []
+
+while a > 2:
+    s = s + a
+    s_values.append(s)
+    a = a - 1
+    
+print(s_values[-1]) 

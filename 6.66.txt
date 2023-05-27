@@ -1,0 +1,14 @@
+def gcd(a, b, c):
+    while b != 0:
+        a, b = b, a % b
+    while c != 0:
+        a, c = c, a % c
+    return a
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+
+result = gcd(a, b, c)
+
+print("НОД({0}, {1}, {2}) = {3}".format(a, b, c, result))

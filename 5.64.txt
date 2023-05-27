@@ -1,0 +1,8 @@
+def reverse_num(num):
+    if(num == 0):
+        return 0
+    else:
+        return (num % 10) * (10 ** (len(str(num))-1)) + reverse_num(num // 10)
+
+num = 1234567
+print(reverse_num(num))

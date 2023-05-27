@@ -1,0 +1,8 @@
+cost = int(input("Введите стоимость 1 кг конфет: "))
+
+gramms = 100
+while gramms <= 2000:
+  candy_cost = gramms/1000 * cost
+  print(f"{gramms} г. конфет стоят {candy_cost} руб.")
+  gramms += 100
+

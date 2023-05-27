@@ -1,0 +1,36 @@
+arr = [3, 5, 2, 8, 4, 6, 1, 7]
+max_elem = arr[0]
+max_without = None
+min_elem = arr[0]
+min_without = None
+max_index = 0
+max_without_index = None
+min_index = 0
+min_without_index = None
+
+for i in range(len(arr)):
+    if arr[i] > max_elem:
+        max_without = max_elem
+        max_elem = arr[i]
+        max_without_index = max_index
+        max_index = i
+    elif max_without is None or arr[i] > max_without:
+        max_without = arr[i]
+        max_without_index = i
+    if arr[i] < min_elem:
+        min_without = min_elem
+        min_elem = arr[i]
+        min_without_index = min_index
+        min_index = i
+    elif min_without is None or arr[i] < min_without:
+        min_without = arr[i]
+        min_without_index = i
+
+print("Максимальный элемент:", max_elem)
+print("Максимальный без учета этого элемента:", max_without)
+print("Минимальный элемент:", min_elem)
+print("Минимальный без учета этого элемента:", min_without)
+print("Номер максимального элемента:", max_index)
+print("Номер максимального без учета элемента:", max_without_index)
+print("Номер минимального элемента:", min_index)
+print("Номер минимального без учета элемента:", min_without_index)

@@ -1,0 +1,5 @@
+text = input('Введите текст:')
+expr = text.replace('-', '+-')
+digits = [int(num) if num.isdigit() else (-1 if num == '-' else 1) for num in expr.split('+')]
+result = sum(digits)
+print('Алгебраическая сумма:', result)

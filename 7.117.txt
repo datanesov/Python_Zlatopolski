@@ -1,0 +1,8 @@
+n = int(input("Введите количество учеников: "))
+heights = [int(input("Введите рост ученика: ")) for i in range(n)]
+boys_avg = sum([height for height in heights if height < 0]) / len([height for height in heights if height < 0])
+girls_avg = sum([height for height in heights if height >= 0]) / len([height for height in heights if height >= 0])
+if boys_avg - girls_avg > 10:
+    print("Средний рост мальчиков превышает средний рост девочек более чем на 10 см")
+else:
+    print("Средний рост мальчиков не превышает средний рост девочек более чем на 10 см")

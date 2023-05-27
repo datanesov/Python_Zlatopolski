@@ -1,0 +1,9 @@
+
+arr = [1, 2, 3, 4, 5, 5, 4, 3, 2, 1]
+distinct_elements = []
+
+for i in arr:
+    if i not in distinct_elements:
+        distinct_elements.append(i)
+
+print("Количество различных элементов в массиве:", len(distinct_elements))

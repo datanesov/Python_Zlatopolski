@@ -1,0 +1,5 @@
+from functools import reduce
+
+n = int(input("Введите n: "))
+summa = reduce(lambda x, y: x + 1/y, range(1, n+1))
+print("Сумма: ", summa)

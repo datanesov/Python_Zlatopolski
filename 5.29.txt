@@ -1,0 +1,36 @@
+# a)
+sum = 0
+count = 0
+for i in range(1, 751):
+    sum += i
+    count += 1
+avg = sum/count
+print(avg)
+# b)
+b = int(input("Введите значение b (>= 150): "))
+sum = 0
+count = 0
+for i in range(150, b+1):
+    sum += i
+    count += 1
+avg = sum/count
+print(avg)
+# c)
+a = int(input("Введите значение а (<= 200): "))
+sum = 0
+count = 0
+for i in range(a, 201):
+    sum += i
+    count += 1
+avg = sum/count
+print(avg)
+# d)
+a = int(input("Введите значение а: "))
+b = int(input("Введите значение b (>= a): "))
+sum = 0
+count = 0
+for i in range(a, b+1):
+    sum += i
+    count += 1
+avg = sum/count
+print(avg)

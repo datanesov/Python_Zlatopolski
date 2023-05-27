@@ -1,0 +1,17 @@
+arr = [2, 6, 8, 3, 9, 1, 4]
+num = 5
+
+# находим элементы меньше числа и считаем их среднее арифметическое
+count = 0
+total = 0
+for i in arr:
+    if i < num:
+        count += 1
+        total += i
+    
+if count != 0:
+    avg = total/count
+else:
+    avg = 0
+
+print(avg)

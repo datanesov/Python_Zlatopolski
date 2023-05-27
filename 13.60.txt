@@ -1,0 +1,10 @@
+
+text = "Lorem ipsum dolor sit amet, 123 consectetur adipiscing elit, 456 sed do eiusmod 789 tempor incididunt ut labore et dolore magna aliqua."
+digits_dict = {str(i): 0 for i in range(10)}
+
+for char in text:
+    if char.isdigit():
+        digits_dict[char] += 1
+
+print(digits_dict)
+

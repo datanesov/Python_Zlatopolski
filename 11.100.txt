@@ -1,0 +1,9 @@
+grades = [5, 4, 5, 3, 5, 4, 3, 2, 5, 3, 4, 5, 3, 4, 2, 5, 4, 2, 3, 4, 5, 4]
+
+average_grade = sum(grades) / len(grades)
+
+below_average_grades = list(filter(lambda x: x < average_grade, grades))
+
+print("Количество учеников с оценками ниже средней: ", len(below_average_grades))
+print("Их номера в массиве: ", [i for i in range(len(grades)) if grades[i] in below_average_grades])
+

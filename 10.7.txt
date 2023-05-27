@@ -1,0 +1,15 @@
+import random
+
+# a) генерация двух разных целых чисел от 0 до 2
+a, b = random.sample(range(3), 2)
+print("a =", a, "b =", b)
+
+# b) генерация трех разных целых чисел от 1 до 3, 0 до 3 и 1 до 4 соответственно
+lst = random.sample([1, 2, 3], 2) + random.sample(range(4), 1) + random.sample(range(1, 4), 1)
+a, b, c = lst
+print("a =", a, "b =", b, "c =", c)
+
+# c) генерация 15 чисел, среди которых 7 двоек и 8 троек
+lst = [2] * 7 + [3] * 8 # создаем список из 7 двоек и 8 троек
+random.shuffle(lst) # перемешиваем элементы списка
+print(lst)

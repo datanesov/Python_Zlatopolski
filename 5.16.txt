@@ -1,0 +1,6 @@
+import math
+
+i = 2
+while i <= 15:
+    print(math.sin(i))
+    i += 1

@@ -1,0 +1,5 @@
+numbers = [int(x) for x in input("Введите последовательность чисел через пробел: ").split()]
+if all(num == numbers[0] for num in numbers):
+    print("Все элементы последовательности равны")
+else:
+    print("Не все элементы последовательности равны")

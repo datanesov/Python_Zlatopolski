@@ -1,0 +1,9 @@
+import math
+
+a = float(input("Введите значение a: "))
+s = float(input("Введите значение s: "))
+
+result = (a ** 2 + 10) / math.sqrt(s ** 2 + 1)
+
+print("Результат вычисления функции: ", result)
+

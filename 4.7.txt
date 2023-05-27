@@ -1,0 +1,15 @@
+import math
+
+x = float(input("Введите значение x: "))
+if math.sin(x) > 0:
+    k = x ** 2
+else:
+    k = abs(x)
+    
+if k < x:
+    result = k * x
+else:
+    result = k - x
+    
+print("Результат вычисления функции: ", result)
+

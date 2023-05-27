@@ -1,0 +1,18 @@
+import random
+
+n = 1000000  # количество генерируемых точек
+count = 0  # количество точек, попадающих внутрь круга
+
+for i in range(n):
+    r = random.uniform(0, 1)
+    phi = random.uniform(0, 2 * math.pi)
+    x, y = r * math.cos(phi), r * math.sin(phi)
+    if x**2 + y**2 <= 1:
+        count += 1
+
+pi = 4 * count / n
+print("Приближенное значение числа π:", pi)
+
+# Вычисляем значение числа л
+l = pi / 2
+print("Приближенное значение числа л:", l)

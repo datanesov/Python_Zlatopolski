@@ -1,0 +1,7 @@
+import datetime
+students = [['Иванов Иван Иванович', (2005, 5, 12)], ['Петров Петр Петрович', (2006, 7, 20)], ['Сидорова Елена Сергеевна', (2005, 4, 5)]]
+today = datetime.date.today()
+for student in students:
+    birthdate = datetime.date(*student[1])
+    if birthdate.month == today.month and birthdate.day == today.day:
+        print(student[0])

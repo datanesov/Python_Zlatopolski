@@ -1,0 +1,10 @@
+
+people = {
+    'Ivanov': ('married', True),
+    'Petrov': ('single', False),
+    'Sidorov': ('married', True)
+}
+
+for person, data in people.items():
+    if data[0] == 'married' and data[1]:
+        print(person)

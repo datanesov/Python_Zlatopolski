@@ -1,0 +1,13 @@
+
+group = [78, 65, 88, 91, 54, 73, 82]
+max_weight = 0
+min_weight = group[0]
+for weight in group:
+    if weight > max_weight:
+        max_weight = weight
+    if weight < min_weight:
+        min_weight = weight
+if max_weight > min_weight * 2:
+    print("Масса самого тяжелого человека превышает массу самого легкого более чем в 2 раза")
+else:
+    print("Масса самого тяжелого человека не превышает массу самого легкого более чем в 2 раза")

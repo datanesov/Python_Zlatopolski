@@ -1,0 +1,7 @@
+import bisect
+
+heights = [182, 180, 173, 168, 165, 162, 159, 156, 153, 150, 148, 146, 144, 142, 140]
+new_height = 170
+index = bisect.bisect_left(heights, new_height)
+print("Новый ученик займет {} место".format(index+1))
+

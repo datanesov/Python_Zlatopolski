@@ -1,0 +1,9 @@
+def show_results(teams, scores):
+    teams_dict = dict(zip(teams, scores))
+    for i, (team, score) in enumerate(sorted(teams_dict.items(), key=lambda x: x[1], reverse=True)):
+        print(f"Место {i+1}: {team} ({score} очков)")
+
+teams = ['Team 1', 'Team 2', 'Team 3', 'Team 4', 'Team 5', 'Team 6', 'Team 7', 'Team 8', 'Team 9', 'Team 10', 'Team 11', 'Team 12', 'Team 13', 'Team 14', 'Team 15', 'Team 16', 'Team 17', 'Team 18', 'Team 19', 'Team 20']
+scores = [50, 44, 39, 36, 32, 28, 25, 22, 20, 18, 16, 15, 13, 12, 10, 9, 8, 5, 3, 2]
+
+show_results(teams, scores)

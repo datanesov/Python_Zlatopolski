@@ -1,0 +1,18 @@
+n = int(input("Введите количество чисел: "))
+d = []
+i = 0
+while i < n:
+    d.append(float(input("Введите число: ")))
+    i += 1
+r = float(input("Введите число r: "))
+summa = 0
+i = 0
+while i < n:
+    if d[i] > 20.5:
+        summa += d[i]
+    i += 1
+if summa < r:
+    print("Cумма чисел больше 20.5 меньше r")
+else:
+    print("Cумма чисел больше 20.5 не меньше r")
+

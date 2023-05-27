@@ -1,0 +1,50 @@
+# a)
+x = float(input('Введите значение x: '))
+result = -1 / pow(x, 2)
+print('Результат: ', result)
+
+# б)
+a = float(input('Введите значение a: '))
+b = float(input('Введите значение b: '))
+c = float(input('Введите значение c: '))
+result = (a * c) / b
+print('Результат: ', result)
+
+# в)
+a = float(input('Введите значение a: '))
+b = float(input('Введите значение b: '))
+c = float(input('Введите значение c: '))
+result = c * a / b
+print('Результат: ', result)
+
+# г)
+a = float(input('Введите значение a: '))
+b = float(input('Введите значение b: '))
+result = (a / 2) + (b / 2)
+print('Результат: ', result)
+
+# д)
+a, b = map(float, input('Введите значения a и b через пробел: ').split())
+result = -5.45 * (2 * b - a) / (b - 2)
+print('Результат: ', result)
+
+# е)
+a, b, c = map(float, input('Введите значения a, b, c через пробел: ').split())
+result = (-b - sqrt(b ** 2 - 4 * a * c)) / (2 * a)
+print('Результат: ', result)
+
+# ж)
+a, b, c = map(float, input('Введите значения a, b, c через пробел: ').split())
+result = c * (2 * a + b) / (2 * a * c)
+print('Результат: ', result)
+
+# з)
+a = float(input('Введите значение a: '))
+b = float(input('Введите значение b: '))
+result = 2 / (a + b + 2)
+print('Результат: ', result)
+
+# и)
+result = 6 / (11 + 4 / (3
++ 5 / 2))
+print('Результат: ', result)

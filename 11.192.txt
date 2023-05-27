@@ -1,0 +1,28 @@
+# а) Вывести все элементы массива, меньшие а.
+a = 7
+arr = [1, 2, 3, 4, 5, 6, 8, 9, 10]
+
+print("Элементы массива меньше {}: ".format(a))
+list(map(lambda x: print(x) if x < a else None, arr))
+
+# б) Найти два элемента массива (их порядковые номера и значение) в интервале, между которыми находится значение p.
+p = 8
+n1 = -1
+n2 = -1
+for i in range(len(arr)-1):
+    if arr[i] < p and arr[i+1] > p:
+        n1 = i
+        n2 = i+1
+        break
+
+if n1 != -1 and n2 != -1:
+    print("Элементы массива между {} и {}: {}, {}".format(arr[n1], arr[n2], n1+1, n2+1))
+else:
+    print("Значение {} не находится между двумя элементами массива".format(p))
+
+# в) Найти элемент массива (его порядковый номер и значение), ближайший к а.
+min_diff = float('inf')
+index = -1
+list(map(lambda i: (lambda diff: [min_diff := diff, index := i])(abs(arr[i] - a)), range(len(arr))))
+
+print("Элемент массива, ближайший к {}: {}, {}".format(a, index+1, arr[index]))

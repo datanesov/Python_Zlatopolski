@@ -1,0 +1,13 @@
+def discriminant(a, b, c):
+    return b**2 - 4*a*c
+
+a = float(input("Введите коэффициент a: "))
+b = float(input("Введите коэффициент b: "))
+c = float(input("Введите коэффициент c: "))
+
+d = discriminant(a, b, c)
+
+if d < 0:
+    print("Уравнение не имеет корней")
+else:
+    print("Уравнение имеет корни")

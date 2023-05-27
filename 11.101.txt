@@ -1,0 +1,12 @@
+precipitation = [665, 602, 680, 785, 642, 653, 696, 854, 725, 717, 694, 810, 641, 711, 635]
+years = range(2001, 2016)
+
+mean_precipitation = sum(precipitation) / len(precipitation)
+
+deviation_list = []
+for i, p in enumerate(precipitation):
+    deviation = p - mean_precipitation
+    deviation_list.append(deviation)
+    print("Отклонение от среднего для", years[i], "года:", deviation)
+print("Среднее количество осадков:", mean_precipitation)
+print("Отклонения от среднего для каждого года:", deviation_list)

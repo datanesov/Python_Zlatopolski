@@ -1,0 +1,9 @@
+newspaper_pages = [12, 10, 8, 16, 6]
+magazine_pages = [24, 18, 30, 20, 40]
+
+total_magazine_pages = 0
+for pages in magazine_pages:
+    if pages > max(newspaper_pages):
+        total_magazine_pages += pages
+        
+print("Total pages in all magazines: ", total_magazine_pages)

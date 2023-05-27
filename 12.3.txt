@@ -1,0 +1,4 @@
+rom_name = input("Введите название романа: ")
+author_name = input("Введите фамилию автора: ")
+output_str = f"Писатель {author_name} - автор романа {rom_name}"
+print(output_str)

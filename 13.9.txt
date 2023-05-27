@@ -1,0 +1,10 @@
+
+students = {
+    'Ivanov': (9, 4),
+    'Petrov': (8, 5),
+    'Sidorov': (9, 5)
+}
+
+for student, data in students.items():
+    if data[0] == 9 and data[1] == 5:
+        print(student)

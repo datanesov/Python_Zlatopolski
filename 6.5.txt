@@ -1,0 +1,9 @@
+def find_max_num(n):
+    if n == 0:
+        return 0
+    elif n % 139 == 0:
+        return n
+    else:
+        return find_max_num(n-1)
+    
+print(find_max_num(5000))

@@ -1,0 +1,16 @@
+
+# Заданная температура воздуха в каждый из дней июля
+temperature = [20, 25, 28, 30, 32, 31, 29, 27, 26, 24, 22, 21, 23, 24,
+               26, 27, 26, 28, 30, 31, 32, 30, 28, 27, 25, 24, 23, 22,
+               20, 18, 17]
+
+# Поиск самых теплых дней
+max_temp = 0
+max_days = []
+for i in range(len(temperature) - 6):
+    temp = sum(temperature[i:i+7])
+    if temp > max_temp:
+        max_temp = temp
+        max_days = temperature[i:i+7]
+
+print("Самые теплые дни: ", max_days)

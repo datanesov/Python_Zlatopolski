@@ -1,0 +1,9 @@
+
+word = "Рентабельность"
+k, s = 3, 10
+new_word = word[:k+1]
+for i in range(s-1, k, -1):
+    new_word += word[i]
+new_word += word[s:]
+print(new_word)
+

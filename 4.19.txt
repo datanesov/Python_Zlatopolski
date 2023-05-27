@@ -1,0 +1,18 @@
+import math
+
+S_circle = float(input("Введите площадь круга: "))
+S_triangle = float(input("Введите площадь треугольника: "))
+
+r_circle = math.sqrt(S_circle/math.pi)  # радиус круга
+a_triangle = math.sqrt(S_triangle*4/math.sqrt(3))  # длина стороны равностороннего треугольника
+
+if r_circle*2 <= a_triangle:
+  print("Круг уместится в треугольнике")
+else:
+  print("Круг не уместится в треугольнике")
+
+if a_triangle <= r_circle*math.sqrt(2):
+  print("Треугольник уместится в круге")
+else:
+  print("Треугольник не уместится в круге")
+

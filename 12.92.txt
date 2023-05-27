@@ -1,0 +1,9 @@
+
+words = input("Введите последовательность слов: ").split()
+for word in words:
+  if "жи" not in word and "ши" not in word:
+    print("В последовательности слов есть ошибки")
+    break
+else:
+  print("Буквосочетания жи и ши записаны правильно")
+

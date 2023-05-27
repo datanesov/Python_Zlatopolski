@@ -1,0 +1,48 @@
+# a)
+def reverse_number(n):
+    reverse = 0
+    while(n>0):
+        remainder = n %10
+        reverse = (reverse *10) + remainder
+        n = n //10
+    return reverse
+number = int(input("Введите натуральное число: "))
+reverse = reverse_number(number)
+print("Число, полученное при прочтении его цифр справа налево:", reverse)
+# б)
+def add_two_to_ends(n):
+    n_str = str(n)
+    result = "22" + n_str + "22"
+    return int(result)
+number = int(input("Введите натуральное число: "))
+result = add_two_to_ends(number)
+print("Число, полученное в результате приписывания по двойке в начало и конец записи исходного числа:", result)
+# в)
+def remove_digit(n, a):
+    a_str = str(a)
+    n_str = str(n)
+    result = n_str.replace(a_str, "")
+    return int(result)
+number = int(input("Введите натуральное число: "))
+digit_to_remove = int(input("Введите цифру, которую нужно удалить: "))
+result = remove_digit(number, digit_to_remove)
+print("Число, полученное в результате удаления из него цифр", digit_to_remove, ":", result)
+#  г)
+def swap_first_and_last(n):
+    n_str = str(n)
+    first_digit = n_str[0]
+    last_digit = n_str[-1]
+    middle_digits = n_str[1:-1]
+    new_number = last_digit + middle_digits + first_digit
+    return int(new_number)
+number = int(input("Введите натуральное число: "))
+result = swap_first_and_last(number)
+print("Число, полученное из исходного перестановкой его первой и по последней цифр:", result)
+# д
+def add_to_itself(n):
+    result = n + n
+    return result
+
+number = int(input("Введите натуральное число: "))
+result = add_to_itself(number)
+print("Число, образованное из исходного приписыванием к нему такого же числа:", result)

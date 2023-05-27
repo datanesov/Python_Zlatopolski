@@ -1,0 +1,5 @@
+sentence = input("Введите предложение: ")
+for letter in sentence:
+    if letter == 'u':
+        print(letter)
+

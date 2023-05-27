@@ -1,0 +1,7 @@
+word = "нужно вставить после первой буквы u_"
+s = "т"
+u_index = word.index("u")
+temp = list(word)
+temp.insert(u_index+1, s)
+correct_word = ''.join(temp)
+print(correct_word)

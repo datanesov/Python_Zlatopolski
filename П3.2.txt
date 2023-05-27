@@ -1,0 +1,18 @@
+# a)
+x = False
+y = True
+z = False
+result1 = x or z
+print(result1)
+# б)
+x = False
+y = True
+z = False
+result1 = x and y
+print(result1)
+# в)
+x = False
+y = True
+z = False
+result1 = x and z
+print(result1)

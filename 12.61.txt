@@ -1,0 +1,3 @@
+text = input("Введите текст: ")
+print(f"Количество символов '+' в тексте: {len([s for s in text if s == '+'])}")
+print(f"Количество символов '*' в тексте: {len([s for s in text if s == '*'])}")

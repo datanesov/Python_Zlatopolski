@@ -1,0 +1,4 @@
+word = "роцессорп"
+correct_word = word[:7][::-1] + "р" + word[-1] + word[7:-1][::-1]
+print(correct_word)
+

@@ -1,0 +1,21 @@
+n = int(input("Введите сумму: "))
+coins = [1, 2, 5, 10]
+dp = [0] * (n + 1)
+dp[0] = 1
+for coin in coins:
+    for i in range(coin, n + 1):
+        dp[i] += dp[i - coin]
+print("Количество способов выплаты:", dp[n])
+
+n = int(input("Введите сумму: "))
+coins = [10, 5, 2, 1]
+total_variants = 0
+for i10 in range(n // 10 + 1):
+    for i5 in range((n - i10 * 10) // 5 + 1):
+        for i2 in range((n - i10 * 10 - i5 * 5) // 2 + 1):
+            i1 = n - i10 * 10 - i5 * 5 - i2 * 2
+            variant = f"{i10} купюр по 10 рублей, {i5} монет по 5 рублей, {i2} монет по 2 рубля, {i1} монет по 1 рублю"
+            print(variant)
+            total_variants += 1
+print("Общее количество вариантов:", total_variants)
+

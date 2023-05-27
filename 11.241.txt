@@ -1,0 +1,21 @@
+
+times = []
+lengths = []
+for i in range(25):
+    length = float(input("Введите длину пути, который проехал автомобиль " + str(i+1) + ": "))
+    length /= 1000   # переводим в километры
+    lengths.append(length)
+    time = float(input("Введите время, затраченное на этот путь: "))
+    times.append(time)
+    
+speeds = []
+for i in range(25):
+    speed = lengths[i] / times[i]
+    speeds.append(speed)
+    
+min_speed = float('inf')
+for i in range(25):
+    if speeds[i] < min_speed:
+        min_speed = speeds[i]
+        
+print("Минимальная средняя скорость:", round(min_speed, 2), "км/ч")

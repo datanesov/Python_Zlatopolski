@@ -1,0 +1,48 @@
+class Day:
+    def __init__(self, precipitation, temperature):
+        self.precipitation = precipitation
+        self.temperature = temperature
+
+days = [
+    Day(12, -5),
+    Day(15, -3),
+    Day(10, 0),
+    Day(7, 3),
+    Day(5, 5),
+    Day(0, 10),
+    Day(0, 15),
+    Day(0, 20),
+    Day(4, 22),
+    Day(8, 18),
+    Day(15, 12),
+    Day(20, 5),
+    Day(23, 0),
+    Day(12, -3),
+    Day(8, -5),
+    Day(10, -8),
+    Day(18, -10),
+    Day(20, -12),
+    Day(15, -5),
+    Day(10, 0),
+    Day(5, 5),
+    Day(0, 10),
+    Day(0, 12),
+    Day(0, 15),
+    Day(0, 18),
+    Day(2, 20),
+    Day(5, 15),
+    Day(10, 10),
+    Day(0, 5)
+]
+
+snow = 0
+rain = 0
+for day in days:
+    if day.temperature <= 0:
+        snow += day.precipitation
+    else:
+        rain += day.precipitation
+
+print("Snow: ", snow)
+print("Rain: ", rain)
+

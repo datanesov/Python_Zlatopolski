@@ -1,0 +1,6 @@
+word = "Антиквариатный"
+list_word = list(word)
+list_word[2:10] = reversed(list_word[2:10])
+new_word = "".join(list_word)
+print(new_word)
+

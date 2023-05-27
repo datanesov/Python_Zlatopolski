@@ -1,0 +1,13 @@
+n = int(input("Введите количество пар чисел: "))
+pairs = []
+for i in range(n):
+  pair = tuple(map(int, input(f"Введите пару чисел {i+1}: ").split()))
+  pairs.append(pair)
+
+# Поиск максимального среднего арифметического
+max_avg_idx = max(range(n), key=lambda i: sum(pairs[i])/2)
+print(f"Максимальное среднее арифметическое: {(pairs[max_avg_idx][0] + pairs[max_avg_idx][1])/2} (в паре {max_avg_idx + 1})")
+
+# Поиск минимального среднего геометрического
+min_geo_idx = min(range(n), key=lambda i: (pairs[i][0] * pairs[i][1])**0.5)
+print(f"Минимальное среднее геометрическое: {(pairs[min_geo_idx][0] * pairs[min_geo_idx][1])**0.5} (в паре {min_geo_idx + 1})")

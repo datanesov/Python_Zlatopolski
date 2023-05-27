@@ -1,0 +1,4 @@
+numbers = [5, 11, 4, 9, 14, 8, 7, 12, 6, 15]
+larger_than_10 = [num for num in numbers if num > 10]
+average = sum(larger_than_10) / len(larger_than_10)
+print("Среднее арифметическое элементов больше 10:", average)

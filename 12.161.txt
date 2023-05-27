@@ -1,0 +1,3 @@
+number = int(input('Введите число:'))
+count = len(list(str(number)))
+print('Количество цифр:', count)

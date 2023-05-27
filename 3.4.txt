@@ -1,0 +1,8 @@
+n = int(input("Введите количество школьников: "))
+k = int(input("Введите количество яблок: "))
+
+apples_per_student = k // n
+apples_left = k % n
+
+print("Каждому школьнику достанется", apples_per_student, "яблок")
+print("Останется в корзинке", apples_left, "яблок")

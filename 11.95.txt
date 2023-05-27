@@ -1,0 +1,5 @@
+array = [3, 7, 12, 5, 9]
+sum_array = sum(array)
+result_array = [i for i, elem in enumerate(array) if elem > sum_array]
+print("Номера элементов, больших суммы всех элементов массива:", result_array)
+

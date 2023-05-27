@@ -1,0 +1,23 @@
+a = [True, False]
+b = [True, False]
+
+for A in a:
+    for B in b:
+        if not A or not B:
+            print(True)
+        else:
+            print(False)
+
+for A in a:
+    for B in b:
+        if A and (not B or B):
+            print(True)
+        else:
+            print(False)
+
+for A in a:
+    for B in b:
+        if (not A or B) and B:
+            print(True)
+        else:
+            print(False)

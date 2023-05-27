@@ -1,0 +1,8 @@
+def summa(n):
+    if n == 1:
+        return 1
+    else:
+        return 1/n + summa(n-1)
+
+n = int(input("Введите n: "))
+print("Сумма: ", round(summa(n), 2))

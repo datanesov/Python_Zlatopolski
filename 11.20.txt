@@ -1,0 +1,20 @@
+import random
+
+answers = [] # создаем список для ответов
+
+def multiplication_quiz(num_questions):
+    if num_questions == 0:
+        return
+    x = random.randint(2,9)
+    y = random.randint(2,9)
+    prod = x*y
+    answer = int(input("Чему равно произведение {} на {}? ".format(x,y)))
+    if answer == prod:
+        print("Правильно!")
+    else:
+        print("Неправильно. Правильный ответ: ", prod)
+    answers.append(answer)
+    multiplication_quiz(num_questions-1)
+
+multiplication_quiz(20)
+print("Вы ответили правильно на {} вопросов.".format(answers.count(prod)))

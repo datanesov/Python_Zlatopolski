@@ -1,0 +1,8 @@
+sentence = input('Введите предложение: ')
+word = ''
+for char in sentence:
+    if char != ' ':
+        word += char
+    else:
+        break
+print(word)

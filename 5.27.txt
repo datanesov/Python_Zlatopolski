@@ -1,0 +1,4 @@
+b = int(input("Введите значение b: "))
+numbers = [i for i in range(-15, b+1)]
+total_sum = sum(numbers)
+print("Сумма всех целых чисел от -15 до b равна:", total_sum)

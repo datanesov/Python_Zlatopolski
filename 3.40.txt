@@ -1,0 +1,5 @@
+for x in range(100, 1000):
+    two_digit_num = int(str(x)[:-1])
+    reversed_num = int(str(two_digit_num)[::-1] + str(x)[-1])
+    if reversed_num == 654:
+        print(x)

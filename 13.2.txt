@@ -1,0 +1,6 @@
+
+clubs = ['Club1', 'Club2', 'Club3']
+cities = ['City1', 'City2', 'City3']
+
+for i in range(len(clubs)):
+    print(clubs[i], cities[i])

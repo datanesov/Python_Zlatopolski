@@ -1,0 +1,17 @@
+# а) 
+
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+abs1 = abs(num1)
+abs2 = abs(num2)
+half_sum = (abs1 + abs2) / 2
+print("Полусумма абсолютных величин:", half_sum)
+
+# б)
+
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+abs1 = abs(num1)
+abs2 = abs(num2)
+sqrt_prod = (abs1 * abs2) ** 0.5
+print("Квадратный корень из произведения абсолютных величин:", sqrt_prod)

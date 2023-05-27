@@ -1,0 +1,11 @@
+
+heights = [180, 175, 172, 168, 165, 160, 155, 153, 150, 148, 145, 142, 140, 139, 135]
+
+new_height = 149
+
+position = 1
+while new_height < heights[position-1]:
+    position += 1
+
+print("Место нового ученика по росту:", position)
+

@@ -1,0 +1,12 @@
+marks = [3, 4, 5, 4, 2, 5, 3, 4, 4, 3, 5, 5, 4, 3, 5, 4, 3, 2, 4, 5, 4, 3, 4, 4, 5, 3, 4, 5]
+est_dvojki = False
+
+for o in marks:
+    if o == 2:
+        est_dvojki = True
+        break
+
+if est_dvojki:
+    print("Среди оценок есть двойки.")
+else:
+    print("Среди оценок нет двоек.")

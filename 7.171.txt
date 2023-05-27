@@ -1,0 +1,9 @@
+numbers = list(map(int, input("Введите последовательность целых чисел через пробел: ").split()))
+
+numbers.sort()
+
+max1, max2 = numbers[-1], numbers[-2]
+min1, min2 = numbers[0], numbers[1]
+
+print("Два максимальных элемента: ", max1, max2)
+print("Два минимальных элемента: ", min1, min2)

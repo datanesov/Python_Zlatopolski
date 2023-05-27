@@ -1,0 +1,12 @@
+# принимаем номер места от пользователя
+place_number = int(input("Введите номер места: "))
+
+# вычисляем номер секции
+section_number = (place_number - 1) // 15 % 8 + 1
+
+# вычисляем номер яруса
+floor_number = (place_number - 1) % 15 // 2 + 1
+
+# выводим результат
+print("Товар находится в секции ", section_number, " на ярусе ", floor_number)
+

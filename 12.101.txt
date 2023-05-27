@@ -1,0 +1,3 @@
+sentence = input("Введите предложение: ")
+new_sentence = "".join(["а" if (i + 1) % 3 == 0 else sentence[i] for i in range(len(sentence))])
+print(new_sentence)

@@ -1,0 +1,30 @@
+# Определяем генераторы для изменения значений
+def increasing_areas(start_area):
+    area = start_area
+    while True:
+        yield area
+        area *= 1.05
+
+def increasing_yields(start_yield):
+    yield_per_ha = start_yield
+    while True:
+        yield yield_per_ha
+        yield_per_ha *= 1.02
+
+# Задаем начальные значения
+year = 1
+area_gen = increasing_areas(100)
+yield_gen = increasing_yields(20)
+total_yield = 0
+
+# Выполняем цикл, пока не достигнуты условия задачи
+while yield_gen.__next__() <= 22 or area_gen.__next__() <= 120 or total_yield <= 800:
+    area = area_gen.__next__()
+    yield_per_ha = yield_gen.__next__()
+    total_yield += area * yield_per_ha
+    year += 1
+
+# Выводим ответы
+print("Урожайность превысит 22 ц/га в ", year, " году")
+print("Площадь участка станет больше 120 га в ", year, " году")
+print("Общий урожай превысит 800 ц в ", year, " году")

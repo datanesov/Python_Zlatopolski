@@ -1,0 +1,22 @@
+def get_total_weight():
+    total_weight = 0
+    while True:
+        weight = float(input("Введите массу груза (0 для завершения): "))
+        if weight == 0:
+            break
+        total_weight += weight
+    return total_weight
+
+def check_weight(max_weight, total_weight):
+    if total_weight <= max_weight:
+        print("Общая масса грузов не превышает грузоподъемность автомобиля")
+    else:
+        print("Общая масса грузов превышает грузоподъемность автомобиля")
+
+max_weight = float(input("Введите грузоподъемность автомобиля: "))
+
+
+total_weight = get_total_weight()
+
+# Проверяем, не превышает ли общая масса грузов грузоподъемность автомобиля
+check_weight(max_weight, total_weight)

@@ -1,0 +1,17 @@
+boys = []
+girls = []
+while True:
+    height = input("Введите рост ученика (для завершения введите 0): ")
+    if height == '0':
+        break
+    else:
+        height = int(height)
+        if height < 0:
+            boys.append(height)
+        else:
+            girls.append(height)
+boys_avg = sum(boys) / len(boys) if len(boys) > 0 else 0
+girls_avg = sum(girls) / len(girls) if len(girls) > 0 else 0
+print("Средний рост мальчиков: ", boys_avg)
+print("Средний рост девочек: ", girls_avg)
+

@@ -1,0 +1,31 @@
+# а)
+def div(a, b):
+    bin_a = bin(a)[2:]
+    div_result = ''
+    remainder = 0
+    for bit in bin_a:
+        remainder <<= 1
+        remainder |= int(bit)
+        if remainder >= b:
+            div_result += '1'
+            remainder -= b
+        else:
+            div_result += '0'
+    return int(div_result, 2)
+
+# б)
+def mod(a, b):
+    bin_a = bin(a)[2:]
+    remainder = 0
+    for bit in bin_a:
+        remainder <<= 1
+        remainder |= int(bit)
+        if remainder >= b:
+            remainder -= b
+    return remainder
+
+a = 17
+b = 5
+print("a // b =", div(a, b))
+print("a % b =", mod(a, b))
+

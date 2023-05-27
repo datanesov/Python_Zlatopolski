@@ -1,0 +1,12 @@
+# a)
+for x in [True, False]:
+    for y in [True, False]:
+        print(not((not x) or y) or (not x))
+# б)
+for x in [True, False]:
+    for y in [True, False]:
+        print(not(not(not x or y)) or not x)
+# в)
+for x in [True, False]:
+    for y in [True, False]:
+        print((not x and not y) or (not x))

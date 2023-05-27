@@ -1,0 +1,14 @@
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+
+def gcd_of_n(numbers):
+    result = numbers[0]
+    for i in range(1, len(numbers)):
+        result = gcd(result, numbers[i])
+    return result
+
+numbers = list(map(int, input("Введите числа через пробел: ").split()))
+
+print("НОД чисел:", gcd_of_n(numbers))

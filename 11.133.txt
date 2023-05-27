@@ -1,0 +1,16 @@
+arr = [10, 2, 3, 8, 5, 15, 19]
+
+min_num = arr[0]
+max_num = arr[0]
+
+for i in range(len(arr)):
+    if arr[i] < min_num:
+        min_num = arr[i]
+    if arr[i] > max_num:
+        max_num = arr[i]
+
+if arr.index(min_num) < arr.index(max_num):
+    print("Минимальное число встретится раньше")
+else:
+    print("Максимальное число встретится раньше")
+

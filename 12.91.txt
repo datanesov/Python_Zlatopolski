@@ -1,0 +1,14 @@
+
+sentence = input("Введите предложение: ")
+index_chu = sentence.find("чу")
+index_shu = sentence.find("щу")
+if index_chu != -1 or index_shu != -1:
+  if index_chu == -1:
+    index = index_shu
+  elif index_shu == -1:
+    index = index_chu
+  else:
+    index = min(index_chu, index_shu)
+  print("Порядковый номер первой буквы первого вхождения: ", index+1)
+else:
+  print("Буквосочетания чу и щу не найдены")

@@ -1,0 +1,14 @@
+school_dict = {'1а': 20, '5б': 30, '9а': 25, '11б': 18, '6а': 27}
+
+school_dict['1а'] = 24
+school_dict['9а'] = 30
+school_dict['11б'] = 20
+school_dict['7в'] = 22
+school_dict.pop('6а')
+
+total_students = sum(school_dict.values())
+
+for key, value in school_dict.items():
+    print("{}    {}".format(key, value))
+
+print("Общее количество учащихся: {}".format(total_students))

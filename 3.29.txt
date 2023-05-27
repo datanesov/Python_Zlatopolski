@@ -1,0 +1,10 @@
+n = int(input("Введите натуральное число n > 9: "))
+num_of_ones = 0
+while n > 0:
+    digit = n % 10
+    if digit == 1:
+        num_of_ones += 1
+    n //= 10
+num_of_tens = (n % 100) // 10
+print("а) Число единиц в числе n:", num_of_ones)
+print("б) Число десятков в числе n:", num_of_tens)

@@ -1,0 +1,5 @@
+text = input('Введите текст:')
+if all(char.isdigit() for char in text):
+    print('Да, это целое число')
+else:
+    print('Нет, это не целое число')

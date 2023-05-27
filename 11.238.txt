@@ -1,0 +1,13 @@
+
+jan_precipitation = [10, 20, 15, 5, 30, 25, 40, 20, 15, 10, 5, 0]
+mar_precipitation = [5, 15, 10, 20, 25, 30, 35, 40, 20, 15, 10, 5]
+
+jan_precipitation_total = sum(jan_precipitation)
+mar_precipitation_total = sum(mar_precipitation)
+
+if jan_precipitation_total > mar_precipitation_total:
+    result = "В январе выпало больше осадков"
+elif jan_precipitation_total < mar_precipitation_total:
+    result = "В марте выпало больше осадков"
+else:
+    result = "В январе и марте выпало одинаковое количество осадков"

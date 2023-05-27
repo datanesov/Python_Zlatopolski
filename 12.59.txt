@@ -1,0 +1,3 @@
+sentence = input("Введите предложение: ")
+char = input("Введите символ: ")
+print(len([s for s in sentence if s == char]))

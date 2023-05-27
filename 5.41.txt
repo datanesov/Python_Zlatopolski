@@ -1,0 +1,13 @@
+n = int(input("Введите количество последних цифр: "))
+num = int(input("Введите натуральное число: "))
+
+summa = 0
+prod = 1
+for i in range(n):
+    digit = num % 10  # получаем последнюю цифру числа
+    summa += digit
+    prod *= digit
+    num //= 10  # удаляем последнюю цифру числа
+
+print("Сумма последних {} цифр: {}".format(n, summa))
+print("Произведение последних {} цифр: {}".format(n, prod))

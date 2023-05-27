@@ -1,0 +1,8 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+for char in set(word2):
+  if word1.count(char) < word2.count(char):
+    print("Нельзя получить второе слово из букв первого")
+    break
+else:
+  print("Можно получить второе слово из букв первого")

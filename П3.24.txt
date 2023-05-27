@@ -1,0 +1,20 @@
+# a)
+for X in (True, False):
+    for Y in (True, False):
+        for Z in (True, False):
+            result = not(Y or not X and Z) or Z
+            print(X, Y, Z, result)
+# б)
+values = [True, False]
+
+for X in values:
+    for Y in values:
+        for Z in values:
+            result = not(Y or not X and Z) or Z
+            print(X, Y, Z, result)
+# в)
+import itertools
+
+for X, Y, Z in itertools.product([True, False], repeat=3):
+    result = not(Y or not X and Z) or Z
+    print(X, Y, Z, result)

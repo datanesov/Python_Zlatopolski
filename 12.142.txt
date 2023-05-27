@@ -1,0 +1,4 @@
+word = input("Введите слово: ")
+k = int(input("Введите номер буквы k: "))
+new_word = word[:-2] + word[-1] + word[k-1:-1] + word[k-2]
+print(new_word)

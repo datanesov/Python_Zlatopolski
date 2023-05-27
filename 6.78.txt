@@ -1,0 +1,16 @@
+number = int(input('Введите число: '))
+reverse_num = 0
+original_num = number
+
+while number > 0:
+    digit = number % 10
+    reverse_num = reverse_num * 10 + digit
+    number //= 10
+
+if reverse_num == original_num:
+    print('Положительный ответ')
+elif sorted(str(original_num)) == list(str(original_num)):
+    print('Положительный ответ')
+else:
+    print('Отрицательный ответ') 
+

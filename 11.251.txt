@@ -1,0 +1,9 @@
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+result_array = []
+index = 0
+for i in range(len(array)):
+    if array[i] % 2 != 0:
+        result_array.insert(index, array[i])
+        index += 1
+print("Исходный массив:", array)
+print("Результат:", result_array)

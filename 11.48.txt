@@ -1,0 +1,16 @@
+rainfall = [10, 20, 15, 5, 25, 30, 40, 20, 10, 5, 15, 20]
+
+total_rainfall = [0, 0, 0]
+
+for i in range(len(rainfall)):
+    if i < 10:
+        total_rainfall[0] += rainfall[i]
+    elif i < 20:
+        total_rainfall[1] += rainfall[i]
+    else:
+        total_rainfall[2] += rainfall[i]
+
+print("Total rainfall for the first ten days of June:", total_rainfall[0])
+print("Total rainfall for the second ten days of June:", total_rainfall[1])
+print("Total rainfall for the last ten days of June:", total_rainfall[2])
+

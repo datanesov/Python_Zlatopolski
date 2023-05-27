@@ -1,0 +1,5 @@
+word = "программирование"
+for index, char in enumerate(word):
+    if index == 2:
+        print(char)
+        break

@@ -1,0 +1,14 @@
+def max_population_density(countries):
+    densities = []
+    for country in countries:
+        density = country['population'] / (country['area'] * 1000)
+        densities.append(density)
+    return max(densities)
+
+countries = [{'name': 'Country A', 'population': 100, 'area': 10},
+             {'name': 'Country B', 'population': 200, 'area': 20},
+             {'name': 'Country C', 'population': 300, 'area': 30},
+             {'name': 'Country D', 'population': 150, 'area': 15},
+             {'name': 'Country E', 'population': 250, 'area': 25},
+             {'name': 'Country F', 'population': 350, 'area': 35}]
+print(max_population_density(countries))

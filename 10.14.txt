@@ -1,0 +1,21 @@
+import random
+
+def roll_dice():
+    total_score = 0
+    for i in range(10):
+        total_score += random.randint(1, 6)
+    return total_score
+player1_score = roll_dice()
+player2_score = roll_dice()
+player3_score = roll_dice()
+
+print("Игрок 1 набрал", player1_score, "очков")
+print("Игрок 2 набрал", player2_score, "очков")
+print("Игрок 3 набрал", player3_score, "очков")
+
+if player1_score > player2_score and player1_score > player3_score:
+    print("Игрок 1 победил")
+elif player2_score > player3_score:
+    print("Игрок 2 победил")
+else:
+    print("Игрок 3 победил")

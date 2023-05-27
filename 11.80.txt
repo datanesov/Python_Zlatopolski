@@ -1,0 +1,18 @@
+marks = [5, 4, 5, 3, 2, 4, 3, 5, 4, 3, 4, 2, 5, 3, 2, 4, 5, 3, 4, 2, 3, 4]
+fives = 0
+fours = 0
+threes = 0
+twos = 0
+for mark in marks:
+    if mark == 5:
+        fives += 1
+    elif mark == 4:
+        fours += 1
+    elif mark == 3:
+        threes += 1
+    elif mark == 2:
+        twos += 1
+print("Количество пятерок:", fives)
+print("Количество четверок:", fours)
+print("Количество троек:", threes)
+print("Количество двоек:", twos)

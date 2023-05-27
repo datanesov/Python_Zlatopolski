@@ -1,0 +1,16 @@
+k = int(input("Введите число k: "))
+num = 10
+pair_num = 1
+while k > num*2 - 2:
+    k -= num*2 - 2
+    num += 1
+    pair_num += 1
+if k % 2 == 0:
+    print("k-я цифра равна 1-й цифре в паре")
+    print((k // 2 + num - 1) % 10)
+else:
+    print("k-я цифра равна 2-й цифре в паре")
+    print((k // 2 + num - 1) // 10)
+print("Номер пары цифр:", pair_num)
+print("Двузначное число:", (pair_num - 1)*10 + 1)
+

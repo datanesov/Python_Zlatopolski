@@ -1,0 +1,5 @@
+
+grades = [4, 5, 3, 2, 5, 4, 3, 4, 5, 3]
+average = sum(grades) / len(grades)
+print(f"Средняя оценка по алгебре: {average}")
+

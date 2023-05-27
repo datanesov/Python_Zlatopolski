@@ -1,0 +1,7 @@
+sportsman1 = (10, 8, 9, 7, 6)
+sportsman2 = (7, 9, 6, 8, 10)
+sum1 = sum(*sportsman1)
+sum2 = sum(*sportsman2)
+
+print("Сумма баллов первого спортсмена:", sum1)
+print("Сумма баллов второго спортсмена:", sum2)

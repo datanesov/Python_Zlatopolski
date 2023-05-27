@@ -1,0 +1,10 @@
+
+wind_directions = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+wind_frequencies = np.array([25, 10, 40, 15, 5, 3, 2, 0])
+
+A = np.vstack([wind_directions, np.ones(len(wind_directions))]).T
+k, b = np.linalg.lstsq(A, wind_frequencies, rcond=None)[0]
+
+min_direction = round((1-k)/2)
+print("Жилой комплекс должен быть расположен на направлении ветра " + str(min_direction) + ".")
+

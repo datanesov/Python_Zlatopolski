@@ -1,0 +1,16 @@
+
+a = True
+b = False
+c = False
+
+# а) А или не (А и Б) или С;
+a1 = a or not (a and b) or c
+print(a1)
+
+# б) не А или А и (Б или С);
+b1 = not a or a and (b or c)
+print(b1)
+
+# в) (А или Б и не С) и С
+c1 = (a or b and not c) and c
+print(c1)

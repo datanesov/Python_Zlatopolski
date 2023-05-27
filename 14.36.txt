@@ -1,0 +1,22 @@
+def count(letter, sentence):
+    count = 0
+    for l in sentence:
+        if l == letter:
+            count += 1
+    return count
+
+sentence1 = input("Введите первое предложение: ")
+sentence2 = input("Введите второе предложение: ")
+sentence3 = input("Введите третье предложение: ")
+
+n = int(input("Введите номер буквы для поиска (начиная с 1): "))
+
+letter = sentence1[n-1]
+count1 = count(letter, sentence1)
+count2 = count(letter, sentence2)
+count3 = count(letter, sentence3)
+
+print("Буква", letter, "встречается", count1, "раз в первом предложении")
+print("Буква", letter, "встречается", count2, "раз во втором предложении")
+print("Буква", letter, "встречается", count3, "раз в третьем предложении")
+print("Общее количество букв", letter, "в трех предложениях:", count1 + count2 + count3)

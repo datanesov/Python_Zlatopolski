@@ -1,0 +1,14 @@
+def analytical_trajectory(v0, a, h, r, g):
+    R = (v0**2 / g) * math.sin(2*a)
+    H = (v0**2 * math.sin(a)**2) / (2 * g)
+    if h <= H + r and abs(R - r) <= 10:
+        return True
+    return False
+
+def get_hit_percentage(n, v0_list, a_list, h, r):
+    hits = 0
+    for i in range(n):
+        if analytical_trajectory(v0_list[i], a_list[i], h, r, 9.8):
+            hits += 1
+    return hits/n * 100
+

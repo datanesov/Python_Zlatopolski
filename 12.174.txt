@@ -1,0 +1,4 @@
+words = [input("Введите слово: ") for _ in range(3)]
+letters_count = Counter("".join(words))
+result = [char for char, count in letters_count.items() if count == 1]
+print(" ".join(result))

@@ -1,0 +1,23 @@
+trains = []
+for i in range(25):
+    number = input("Введите номер поезда: ")
+    destination = input("Введите место назначения: ")
+    arrival_time = input("Введите время прибытия (чч:мм): ")
+    departure_time = input("Введите время отправления (чч:мм): ")
+    trains.append({"number": number, "destination": destination, "arrival_time": arrival_time, "departure_time": departure_time})
+
+current_time = input("Введите текущее время (чч:мм): ")
+print("Поезда, находящиеся на станции:")
+for train in trains:
+    arrival_hour, arrival_minute = map(int, train["arrival_time"].split(":"))
+    departure_hour, departure_minute = map(int, train["departure_time"].split(":"
+))
+    current_hour, current_minute = map(int, current_time.split(":"))
+    if arrival_hour < departure_hour or (arrival_hour == departure_hour and arrival_minute < departure_minute):
+        if arrival_hour < current_hour or (arrival_hour == current_hour and arrival_minute <= current_minute):
+            if departure_hour > current_hour or (departure_hour == current_hour and departure_minute > current_minute):
+                print(f"{train['number']}, {train['destination']}")
+    else:
+        if departure_hour < current_hour or (departure_hour == current_hour and departure_minute <= current_minute):
+            if arrival_hour > current_hour or (arrival_hour == current_hour and arrival_minute > current_minute):
+                print(f"{train['number']}, {train['destination']}")

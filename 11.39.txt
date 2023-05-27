@@ -1,0 +1,14 @@
+arr = [12, 45, 20, 8, 9, 15, 11]
+
+# Решение части а) задачи
+arr = [0 if i % 10 == 0 else i for i in arr]
+
+# Решение части б) задачи
+arr = [i/2 if i % 2 == 0 else i*2 for i in arr]
+
+# Решение части в) задачи
+m = 5
+n = 3
+arr = [i-m if i % 2 != 0 else i+n for i in arr]
+
+print(arr)

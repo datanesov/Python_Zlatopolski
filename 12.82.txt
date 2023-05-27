@@ -1,0 +1,7 @@
+import re
+sentence = input("Введите предложение: ")
+first_index = re.search('[a-zA-Z]', sentence).start() + 1
+last_index = len(sentence) - re.search('[a-zA-Z]', sentence[::-1]).start()
+print("Порядковый номер первой буквы:", first_index)
+print("Порядковый номер последней буквы:", last_index)
+

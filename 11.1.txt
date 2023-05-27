@@ -1,0 +1,8 @@
+arr = [0]*8
+arr[0] = 37
+arr[2] = 50
+arr[3] = 46
+arr[4] = 34
+arr[5] = 46
+arr[7] = 13
+print(arr)

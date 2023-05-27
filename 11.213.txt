@@ -1,0 +1,12 @@
+students = [(170, "Иванов"), (175, "Петров"), (180, "Сидоров")]
+
+flag = True
+for i in range(len(students)-1):
+    if students[i][0] < students[i+1][0]:
+        flag = False
+        break
+        
+if flag:
+    print("Студенты перечислены в порядке убывания их роста")
+else:
+    print("Студенты не перечислены в порядке убывания их роста")

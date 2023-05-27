@@ -1,0 +1,15 @@
+from math import log
+n = 100
+logn = log(n)
+sum = 0
+k = 1
+while k <= n:
+    sum += pow(-1, k+1) / k
+    if k == 1:
+        limit = sum
+    elif k % 10 == 0:
+        if sum - limit < 1.0e-15 * abs(sum): # достигнута точность вычислений
+            break
+    k += 1
+print(sum)
+

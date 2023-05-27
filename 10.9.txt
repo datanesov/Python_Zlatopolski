@@ -1,0 +1,12 @@
+import numpy as np
+
+def coin_flip(times):
+    results = np.random.choice([0, 1], size=times)
+    heads = np.count_nonzero(results == 0)
+    tails = np.count_nonzero(results == 1)
+    print("Heads: ", heads, "Tails: ", tails)
+    print("Heads frequency: ", heads/times)
+    print("Tails frequency: ", tails/times)
+    
+coin_flip(100)
+coin_flip(1000)

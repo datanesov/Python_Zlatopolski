@@ -1,0 +1,4 @@
+text = input('Введите текст:')
+count = sum(char.isdigit() for char in text)
+print('Количество цифр:', count)
+

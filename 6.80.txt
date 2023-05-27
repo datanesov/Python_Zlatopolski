@@ -1,0 +1,7 @@
+number = input("Введите натуральное число: ")
+for i in range(len(number)-1):
+    if int(number[i]) > int(number[i+1]):
+        print("Не упорядоченная по возрастанию")
+        break
+else:
+    print("Упорядоченная по возрастанию"

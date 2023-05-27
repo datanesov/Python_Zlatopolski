@@ -1,0 +1,14 @@
+
+def calculate_distance(stage, distance_from_home, distance_to_work):
+    if stage == 100:  # базовый случай рекурсии
+        return (distance_from_home, 2 * distance_from_home + 1)
+    if stage % 2 == 1:
+        distance_from_home += distance_to_work / 2
+    else:
+        distance_from_home -= distance_to_work / 2
+    distance_to_work /= (stage + 1) / stage
+    return calculate_distance(stage + 1, distance_from_home, distance_to_work)
+
+result = calculate_distance(1, 0, 1)
+print("Расстояние от дома:", result[0])
+print("Общий пройденный путь:", result[1])

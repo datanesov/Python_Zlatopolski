@@ -1,0 +1,9 @@
+n = int(input())
+a = int(input())
+summ = 0
+for i in range(n):
+    summ += a + i
+if summ % 2 == 0:
+    print("Сумма номеров квартир - четное число")
+else:
+    print("Сумма номеров квартир - нечетное число")

@@ -1,0 +1,4 @@
+
+sentence = input().split()
+result = list(set(sentence))
+print(" ".join(result))

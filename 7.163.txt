@@ -1,0 +1,14 @@
+n = int(input("Введите количество покупателей: "))
+t = []
+for i in range(n):
+    t.append(float(input("Введите время обслуживания покупателя {}: ".format(i+1))))
+
+c = [t[0]]
+for i in range(1, n):
+    c.append(c[i-1] + t[i])
+
+min_time = min(c)
+last_min_index = n - c[::-1].index(min_time) - 1
+
+print("Время пребывания в очереди: ", c)
+print("Номер последнего покупателя с минимальным временем: ", last_min_index+1)

@@ -1,0 +1,7 @@
+nums = [float(x) for x in input("Введите последовательность чисел через пробел: ").split()]
+count = 0
+for num in nums:
+    if num == 0:
+        break
+    count += 1
+print(f"Количество чисел, предшествующих первому числу 0: {count}")

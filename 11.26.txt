@@ -1,0 +1,12 @@
+arr = [4, -7, 2, -8, 5, 9, -3]
+
+positive = []
+negative = []
+
+for n in arr:
+    if n >= 0:
+        positive.append(n)
+    else:
+        negative.append(n)
+
+print(*positive, *negative)

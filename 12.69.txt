@@ -1,0 +1,11 @@
+sentence = input('Введите предложение: ')
+a_count = o_count = 0
+for char in sentence:
+    if char == 'а':
+        a_count += 1
+    elif char == 'о':
+        o_count += 1
+if a_count > o_count:
+    print('Больше букв "а"')
+else:
+    print('Больше букв "о"')

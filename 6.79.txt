@@ -1,0 +1,4 @@
+def check_order(num):
+    digits_list = [int(digit) for digit in str(num)]
+    reversed_digits_list = sorted(digits_list, reverse=True)
+    return digits_list == reversed_digits_list

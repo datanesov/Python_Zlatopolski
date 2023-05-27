@@ -1,0 +1,7 @@
+n = int(input("Введите число: "))
+numbers = []
+for i in range(10, 100):
+    if i % n == 0 or str(n) in str(i):
+        numbers.append(i)
+print("Двузначные числа, которые делятся на", n, "или содержат цифру", n, ":", numbers)
+

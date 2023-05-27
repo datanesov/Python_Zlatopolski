@@ -1,0 +1,73 @@
+# а)
+
+n = int(input("Введите натуральное число: "))
+k = int(input("Введите число k: "))
+
+sum_digits = 0
+for digit in str(n):
+    sum_digits += int(digit)
+
+if sum_digits > k and n % 2 == 0:
+    print("Условие выполнено")
+else:
+    print("Условие не выполнено")
+
+
+# б)
+
+n = int(input("Введите натуральное число: "))
+b = int(input("Введите число b: "))
+
+num_digits = len(str(n))
+
+if num_digits % 2 == 0 and n <= b:
+    print("Условие выполнено")
+else:
+    print("Условие не выполнено")
+    
+    
+# г)
+
+n = int(input("Введите натуральное число: "))
+x = int(input("Введите цифру x: "))
+y = int(input("Введите цифру y: "))
+
+first_digit = int(str(n)[0])
+last_digit = int(str(n)[-1])
+
+if first_digit == x and last_digit == y:
+    print("Условие выполнено")
+else:
+    print("Условие не выполнено")
+    
+    
+Решение задачи методом д)
+
+n = int(input("Введите натуральное число: "))
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+
+product_digits = 1
+for digit in str(n):
+    product_digits *= int(digit)
+
+if product_digits < a and n % b == 0:
+    print("Условие выполнено")
+else:
+    print("Условие не выполнено")
+    
+    
+Решение задачи методом е)
+
+n = int(input("Введите натуральное число: "))
+m = int(input("Введите число m: "))
+n = int(input("Введите число n: "))
+
+sum_digits = 0
+for digit in str(n):
+    sum_digits += int(digit)
+
+if sum_digits > m and n % n == 0:
+    print("Условие выполнено")
+else:
+    print("Условие не выполнено")

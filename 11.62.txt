@@ -1,0 +1,9 @@
+
+precipitation = [2, 5, 3, 7, 4, 8, 0, 1, 9, 6, 2, 3]
+total_precipitation = 0
+
+for i in range(len(precipitation)):
+    if (i+1) % 2 == 0:
+        total_precipitation += precipitation[i]
+
+print("Total precipitation on even-numbered days in February:", total_precipitation)

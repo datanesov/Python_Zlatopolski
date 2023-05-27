@@ -1,0 +1,14 @@
+# a)
+arr = [1.2, -2.5, 3.3, -4.8, 5.1, -6.7]
+k1 = 3
+k2 = 4
+
+arr = [arr[i] - arr[k1] if arr[i] > 0 and i != k1 else arr[i] - arr[k2] if arr[i] <= 0 and i != k2 else arr[i] for i in range(len(arr))]
+
+print(arr)
+# b)
+arr = [1.2, -2.5, 3.3, -4.8, 5.1, -6.7]
+
+arr = [arr[i]+1 if i%2!=0 else arr[i]-1 for i in range(len(arr))]
+
+print(arr)

@@ -1,0 +1,11 @@
+def count_cells(hours):
+    if hours == 0:
+        return 1
+    else:
+        return 2**(hours//3) * count_cells(hours-3)
+
+hours = [3, 6, 9, 12, 15, 18, 21, 24] # список часов, для которых нужно вычислить количество клеток
+
+for h in hours:
+    cells = count_cells(h)
+    print("Через", h, "часов будет", cells, "клеток") # выводим результат

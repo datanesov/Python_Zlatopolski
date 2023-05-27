@@ -1,0 +1,12 @@
+number = int(input("Введите двузначное число: "))
+sum_of_digits = (number // 10) + (number % 10)
+
+if sum_of_digits % 3 == 0:
+    print("Сумма его цифр кратна трем")
+else:
+    print("Сумма его цифр не кратна трем")
+    
+if sum_of_digits > 0 and number % sum_of_digits == 0:
+    print("Сумма его цифр кратна числу", int(number/sum_of_digits))
+else:
+    print("Сумма его цифр не кратна числу", number)

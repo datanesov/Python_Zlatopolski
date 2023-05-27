@@ -1,0 +1,9 @@
+lst = []
+product = 1
+for i in iter(int, 0):
+    lst.append(i)
+    
+for i in lst:
+    print(i * product)
+    product *= i
+

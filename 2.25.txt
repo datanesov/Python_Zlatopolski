@@ -1,0 +1,11 @@
+a = float(input("Введите длину: "))
+b = float(input("Введите ширину: "))
+c = float(input("Введите высоту: "))
+
+volume = a * b * c
+print("Объем прямоугольного параллелепипеда равен:", volume)
+
+sides = [a*b, b*c, a*c]
+lateral_surface_area = sum(sides) * 2
+print("Площадь боковой поверхности равна:", lateral_surface_area)
+

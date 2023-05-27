@@ -1,0 +1,7 @@
+funts_list = list(range(1, 11))
+kg_list = list(map(lambda funts: funts * 453 / 1000, funts_list))
+
+print("| Funts |---|  KG  |")
+print("|-------|---|------|")
+for funts, kg in zip(funts_list, kg_list):
+    print(f"| {funts:>5} |---| {kg:>5.2f} |")

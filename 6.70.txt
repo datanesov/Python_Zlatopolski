@@ -1,0 +1,16 @@
+a = int(input("Введите ширину прямоугольника: "))
+b = int(input("Введите длину прямоугольника: "))
+
+while a != 0 and b != 0:
+    if a > b:
+        x = b
+        y = a
+    else:
+        x = a
+        y = b
+    count = y // x
+    for i in range(count):
+        print(x, "x", x)
+    y -= count * x
+    a = x if a > b else y
+    b = y if a > b else x

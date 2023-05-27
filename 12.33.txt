@@ -1,0 +1,11 @@
+word = "муха"
+new_word = ''
+for i in word:
+    if i == 'м':
+        new_word += 'с'
+    elif i == 'х':
+        new_word += 'н'
+    else:
+        new_word += i
+print(new_word)
+

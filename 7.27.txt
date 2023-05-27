@@ -1,0 +1,5 @@
+import statistics
+
+marks = [4, 5, 3, 5, 4, 5, 3, 4, 4, 5, 4, 3, 4, 5, 5, 4, 3, 5, 5, 4]
+average_mark = statistics.mean(marks)
+print("Средняя оценка по физике:", average_mark)

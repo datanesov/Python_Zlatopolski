@@ -1,0 +1,25 @@
+total_product = 1
+for i in range(7, 15):
+    total_product *= i
+print("Произведение всех целых чисел от 7 до 14 равно:", total_product)
+
+a = int(input("Введите значение а: "))
+total_product = 1
+while a <= 15:
+    total_product *= a
+    a += 1
+print("Произведение всех целых чисел от а до 15 равно:", total_product)
+
+b = int(input("Введите значение b: "))
+numbers = [i for i in range(1, b+1)]
+total_product = 1
+for num in numbers:
+    total_product *= num
+print("Произведение всех целых чисел от 1 до b равно:", total_product)
+
+a = int(input("Введите значение а: "))
+b = int(input("Введите значение b: "))
+total_product = 1
+for i in range(a, b+1):
+   total_product *= i
+print("Произведение всех целых чисел от а до b равно:", total_product)

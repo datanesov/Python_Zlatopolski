@@ -1,0 +1,35 @@
+import turtle
+
+n = int(input("Введите число n: "))
+
+# настроим окно Turtle
+turtle.setup(600, 600)
+turtle.setworldcoordinates(0, 0, n, n)
+
+# функция для разложения числа на множители
+def prime_factors(num):
+    factors = []
+    d = 2
+    while d * d <= num:
+        while (num % d) == 0:
+            factors.append(d)
+            num //= d
+        d += 1
+    if num > 1:
+        factors.append(num)
+    return factors
+
+# рисуем числа и + в соответствии с количеством множителей
+for i in range(1, n+1):
+    turtle.penup()  # поднимаем перо, чтобы не рисовать линию
+    turtle.goto(i, 0)  # перемещаем черепашку в начало каждой строки
+    turtle.write(i, align="center")  # пишем текущее число в строке
+    for j in range(len(prime_factors(i))):  # рисуем столько +, сколько множителей
+        turtle.pendown()  # опускаем перо, чтобы рисовать линию
+        turtle.forward(0.5)  # рисуем короткую линию вправо
+        turtle.penup()  # поднимаем перо, чтобы не рисовать линию
+        turtle.forward(0.5)  # перемещаемся на следующую позицию для рисования
+
+
+turtle.done()
+

@@ -1,0 +1,17 @@
+def count(letter, sentence):
+    count = 0
+    for l in sentence:
+        if l == letter:
+            count += 1
+    return count
+
+sentence1 = input("Введите первое предложение: ")
+sentence2 = input("Введите второе предложение: ")
+
+percent1 = round(count('о', sentence1) / len(sentence1) * 100, 2)
+percent2 = round(count('о', sentence2) / len(sentence2) * 100, 2)
+
+if percent1 > percent2:
+    print("В первом предложении доля буквы 'о' больше и составляет", percent1, "%")
+else:
+    print("Во втором предложении доля буквы 'о' больше и составляет", percent2, "%")

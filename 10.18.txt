@@ -1,0 +1,19 @@
+
+import random
+
+correct_answers = 0
+wrong_answers = 0
+
+for i in range(20):
+    num1 = random.randint(1, 9)
+    num2 = random.randint(1, 9)
+    answer = int(input(f'Чему равно произведение {num1} х {num2}?'))
+    if answer == num1 * num2:
+        print('Правильный ответ!')
+        correct_answers += 1
+    else:
+        print(f'Неправильный ответ! Правильный ответ: {num1 * num2}')
+        wrong_answers += 1
+
+print(f'Количество правильных ответов: {correct_answers}')
+print(f'Количество неправильных ответов: {wrong_answers}')

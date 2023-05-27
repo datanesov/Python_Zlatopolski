@@ -1,0 +1,4 @@
+import math
+e = round(math.e, 2)
+print(e)
+

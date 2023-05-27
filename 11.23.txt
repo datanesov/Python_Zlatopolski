@@ -1,0 +1,9 @@
+arr = [23, 44, 5, 6, 70, 81, 2, 12]
+
+# а) все чётные элементы
+even_nums = [num for num in arr if num % 2 == 0]
+print("Чётные элементы массива: ", even_nums)
+
+# б) все элементы, оканчивающиеся на 0
+zero_ends = [num for num in arr if num % 10 == 0]
+print("Элементы, оканчивающиеся на 0: ", zero_ends)

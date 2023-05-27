@@ -1,0 +1,7 @@
+def calc_expression(n):
+  if n == 1:
+    return 1
+  else:
+    return ((n**2 - (n-1)**2)**2 - calc_expression(n-1))**2
+  
+print(calc_expression(20))

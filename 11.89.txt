@@ -1,0 +1,15 @@
+rainfall = [0, 0, 3, 0, 0, 5, 10, 0, 0, 0, 2, 6, 7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 1, 8, 0, 0, 4, 0]
+total_rainfall = 0
+days_with_rain = 0
+
+for rainfall_today in rainfall:
+    if rainfall_today != 0:
+        days_with_rain += 1
+        total_rainfall += rainfall_today
+
+if days_with_rain == 0:
+    print("В августе не было дождей")
+else:
+    average_rainfall = total_rainfall / days_with_rain
+    print("Среднее количество осадков, выпавших в дни дождя: ", average_rainfall)
+

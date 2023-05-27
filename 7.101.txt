@@ -1,0 +1,14 @@
+sequence = []
+while True:
+    num = float(input("Введите число (для остановки введите 10000): "))
+    if num == 10000:
+        break
+    sequence.append(num)
+
+for i in range(1, len(sequence)):
+    if sequence[i] < sequence[i-1]:
+        print("Последовательность не является упорядоченной по возрастанию.")
+        print("Первое нарушение упорядоченности на %d позиции." % i)
+        break
+else:
+    print("Последовательность упорядочена по возрастанию.")

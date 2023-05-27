@@ -1,0 +1,30 @@
+import random
+
+# Список названий карт
+cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Валет', 'Дама', 'Король', 'Туз']
+
+# Список мастей
+suits = ['Пик', 'Треф', 'Бубен', 'Черви']
+
+# Выбираем случайную козырную масть
+trump_suit = random.choice(suits)
+
+# Выводим на экран название козырной масти
+print('Козырь:', trump_suit)
+
+# Создаем словарь для всех карт, где ключ - название карты, а значение - ее порядковый номер при сортировке
+all_cards = {}
+for i, card in enumerate(cards):
+    all_cards[card] = i + 1
+
+# Обновляем значения для козырных карт
+for card in cards:
+    all_cards[card + ' ' + trump_suit] = all_cards[card] + 13
+
+# Сортируем словарь по значению
+sorted_cards = sorted(all_cards.items(), key=lambda x: x[1])
+
+# Выводим отсортированный список карт на экран
+for card in sorted_cards:
+    print(card[0])
+

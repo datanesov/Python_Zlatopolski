@@ -1,0 +1,13 @@
+height = [165, 170, 180, 185, 175, 185, 190, 190, 180, 185, 185, 180, 175, 165, 160, 170, 170, 175, 170, 175, 170,
+          170, 185, 190, 180, 190, 190, 185, 170, 175, 170, 170, 175, 170]
+max_height = height[0]
+count = 0
+for i in height:
+    if i > max_height:
+        max_height = i
+
+for i in height:
+    if i == max_height:
+        count += 1
+print("Количество людей с самым большим ростом:", count)
+

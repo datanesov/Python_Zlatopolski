@@ -1,0 +1,11 @@
+numerator = [1,2] # числители первых двух дробей
+denominator = [1,1] # знаменатели первых двух дробей
+i = 2 # начальное значение индекса для следующей дроби
+while True:
+    numerator.append(numerator[i-1] + numerator[i-2]) # числитель следующей дроби
+    denominator.append(denominator[i-1] + denominator[i-2]) # знаменатель следующей дроби
+    if abs(numerator[i]/denominator[i] - numerator[i-1]/denominator[i-1]) <= 0.001: # проверяем условие
+        break # если условие выполнено, выходим из цикла
+    i += 1 # увеличиваем индекс для следующей дроби
+
+print(numerator[i+1], "/", denominator[i+1]) # выводим результат

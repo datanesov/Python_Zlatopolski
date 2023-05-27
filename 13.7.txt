@@ -1,0 +1,11 @@
+
+people = {
+    'Ivanov': '89501234567',
+    'Petrov': '89654321098',
+    'Sidorov': '89765432101'
+}
+
+for person, phone in people.items():
+    if phone[0] == '8' and phone[1] == '9' and phone[2] == '5' and phone[3] == '0' and phone[4] == '1':
+        print(person)
+

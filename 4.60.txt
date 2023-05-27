@@ -1,0 +1,10 @@
+# Решение задачи с помощью списков и функции all()
+heights = []
+for i in range(3):
+    height = int(input(f"Введите рост {i+1} человека: "))
+    heights.append(height)
+
+if all(height == heights[0] for height in heights):
+    print("Рост всех трех человек одинаковый")
+else:
+    print("Рост любых двух или всех трех человек разный")

@@ -1,0 +1,6 @@
+precipitation = [2.5, 3.1, 4.2, 2.9, 5.3, 6.1, 7.9, 8.2, 4.5, 3.8, 2.1, 5.6]
+
+max_precipitation = max(precipitation)
+max_precipitation_date = len(precipitation) - 1 - precipitation[::-1].index(max_precipitation) + 1
+
+print("The date with the highest precipitation is", max_precipitation_date)

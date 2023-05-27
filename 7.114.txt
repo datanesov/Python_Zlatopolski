@@ -1,0 +1,6 @@
+nums = [3, 7, 8, 5, 10, 23, 14, 21, 16, 9, 2, 11, 4, 6]
+even_nums = [num for num in nums if num % 2 == 0] # список четных чисел
+if len(even_nums) == 0:
+    print("Четных чисел нет в данной последовательности")
+else:
+    print("Среднее арифметическое четных чисел:", sum(even_nums) / len(even_nums))

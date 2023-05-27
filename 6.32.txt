@@ -1,0 +1,17 @@
+
+import math
+
+def run_distance(day):
+    return 10 * 1.1 ** (day - 1)
+
+for day in range(1, 100):
+    if run_distance(day) > 20:
+        print("Лыжник пробежит больше 20 км на", day, "день")
+        break
+        
+total_distance = 0
+for day in range(1, 100):
+    total_distance += run_distance(day)
+    if total_distance > 100:
+        print("Суммарный пробег превысит 100 км на", day, "день")
+        break

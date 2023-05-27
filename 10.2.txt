@@ -1,0 +1,54 @@
+# a)
+import random
+
+nums = []
+for i in range(10):
+    nums.append(random.randint(0, 10))
+
+print(nums)
+
+# b)
+import random
+
+k = int(input("Введите количество чисел: "))
+a = int(input("Введите верхнюю границу: "))
+
+nums = []
+for i in range(k):
+    nums.append(random.randint(0, a))
+
+print(nums)
+
+# c)
+
+import random
+
+nums = []
+for i in range(20):
+    nums.append(random.randint(10, 20))
+
+print(nums)
+# d)
+import random
+
+k = int(input("Введите количество чисел: "))
+a = int(input("Введите верхнюю границу: "))
+
+nums = []
+for i in range(k):
+    nums.append(random.randint(-10, a))
+
+print(nums)
+
+# e)
+import random
+
+a = int(input("Введите начальную границу: "))
+b = int(input("Введите конечную границу: "))
+k = random.randint(1, 15)
+
+nums = []
+for i in range(k):
+    nums.append(random.randint(a, b))
+
+print(nums)

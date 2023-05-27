@@ -1,0 +1,10 @@
+sequence = []
+while True:
+    num = float(input("Введите число: "))
+    if num == 1000:
+        break
+    sequence.append(num)
+
+count = len([i for i in range(len(sequence)-1) if sequence[i] == sequence[i+1]])
+
+print("Количество повторяющихся чисел:", count)

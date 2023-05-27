@@ -1,0 +1,47 @@
+a = 3 # размеры стола
+b = 2
+c = 2 # размеры кости домино
+d = 1
+e = 1
+
+# функция для построения кости
+def build_tile(table, tile, x, y):
+    for i in range(tile[0]):
+        for j in range(tile[1]):
+            # помечаем ячейки, занятые костью
+            table[x+i][y+j] = True
+
+# функция для проверки возможности размещения кости
+def check_tile(table, tile, x, y):
+    for i in range(tile[0]):
+        for j in range(tile[1]):
+            # проверяем, что все ячейки кости пусты и лежат на одной грани
+            if x+i < len(table) and y+j < len(table[0]) and (table[x+i][y+j] or i+j != 0):
+                return False
+    return True
+
+# построение двумерного массива для представления стола
+table = [[False for j in range(b)] for i in range(a)]
+
+tiles = [] # список костей в текущем варианте размещения
+
+# размещение костей по вертикали
+for i in range(c):
+    for j in range(0, b-e+1, e):
+        if check_tile(table, [c, e], i, j):
+            build_tile(table, [c, e], i, j)
+            tiles.append([i, j])
+
+# размещение костей по горизонтали
+for i in range(d):
+    for j in range(len(tiles)-c+1):
+        x = tiles[j+c-1][0]
+        y = tiles[j+c-1][1] + e
+        if check_tile(table, [d, e], x, y):
+            build_tile(table, [d, e], x, y)
+            tiles.append([x, y])
+
+print('Наибольшее количество костей:', len(tiles))
+print('Координаты костей:')
+for tile in tiles:
+    print(tile[0], tile[1])

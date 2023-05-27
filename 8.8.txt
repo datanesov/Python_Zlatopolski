@@ -1,0 +1,9 @@
+def sequence(n):
+    return [1 + 1/i for i in range(2, n+1)]
+
+a = 1.0
+n = 2
+while True:
+    if all(x >= a for x in sequence(n)):
+        print(n)
+    n += 1

@@ -1,0 +1,7 @@
+n = 500
+found = 0
+while found < 20:
+    if n % 13 == 0 or n % 17 == 0:
+        print(n)
+        found += 1
+    n += 1

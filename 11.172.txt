@@ -1,0 +1,24 @@
+arr = [10, 20, 30, 40, 50, 60, 70]
+n = 35
+m = 55
+k = 2
+if arr[k] > n:
+    arr.insert(k, n)
+else:
+    for i in range(k, len(arr)):
+        if arr[i] > n:
+            arr.insert(i, n)
+            break
+    else: # если все элементы меньше n, то добавляем в конец
+        arr.append(n)
+f arr[-1] < m:
+    arr.append(m)
+else:
+    for i in range(len(arr)-1, -1, -1):
+        if arr[i] < m:
+            arr.insert(i+1, m)
+            break
+    else: # если все элементы больше m, то добавляем в начало
+        arr.insert(0, m)
+
+print(arr)

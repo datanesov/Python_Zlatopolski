@@ -1,0 +1,11 @@
+
+words = input("Введите последовательность слов: ").split()
+errors = []
+for i, word in enumerate(words, start=1):
+  if "жи" not in word and "ши" not in word:
+    errors.append(i)
+if errors:
+  print("В словах под номерами", errors, "есть ошибки")
+else:
+  print("Буквосочетания жи и ши записаны правильно")
+

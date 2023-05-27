@@ -1,0 +1,5 @@
+days_since_2010 = p * 30 + 2
+month_idx = (days_since_2010 // 30) - 1
+
+month_name = months[month_idx]
+print(month_name)

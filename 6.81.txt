@@ -1,0 +1,7 @@
+number = input("Введите число: ")
+digits = [int(d) for d in number]
+is_monotonic = all(digits[i] < digits[i+1] for i in range(len(digits)-1))
+if is_monotonic:
+    print("Цифры введенного числа образуют монотонно возрастающую последовательность")
+else:
+    print("Цифры введенного числа не образуют монотонно возрастающую последовательность")

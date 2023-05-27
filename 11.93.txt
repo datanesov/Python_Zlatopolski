@@ -1,0 +1,16 @@
+cars_prices = [10000, 8000, 12000, 15000, 9000]
+bikes_prices = [2500, 3000, 2000, 4000]
+
+def check_prices(cars, bikes):
+    cars_sum = sum(cars)
+    bikes_sum = sum(bikes)
+    if cars_sum > 3 * bikes_sum:
+        return True
+    else:
+        return False
+
+if check_prices(cars_prices, bikes_prices) == True:
+    print("Средняя стоимость автомобилей превышает среднюю стоимость мотоциклов более чем в 3 раза")
+else:
+    print("Средняя стоимость автомобилей не превышает среднюю стоимость мотоциклов более чем в 3 раза")
+

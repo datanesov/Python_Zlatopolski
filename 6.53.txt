@@ -1,0 +1,62 @@
+a = int(input("Введите цифру a: "))
+b = int(input("Введите цифру b: "))
+n = int(input("Введите число: "))
+k = int(input("Введите количество повторений: "))
+
+# Проверка на наличие цифры а
+contains_a = False
+num = n
+while num > 0:
+    digit = num % 10
+    if digit == a:
+        contains_a = True
+        break
+    num //= 10
+if contains_a:
+    print("Цифра a есть в числе")
+else:
+    print("Цифры a нет в числе")
+
+# Проверка на отсутствие цифры b
+contains_b = False
+num = n
+while num > 0:
+    digit = num % 10
+    if digit == b:
+        contains_b = True
+        break
+    num //= 10
+if not contains_b:
+    print("Цифры b нет в числе")
+else:
+    print("Цифра b есть в числе")
+
+# Проверка на количество повторений цифры а
+count = 0
+num = n
+while num > 0:
+    digit = num % 10
+    if digit == a:
+        count += 1
+    num //= 10
+if count > k:
+    print(f"Цифра а встречается в числе более {k} раз")
+else:
+    print(f"Цифра а встречается в числе не более {k} раз")
+
+# Проверка на наличие цифр а и b
+contains_a = False
+contains_b = False
+num = n
+while num > 0:
+    digit = num % 10
+    if digit == a:
+        contains_a = True
+    if digit == b:
+        contains_b = True
+    num //= 10
+if contains_a and contains_b:
+    print("Цифры а и b есть в числе")
+else:
+    print("Цифры а и/или b нет в числе")
+

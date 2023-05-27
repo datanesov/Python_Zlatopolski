@@ -1,0 +1,15 @@
+def find_mean_height(class_height):
+    sum_height = sum(class_height)
+    mean_height = sum_height / len(class_height)
+    return mean_height
+
+class_height_1 = [180, 170, 175, 165, 185] # рост учеников первого класса
+class_height_2 = [170, 175, 168, 172, 180] # рост учеников второго класса
+
+# находим средний рост каждого класса с помощью функции
+mean_class_1 = find_mean_height(class_height_1)
+mean_class_2 = find_mean_height(class_height_2)
+
+# выводим средний рост каждого класса
+print("Средний рост учеников первого класса:", mean_class_1)
+print("Средний рост учеников второго класса:", mean_class_2)

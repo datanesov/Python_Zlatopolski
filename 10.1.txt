@@ -1,0 +1,41 @@
+import random
+
+def generate_list(count, min_value, max_value):
+    return [random.uniform(min_value, max_value) for _ in range(count)]
+
+# а)
+a = generate_list(8, 0, 1)
+print(a)
+
+# б)
+k = int(input("Введите количество чисел: "))
+b = generate_list(k, 0, 15)
+print(b)
+
+# в)
+c = generate_list(15, 25, 26)
+print(c)
+
+# г)
+d = generate_list(20, 0, 15)
+print(d)
+
+# д)
+e = int(input("Введите число a: "))
+f = int(input("Введите число b: "))
+n = random.randint(0, e)
+g = generate_list(n, 0, b)
+print(g)
+
+# е)
+h = generate_list(10, -40, 40)
+print(h)
+
+# ж)
+m = int(input("Введите число m: "))
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+o = random.randint(0, m)
+p = generate_list(o, a, b)
+print(p)
+

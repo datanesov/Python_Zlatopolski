@@ -1,0 +1,9 @@
+n = int(input('Введите натуральное число n: '))
+b = []
+for i in range(n):
+    b.append(float(input(f'Введите вещественное число b_{i+1}: ')))
+p = float(input('Введите вещественное число p: '))
+
+summa = sum([x for x in b if x > p])
+
+print(f'Сумма чисел, больших {p}: {summa}')

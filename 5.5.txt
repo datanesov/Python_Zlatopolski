@@ -1,0 +1,15 @@
+a = 21
+b = 20
+c = 0
+d = 45
+e = 43.5
+f = 44
+
+for i in range(11):
+    print("{:.1f} {:.1f}".format(a, b), end="  ;  ")
+    print("{:.1f} {:.1f} {:.1f}".format(d, e, f))
+    a -= 1
+    b = float("{:.1f}".format(b - 1.8))
+    d = float("{:.1f}".format(d - 0.5))
+    e = float("{:.1f}".format(e - 0.3))
+    f = float("{:.1f}".format(f - 0.2))

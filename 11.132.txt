@@ -1,0 +1,16 @@
+
+def largest_class_size(classes):
+    return max(classes)
+
+def smallest_class_size(classes):
+    return min(classes)
+
+def class_size_difference(classes):
+    largest = largest_class_size(classes)
+    smallest = smallest_class_size(classes)
+    return largest - smallest
+
+if class_size_difference(classes) == 10:
+    print("Yes")
+else:
+    print("No")

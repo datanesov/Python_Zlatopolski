@@ -1,0 +1,36 @@
+number = int(input("Введите трехзначное число: "))
+digit1 = number // 100
+digit2 = (number // 10) % 10
+digit3 = number % 10
+
+# а)
+sum_of_digits = digit1 + digit2 + digit3
+if 10 <= sum_of_digits <= 99:
+    print("Сумма цифр является двузначным числом")
+else:
+    print("Сумма цифр не является двузначным числом")
+
+# б)
+product_of_digits = digit1 * digit2 * digit3
+if product_of_digits >= 100:
+    print("Произведение цифр является трехзначным числом")
+else:
+    print("Произведение цифр не является трехзначным числом")
+
+# в)
+if number > product_of_digits:
+    print("Число больше произведения его цифр")
+else:
+    print("Число не больше произведения его цифр")
+
+# г)
+if sum_of_digits % 5 == 0:
+    print("Сумма цифр кратна пяти")
+else:
+    print("Сумма цифр не кратна пяти")
+
+# д)
+if sum_of_digits % number == 0:
+    print("Сумма цифр кратна числу а")
+else:
+    print("Сумма цифр не кратна числу а")

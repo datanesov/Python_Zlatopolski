@@ -1,0 +1,8 @@
+def div_sum(num):
+    return sum([i for i in range(1,num+1) if num % i == 0])
+
+sums = [div_sum(num) for num in range(50,71)] # создаем список сумм делителей
+
+# выводим результаты
+for i in range(len(sums)):
+    print("Сумма делителей числа", 50+i, "=", sums[i])

@@ -1,0 +1,7 @@
+import time
+time1 = time.strptime('12:30:45', '%H:%M:%S')
+time2 = time.strptime('15:20:10', '%H:%M:%S')
+if time1 < time2:
+    print('Время', time.strftime('%H:%M:%S', time1), 'было раньше')
+else:
+    print('Время', time.strftime('%H:%M:%S', time2), 'было раньше')

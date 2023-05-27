@@ -1,0 +1,9 @@
+scores = [55, 44, 37, 65, 58, 42]
+places = [1, 2, 3, 4, 5, 6]
+sorted_scores = sorted(scores, reverse=True)
+sorted_places = [sorted_scores.index(score)+1 for score in scores]
+if sorted_places == places:
+    print("Команды перечислены в списке в соответствии с занятыми ими местами")
+else:
+    print("Команды не перечислены в списке в соответствии с занятыми ими местами")
+

@@ -1,0 +1,16 @@
+groups = {
+    "Group 1": {"Exam 1": 5, "Exam 2": 4, "Exam 3": 3},
+    "Group 2": {"Exam 1": 4, "Exam 2": 3, "Exam 3": 5},
+    "Group 3": {"Exam 1": 3, "Exam 2": 5, "Exam 3": 4}
+}
+
+highest_avg = -1
+highest_group = ""
+
+for group, exams in groups.items():
+    avg = sum(exams.values()) / len(exams)
+    if avg > highest_avg:
+        highest_avg = avg
+        highest_group = group
+
+print(highest_group, "has the highest average score")

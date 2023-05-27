@@ -1,0 +1,13 @@
+# a)
+
+for num in range(32, 1000, 10):
+    x = num * num % 1000
+    if x // 100 == num % 10:
+        print(num)
+```
+
+# б)
+
+for num in range(105, 1000, 7):
+    if (num // 100 + num // 10 % 10 + num % 10) % 7 == 0:
+        print(num)

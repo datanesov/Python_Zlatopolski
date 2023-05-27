@@ -1,0 +1,20 @@
+number = input("Введите натуральное число: ")
+a = input("Введите цифру a: ")
+b = input("Введите цифру b: ")
+
+if a not in number or b not in number:
+    print("Цифры a и b не встречаются в числе")
+else:
+    a_index = -1
+    b_index = -1
+    for i in range(len(number)):
+        if number[i] == a:
+            a_index = i
+        elif number[i] == b:
+            b_index = i
+        if a_index != -1 and b_index != -1:
+            break
+    if a_index > b_index:
+        print("Цифра a находится правее цифры b")
+    else:
+        print("Цифра b находится правее цифры a")

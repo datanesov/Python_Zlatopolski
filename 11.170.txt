@@ -1,0 +1,7 @@
+arr = [1, 2, 3, 4, 5, 6, 7]
+n1 = 8
+n2 = 9
+max_val = max(arr)
+max_index = arr.index(max_val)
+arr = arr[:max_index] + [n2] + arr[max_index:] + [n1] + arr[max_index+1:]
+print(arr)

@@ -1,0 +1,34 @@
+heights = [] # список для хранения роста учеников
+
+# ввод роста каждого ученика
+for i in range(25):
+    height = int(input("Введите рост ученика " + str(i + 1) + ": "))
+    heights.append(height)
+
+# сортировка списка по возрастанию
+heights.sort()
+
+# поиск самого высокого и самого низкого учеников
+max_height = heights[-1]
+min_height = heights[0]
+
+# поиск фамилий учеников по росту
+names = [] # список для хранения фамилий учеников, соответствующих определенному росту
+for i in range(25):
+    if heights[i] == max_height:
+        name = input("Введите фамилию ученика с ростом " + str(max_height) + ": ")
+        names.append(name)
+    elif heights[i] == min_height:
+        name = input("Введите фамилию ученика с ростом " + str(min_height) + ": ")
+        names.append(name)
+
+# вывод результатов
+print("Самый высокий ученик(и): ", end="")
+for name in names:
+    print(name, end=" ")
+print("с ростом", max_height)
+
+print("Самый низкий ученик(и): ", end="")
+for name in names:
+    print(name, end=" ")
+print("с ростом", min_height)

@@ -1,0 +1,16 @@
+class Item:
+    def __init__(self, mass, volume):
+        self.mass = mass
+        self.volume = volume
+
+    def density(self):
+        return self.mass / self.volume
+
+def max_density(items):
+    densities = []
+    for item in items:
+        densities.append(item.density())
+    return max(densities)
+
+items = [Item(10, 1), Item(20, 2), Item(30, 3), Item(15, 1.5), Item(25, 2.5), Item(35, 3.5)]
+print(max_density(items))

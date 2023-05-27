@@ -1,0 +1,18 @@
+array = [2, 3, 4, -1, 0, -3, 5, -6, 1, -2]
+
+positive_numbers = [num for num in array if num > 0]
+negative_numbers = [num for num in array if num < 0]
+
+if len(positive_numbers) == 0:
+    average_positive = 0
+else:
+    average_positive = sum(positive_numbers) / len(positive_numbers)
+
+if len(negative_numbers) == 0:
+    average_negative = 0
+else:
+    average_negative = sum(negative_numbers) / len(negative_numbers)
+
+print("Average of positive numbers:", average_positive)
+print("Average of negative numbers:", average_negative)
+

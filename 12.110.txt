@@ -1,0 +1,7 @@
+word = "python"
+m, n = 1, 4
+new_word = word.replace(word[m], "#", 1)
+new_word = new_word.replace(word[n], word[m], 1)
+new_word = new_word.replace("#", word[n], 1)
+print(new_word)
+

@@ -1,0 +1,10 @@
+number = int(input()) # принимаем на ввод двузначное число
+
+square = number ** 2 #возводим в квадрат
+
+sum_of_cubes = (number // 10) ** 3 + (number % 10) ** 3 # считаем сумму кубов цифр
+
+if square == sum_of_cubes * 4: # проверяем условие
+    print('Положительный') 
+else:
+    print('Отрицательный')

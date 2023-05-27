@@ -1,0 +1,12 @@
+
+game_scores = [3, 0, 1, 1, 1, 0, 3, 1, 1]
+
+win_index = game_scores.index(3) if 3 in game_scores else -1
+lose_index = game_scores.index(0) if 0 in game_scores else -1
+
+if win_index < lose_index:
+    print("Первый выигрыш был раньше")
+elif lose_index < win_index:
+    print("Первый проигрыш был раньше")
+else:
+    print("Выигрыш и проигрыш были в одной игре")

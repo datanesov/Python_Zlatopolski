@@ -1,0 +1,8 @@
+books = [1000, 2500, 3000, 800, 1100, 5000, 1200, 900, 600, 400, 1300, 1500, 1100, 1400, 2000, 700, 900, 1200, 1800, 2500, 600, 1100, 500, 400, 1000, 1300, 1400, 200, 400, 1000, 1500, 800, 900, 1200, 1600]
+
+total_books = sum(books)
+
+if 100000 <= total_books < 1000000:
+  print("The total number of books in the library is a six-digit number")
+else:
+  print("The total number of books in the library is not a six-digit number")

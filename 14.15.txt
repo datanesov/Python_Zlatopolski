@@ -1,0 +1,6 @@
+def perimeter(a, b, h):
+    return (a + b + (2 * (h ** 2 + (a - b) ** 2) ** 0.5))
+
+a1, a2, h1, h2 = 5, 7, 3, 4
+P1 = perimeter(a1, a2, h1) + perimeter(a2, a1, h2)
+print(P1)

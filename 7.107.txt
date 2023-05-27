@@ -1,0 +1,11 @@
+
+x = int(input("Введите натуральное число x: "))
+n = int(input("Введите число n: "))
+a = [int(input(f"Введите число a_{i+1}: ")) for i in range(12)]
+
+a_greater_n = [a_i for a_i in a if a_i > n]
+if len(a_greater_n) > 0:
+    avg_a = sum(a_greater_n) / len(a_greater_n)
+    print(f"Среднее арифметическое чисел, больших {n}, равно {avg_a}")
+else:
+    print("Числа, большие n, отсутствуют среди заданных")

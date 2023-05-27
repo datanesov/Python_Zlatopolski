@@ -1,0 +1,6 @@
+
+word = "ИТЕРНЕТН"
+correct_word = "ИНТЕРНЕТ"
+# Использование метода replace для замены букв
+correct_word = correct_word.replace("Т", "ТН", 1).replace("Н", "", 1)
+print(correct_word)

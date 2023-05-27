@@ -1,0 +1,7 @@
+p = 0
+q = 30
+d = q - 5
+q = 2 * d
+p = q - 100
+print(p)
+print(q)

@@ -1,0 +1,8 @@
+num = input("Введите число: ")
+
+for i in range(len(num)//2):
+    if num[i] != num[-i-1]:
+        print(f"{num} не является палиндромом")
+        break
+else:
+    print(f"{num} является палиндромом")

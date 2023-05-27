@@ -1,0 +1,9 @@
+
+school_dict = {'1а': 20, '5б': 30, '9а': 25, '11б': 18, '6а': 27}
+
+class_name = input("Введите название класса: ")
+
+if class_name in school_dict:
+    print("Количество учащихся в классе {}: {}".format(class_name, school_dict[class_name]))
+else:
+    print("Такого класса нет в словаре")

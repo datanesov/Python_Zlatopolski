@@ -1,0 +1,7 @@
+
+rainfall = [0, 2, 4, 0, 0, 0, 3, 0, 5, 0, 1, 0] # пример массива
+
+no_rain_days = list(filter(lambda x: rainfall[x]==0, range(len(rainfall))))
+
+print("Дней без осадков в январе:", no_rain_days)
+

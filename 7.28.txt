@@ -1,0 +1,8 @@
+grades = [5, 4, 3, 4, 5, 5, 4, 3, 4, 5]
+
+sum_grades = 0
+for grade in grades:
+    sum_grades += grade
+average_grade = sum_grades / len(grades)
+
+print("Средняя оценка:", average_grade)

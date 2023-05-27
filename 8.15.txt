@@ -1,0 +1,6 @@
+m = float(input("Введите число m: "))
+
+for x in range(1, 101):
+    y = (x**2 + 100) / (x + 200)
+    if y < m:
+        print(y)

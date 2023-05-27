@@ -1,0 +1,2 @@
+sentence = input("Введите предложение: ")
+print(len(sentence.split()))

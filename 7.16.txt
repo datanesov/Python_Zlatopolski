@@ -1,0 +1,8 @@
+n = int(input())
+b = list(map(int, input().split()))
+p = int(input())
+
+if sum(b) < p:
+    print("Yes")
+else:
+    print("No")

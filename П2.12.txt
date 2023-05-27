@@ -1,0 +1,10 @@
+def gcd(a,b):
+    if a == 0:
+        return b
+    return gcd(b % a, a)
+
+a = 56
+b = 77
+
+result = gcd(a,b)
+print(result)

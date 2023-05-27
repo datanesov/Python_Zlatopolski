@@ -1,0 +1,19 @@
+flat_building = [[i * 6 + j + 1 for j in range(6)] for i in range(9)]
+entrances = [[1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4], [1, 2, 3, 4]]
+
+n = 53
+
+# находим номер квартиры на этаже
+apartment_num_on_floor = (n - 1) % 6 + 1
+
+# находим номер этажа с учетом подъезда
+floor_num = (n - 1) // 6 + 1
+
+# находим номер подъезда
+entrance_num = entrances[floor_num - 1][0]
+
+# выведем ответы
+print(entrance_num)
+print(floor_num)
+print(apartment_num_on_floor)
+

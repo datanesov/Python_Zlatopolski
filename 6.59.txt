@@ -1,0 +1,14 @@
+number = input("Введите натуральное число: ")
+
+min_digit = number[0]
+count_min = 0
+
+for digit in number:
+    if digit < min_digit:
+        min_digit = digit
+        count_min = 1
+    elif digit == min_digit:
+        count_min += 1
+
+print("Минимальная цифра встречается", count_min, "раз(а)") 
+

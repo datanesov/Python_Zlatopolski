@@ -1,0 +1,2 @@
+sum = sum(filter(lambda x: x % 3 == 0 and x % 10 in [2, 4, 8], range(31, 100)))
+print(sum)

@@ -1,0 +1,22 @@
+
+arr = [15, 30, 25, 10, 40, 50, 5, 35]
+
+# Проверка условия а)
+sum_a = 0
+for elem in arr:
+    if elem > 20:
+        sum_a += elem
+if sum_a > 100:
+    print("Условие а) выполнено")
+else:
+    print("Условие а) не выполнено")
+
+# Проверка условия б)
+sum_b = 0
+for elem in arr:
+    if elem < 50:
+        sum_b += elem
+if sum_b % 2 == 0:
+    print("Условие б) выполнено")
+else:
+    print("Условие б) не выполнено")

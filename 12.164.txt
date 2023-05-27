@@ -1,0 +1,4 @@
+sentence = input("Введите предложение: ")
+spaces = sentence.split()
+max_spaces = len(max(spaces, key=len))
+print("Наибольшее количество идущих подряд пробелов:", max_spaces-1)

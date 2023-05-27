@@ -1,0 +1,17 @@
+n = int(input("Введите число n: "))
+m = int(input("Введите количество чисел: "))
+a = []
+sum = 0
+count = 0
+
+for i in range(m):
+    a.append(int(input("Введите число a: ")))
+    if a[i] % n == 0:
+        sum += a[i]
+        count += 1
+
+if count == 0:
+    print("Чисел, кратных", n, "нет")
+else:
+    print("Среднее арифметическое чисел, кратных", n, "равно", sum/count)
+

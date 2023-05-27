@@ -1,0 +1,7 @@
+def sqrt_sum_iterative(n):
+    total = math.sqrt(1)
+    for i in range(2, n+1):
+        total = math.sqrt(i + total)
+    return total
+
+print(sqrt_sum_iterative(50))

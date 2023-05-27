@@ -1,0 +1,38 @@
+array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def sum_array(arr):
+    return sum(arr)
+
+def mult_array(arr):
+    result = 1
+    for i in arr:
+        result *= i
+    return result
+
+def sum_sq_array(arr):
+    result = 0
+    for i in arr:
+        result += i**2
+    return result
+
+def sum_first_six(arr):
+    return sum(arr[:6])
+
+def sum_k1_k2(arr, k1, k2):
+    return sum(arr[k1-1:k2])
+
+def avg_array(arr):
+    length = len(arr)
+    return sum(arr) / length
+
+def avg_s1_s2(arr, s1, s2):
+    sum_s = sum(arr[s1-1:s2])
+    return sum_s / (s2 - s1 + 1)
+
+print("Сумма всех элементов:", sum_array(array))
+print("Произведение всех элементов:", mult_array(array))
+print("Сумма квадратов всех элементов:", sum_sq_array(array))
+print("Сумма шести первых элементов:", sum_first_six(array))
+print("Сумма элементов с", k1, "-го по", k2, "-й:", sum_k1_k2(array, k1, k2))
+print("Среднее арифметическое всех элементов:", avg_array(array))
+print("Среднее арифметическое элементов с", s1, "-го по", s2, "-й:", avg_s1_s2(array, s1, s2))

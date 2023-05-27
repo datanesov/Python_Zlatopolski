@@ -1,0 +1,8 @@
+from sympy import *
+primes = []
+n = 100
+while len(primes) < 10:
+    if isprime(n):
+        primes.append(n)
+    n += 1
+print(primes)

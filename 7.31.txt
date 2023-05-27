@@ -1,0 +1,15 @@
+numbers = []
+while True:
+    num = int(input("Enter a non-negative integer (enter a negative integer to stop): "))
+    if num < 0:
+        break
+    else:
+        numbers.append(num)
+
+count = len(numbers)
+if count == 0:
+    print("The sequence is empty.")
+else:
+    total = sum(numbers)
+    average = total / count
+    print("The average of the sequence is:", average)

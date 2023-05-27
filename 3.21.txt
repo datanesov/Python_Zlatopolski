@@ -1,0 +1,3 @@
+num = int(input("Введите трехзначное число: "))
+reversed_num = int(str(num)[::-1])
+print("Число, полученное при чтении цифр справа налево:", reversed_num)

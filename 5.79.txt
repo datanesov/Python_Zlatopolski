@@ -1,0 +1,8 @@
+from sympy.ntheory.modular import crt
+
+a1, m1 = 125, 133
+a2, m2 = 111, 134
+
+x, _ = crt([m1, m2], [a1, a2])
+if x is not None and 1000 <= x <= 9999:
+    print(x)

@@ -1,0 +1,14 @@
+def calculate_age(year_born, month_born, year_today, month_today):
+    age = year_today - year_born
+    if month_born > month_today:
+        age -= 1
+    elif month_born == month_today:
+        age += 1
+    return age
+
+year_born = 1990
+month_born = 5
+year_today = 2021
+month_today = 9
+
+print(calculate_age(year_born, month_born, year_today, month_today))

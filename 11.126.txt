@@ -1,0 +1,13 @@
+rainfall = [15, 20, 17, 22, 13, 21, 18, 22, 25, 10, 27, 28, 23, 29, 30, 21, 17, 12, 19, 20, 18, 13, 16, 24, 27, 17,
+            15, 14, 13, 11, 20, 17, 22, 25]
+max_rain = rainfall[0]
+count = 0
+for i in rainfall:
+    if i > max_rain:
+        max_rain = i
+
+for i in rainfall:
+    if i == max_rain:
+        count += 1
+print("Количество дней, когда выпало максимальное количество осадков:", count)
+

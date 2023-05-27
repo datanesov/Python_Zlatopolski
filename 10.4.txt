@@ -1,0 +1,7 @@
+
+for i in range(50):
+    num = random.randint(0, 3)
+    if num % 2 == 0:
+        print(0)
+    else:
+        print(1)

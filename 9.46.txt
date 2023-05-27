@@ -1,0 +1,13 @@
+  def digital_root(n):
+while n >= 10:
+        tmp = n
+        s = 0
+        
+        while tmp:
+            s += tmp % 10
+            tmp //= 10
+        
+        n = s
+    
+    return n
+

@@ -1,0 +1,13 @@
+
+def calculate_c(a, b):
+    if a < b:
+        return b - a
+    else:
+        return a - 2 * b
+
+a = 40
+b = 10
+c = calculate_c(a, b)
+b = -a / 2 * b
+print(b)
+

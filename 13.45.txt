@@ -1,0 +1,14 @@
+def add_subject(grades, new_grade, k):
+    for lst in grades:
+        lst.insert(k-1, new_grade.pop(0))
+    return grades
+
+grades = [[5, 4, 3, 5, 4, 3, 4, 5, 3, 4, 5, 4], [4, 4, 5, 3, 5, 4, 3, 5, 4, 5, 4, 5], [3, 5, 4, 5, 4, 5, 4, 3, 5, 3, 4, 3]]
+new_grade = [3, 4, 5, 4, 3, 5, 4, 5, 4, 3, 4, 5]
+k = 4
+
+new_table = add_subject(grades, new_grade, k)
+
+# выводим новую таблицу
+for lst in new_table:
+    print(lst)

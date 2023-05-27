@@ -1,0 +1,16 @@
+n = int(input("Введите количество пар чисел: "))
+a, b = [], []
+
+for i in range(n):
+    pair = input(f"Введите пару чисел номер {i+1}: ").split()
+    a.append(int(pair[0]))
+    b.append(int(pair[1]))
+
+pairs = list(zip(a, b))
+pairs.sort(key=lambda x: x[1])
+
+max_sum = pairs[-1][0] + pairs[-2][1]
+min_product = pairs[0][0] * pairs[1][1] if pairs[0][0] * pairs[1][1] < pairs[-1][0] * pairs[-2][1] else pairs[-1][0] * pairs[-2][1]
+
+print(f"Максимальная сумма значений чисел в паре: {max_sum}")
+print(f"Минимальное произведение значений чисел в паре: {min_product}")

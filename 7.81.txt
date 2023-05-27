@@ -1,0 +1,13 @@
+grades = [5, 4, 3, 2]
+count = {5: 0, 4: 0, 3: 0, 2: 0}
+
+for i in range(20):
+    grade = int(input())
+    if grade in grades:
+        count[grade] += 1
+
+print("Количество пятерок:", count[5])
+print("Количество четверок:", count[4])
+print("Количество троек:", count[3])
+print("Количество двоек:", count[2])
+

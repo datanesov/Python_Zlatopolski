@@ -1,0 +1,18 @@
+# вводим оценки студентов в словарь, где ключ - предмет, значение - список оценок
+marks = {1: [], 2: [], 3: []}
+for i in range(14):
+    for j in range(3):
+        mark = int(input(f"Введите оценку студента {i+1} по предмету {j+1}: "))
+        marks[j+1].append(mark)
+
+# количество студентов, сдавших сессию без двоек
+passed_without_two = sum(all(mark >= 3 for mark in marks[subject]) for subject in marks)
+print(f"Количество студентов, сдавших сессию без двоек: {passed_without_two}")
+
+# количество предметов, по которым были получены только оценки «5» и «4»
+subjects_with_45 = sum(all(mark >= 4 for mark in marks[subject]) for subject in marks)
+print(f"Количество предметов, по которым были получены только оценки 4 и 5: {subjects_with_45}")
+
+# количество двоек по каждому предмету
+twos_per_subject = [marks[subject].count(2) for subject in marks]
+print(f"Количество двоек по каждому предмету: {twos_per_subject}")

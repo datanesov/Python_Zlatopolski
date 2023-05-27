@@ -1,0 +1,18 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+def get_divisors(q, p):
+    def find_divisors(n, divisor, divisors):
+        if divisor > n:  # Базовый случай, если делитель больше самого числа
+            return divisors
+        if n % divisor == 0 and gcd(divisor, p) == 1:  # Если divisor является делителем и взаимно прост с p
+            divisors.append(divisor)
+        return find_divisors(n, divisor+1, divisors)  # Рекурсивный вызов для следующего делителя
+
+    return find_divisors(q, 1, [])  # Начальные значения для рекурсивной функции
+
+q = int(input("Введите q: "))
+p = int(input("Введите p: "))
+print("Делители q, взаимно простые с p:", get_divisors(q, p))

@@ -1,0 +1,3 @@
+text = input("Введите текст: ")
+print(f"Количество предложений: {len([s for s in text if s == '.' or s == '?'])}")
+

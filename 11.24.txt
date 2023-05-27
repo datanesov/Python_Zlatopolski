@@ -1,0 +1,10 @@
+# a) двузначные числа
+arr = [45, 23, 67, 88, 102, 12, 98, 5, 76, 99]
+result = [n for n in arr if n >= 10 and n <= 99]
+print(result)
+
+# б) трехзначные числа
+arr = [45, 23, 67, 88, 102, 12, 981, 5, 763, 999]
+result = [n for n in arr if n >= 100 and n <= 999]
+print(result)
+

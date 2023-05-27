@@ -1,0 +1,9 @@
+import math
+
+def is_perfect_square(n):
+    return int(math.sqrt(n))**2 == n
+
+lst = [2,3,4,25,36,49,50,64]
+count = sum(1 for i in lst if is_perfect_square(i))
+print(count)
+

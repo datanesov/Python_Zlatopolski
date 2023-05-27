@@ -1,0 +1,14 @@
+heights = [170, 180, 175, 190, 185, 195, 200, 198, 196, 194, 192, 190, 188, 186, 184]
+
+new_height = 182 
+
+# добавляем нового ученика
+heights.append(new_height)
+
+# сортируем по убыванию
+heights.sort(reverse=True)
+
+# выводим новый список фамилий
+for i in range(len(heights)):
+    print(f"Ученик {i+1}: {heights[i]} см")
+

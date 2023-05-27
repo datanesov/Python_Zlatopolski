@@ -1,0 +1,12 @@
+import time
+
+time1 = time.mktime((year1, month1, day1, 0, 0, 0, 0, 0, 0))
+time2 = time.mktime((year2, month2, day2, 0, 0, 0, 0, 0, 0))
+
+if time1 > time2:
+    print("Первый человек старше")
+elif time2 > time1:
+    print("Второй человек старше")
+else:
+    print("Оба человека родились в один и тот же день")
+

@@ -1,0 +1,13 @@
+def function_1(x):
+  return 17*x**2 - 6*x + 13
+
+def function_2(a):
+  return 3*a**2 + 5*a - 21
+
+print("Введите значение x:")
+x = float(input())
+print("Значение функции y=", function_1(x))
+
+print("Введите значение a:")
+a = float(input())
+print("Значение функции y=", function_2(a))

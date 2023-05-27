@@ -1,0 +1,32 @@
+# a)
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+
+i = 1
+while (a * i) <= b:
+    i *= 2
+
+result = 0
+while i > 1:
+    i //= 2
+    if (a * result + a * i) <= b:
+        result += i
+
+print("Результат целочисленного деления b на a: ", result)
+
+# b)
+a = int(input("Введите число a: "))
+b = int(input("Введите число b: "))
+
+i = 1
+while (a * i) <= b:
+    i *= 2
+
+result = 0
+while i > 1:
+    i //= 2
+    if (a * result + a * i) <= b:
+        result += i
+
+result = b - a * result
+print("Остаток от деления b на a: ", result)

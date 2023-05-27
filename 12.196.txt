@@ -1,0 +1,19 @@
+
+expression = input("Введите арифметическое выражение со скобками: ")
+
+stack = []
+
+for i, symbol in enumerate(expression):
+    if symbol == '(':
+        stack.append(i)
+    elif symbol == ')':
+        if stack:
+            stack.pop()
+        else:
+            print(f"Неправильно расставлены скобки: правая скобка лишняя на позиции {i}")
+            break
+
+if stack:
+    print(f"Лишние левые скобки: {len(stack)}")
+else:
+    print("Скобки расставлены правильно")

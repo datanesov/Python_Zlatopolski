@@ -1,0 +1,9 @@
+elements = {'медь': 'Cu', 'кислород': 'O', 'углерод': 'C'}
+
+element_name = input("Введите название элемента: ")
+
+try:
+    elements[element_name]
+    print("Такой элемент есть в словаре")
+except KeyError:
+    print("Такого элемента нет в словаре")

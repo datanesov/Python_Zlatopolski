@@ -1,0 +1,45 @@
+costs = [[0 for i in range(6)] for j in range(5)] # инициализация списка стоимости товаров
+quantity = [[0 for i in range(6)] for j in range(5)] # инициализация списка количества проданных товаров
+total_income_by_product = [0 for i in range(5)] # инициализация списка общего дохода по каждому товару
+total_income_by_day = [0 for i in range(6)] # инициализация списка общего дохода по каждому дню
+total_income = 0 # переменная общего дохода магазина за 6 дней
+
+# ввод информации о стоимости и количестве проданных товаров
+for i in range(5):
+    for j in range(6):
+        print(f"Введите стоимость товара {i+1} за {j+1} день: ", end="")
+        costs[i][j] = int(input())
+        print(f"Введите количество товара {i+1} за {j+1} день: ", end="")
+        quantity[i][j] = int(input())
+
+# расчет общего дохода по каждому товару и общего дохода по каждому дню
+for i in range(5):
+    for j in range(6):
+        total_income_by_product[i] += costs[i][j] * quantity[i][j]
+        total_income_by_day[j] += costs[i][j] * quantity[i][j]
+        total_income += costs[i][j] * quantity[i][j]
+
+# вывод результатов
+print("Общий доход по каждому товару:")
+for i in range(5):
+    print(f"Товар {i+1}: {total_income_by_product[i]}")
+
+print("\nОбщий доход по каждому дню:")
+for i in range(6):
+    print(f"День {i+1}: {total_income_by_day[i]}")
+
+print(f"\nОбщий доход магазина за 6 дней: {total_income}")
+
+max_income_product = total_income_by_product.index(max(total_income_by_product)) + 1
+print(f"\nМаксимальный общий доход за 6 дней был получен от продажи товара {max_income_product}")
+
+max_income_day = total_income_by_day.index(max(total_income_by_day)) + 1
+print(f"\nМаксимальный общий доход от продажи всех видов товара был получен в {max_income_day} день")
+
+a = int(input("\nВведите значение a: "))
+days_above_a = 0
+for i in range(6):
+    if sum(total_income_by_day[:i+1]) > a:
+        days_above_a += 1
+
+print(f"\nКоличество дней, в которые общий доход от продажи всех видов товара превысил {a} рублей: {days_above_a}")

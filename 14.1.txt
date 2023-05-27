@@ -1,0 +1,6 @@
+def draw_line():
+    line = ""
+    for i in range(60):
+        line += "*"
+    print(line)
+

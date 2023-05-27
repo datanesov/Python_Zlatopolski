@@ -1,0 +1,48 @@
+# ввод данных
+g = int(input('Введите год: '))
+t = int(input('Введите месяц: '))
+p = int(input('Введите число: '))
+
+# вычисление количества дней в месяце
+days_in_month = 31
+if t in [4, 6, 9, 11]:
+    days_in_month = 30
+elif t == 2:
+    if g % 4 == 0 and (g % 100 != 0 or g % 400 == 0):
+        days_in_month = 29
+    else:
+        days_in_month = 28
+
+# вычисление предыдущего дня
+p_prev = p - 1
+if p_prev == 0:
+    t_prev = t - 1
+    if t_prev == 0:
+        g_prev = g - 1
+        t_prev = 12
+    else:
+        g_prev = g
+    days_in_month_prev = 31
+    if t_prev in [4, 6, 9, 11]:
+        days_in_month_prev = 30
+    elif t_prev == 2:
+        if g_prev % 4 == 0 and (g_prev % 100 != 0 or g_prev % 400 == 0):
+            days_in_month_prev = 29
+        else:
+            days_in_month_prev = 28
+    p_prev = days_in_month_prev
+
+# вычисление следующего дня
+p_next = p + 1
+if p_next > days_in_month:
+    p_next = 1
+    t_next = t + 1
+    if t_next == 13:
+        g_next = g + 1
+        t_next = 1
+    else:
+        g_next = g
+
+# вывод результатов
+print('Предыдущий день:', p_prev, '.', t_prev, '.', g_prev)
+print('Следующий день:', p_next, '.', t_next, '.', g_next)

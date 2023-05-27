@@ -1,0 +1,18 @@
+x = int(input("Введите координату по оси X: "))
+y = int(input("Введите координату по оси Y: "))
+
+if x > 0 and y > 0:
+    print("Точка ({}, {}) находится в области I".format(x, y))
+elif x < 0 and y > 0:
+    print("Точка ({}, {}) находится в области II".format(x, y))
+elif x < 0 and y < 0:
+    print("Точка ({}, {}) находится в области III".format(x, y))
+elif x > 0 and y < 0:
+    print("Точка ({}, {}) находится в области IV".format(x, y))
+elif x == 0 and y == 0:
+    print("Точка ({}, {}) лежит на границе областей".format(x, y))
+elif x == 0 and y != 0:
+    print("Точка ({}, {}) лежит на оси Y".format(x, y))
+elif x != 0 and y == 0:
+    print("Точка ({}, {}) лежит на оси X".format(x, y))
+

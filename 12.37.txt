@@ -1,0 +1,8 @@
+word = input("Введите слово: ")
+new_word = ''
+for i in range(len(word)):
+    if i < 3 or i >= len(word)-3:
+        new_word += word[-(i+1)]
+    else:
+        new_word += word[i]
+print(new_word)

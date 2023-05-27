@@ -1,0 +1,6 @@
+word = "абвгде_"
+k = 3
+s = "т"
+correct_word = word[:k+1] + s + word[k+1:]
+print(correct_word)
+

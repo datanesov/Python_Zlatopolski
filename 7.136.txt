@@ -1,0 +1,9 @@
+results = []
+while True:
+    result = float(input("Введите результат спортсмена (время в минутах): "))
+    if not results or result < min(results):
+        print("Лучший результат на данный момент: ", result)
+    else:
+        print("Лучший результат: ", min(results))
+    results.append(result)
+

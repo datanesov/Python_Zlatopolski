@@ -1,0 +1,4 @@
+text = input('Введите текст:')
+digits = list(map(int, text.split('+')))
+sum_of_digits = sum(filter(lambda x: isinstance(x, int), digits))
+print('Сумма:', sum_of_digits)

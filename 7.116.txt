@@ -1,0 +1,16 @@
+def average(lst):
+    return sum(lst) / len(lst)
+
+def check_price(cars, motorcycles):
+    avg_cars = average(cars)
+    avg_motorcycles = average(motorcycles)
+    
+    if avg_cars / avg_motorcycles > 3 and min(cars) > 5000:
+        return "Средняя стоимость автомобилей превышает среднюю стоимость мотоциклов более чем в 3 раза."
+    else:
+        return "Средняя стоимость автомобилей не превышает среднюю стоимость мотоциклов более чем в 3 раза."
+
+cars = [7000, 9000, 6000, 7500, 10000]
+motorcycles = [1500, 2000, 1800, 2500, 3000]
+
+print(check_price(cars, motorcycles))

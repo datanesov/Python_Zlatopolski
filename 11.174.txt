@@ -1,0 +1,10 @@
+arr = [2,6,4,8,15,27,9,55,59]
+
+new_arr = [] # создаем новый массив
+
+for i in arr:
+    new_arr.append(i)
+    if '5' in str(i):
+        new_arr.append(11.174)
+
+print(new_arr)

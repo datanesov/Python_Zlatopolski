@@ -1,0 +1,20 @@
+def area_triangle(a, b, c):
+    p = (a + b + c) / 2
+    area = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+    return area
+
+a = float(input("Введите сторону a: "))
+b = float(input("Введите сторону b: "))
+c = float(input("Введите сторону c: "))
+d = float(input("Введите сторону d: "))
+e = float(input("Введите сторону e: "))
+
+# Разбиение пятиугольника на треугольники и их площадь
+triangle1 = area_triangle(a, b, e)
+triangle2 = area_triangle(b, c, d)
+triangle3 = area_triangle(e, d, c)
+
+# Площадь пятиугольника
+area = triangle1 + triangle2 + triangle3
+
+print("Площадь пятиугольника = ", area)

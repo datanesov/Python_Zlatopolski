@@ -1,0 +1,3 @@
+word = "клоун"
+new_words = [word[1] + word[2] + word[0] + word[3] + word[4], word[0] + word[1] + word[3] + word[4] + word[2], word[0] + word[1] + word[4] + word[3] + word[2]]
+print(new_words)

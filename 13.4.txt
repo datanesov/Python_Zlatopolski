@@ -1,0 +1,10 @@
+
+workers = {
+    'Ivanov': False,
+    'Petrov': True,
+    'Sidorov': False
+}
+
+for worker in workers:
+    if workers[worker]:
+        print(worker)

@@ -1,0 +1,7 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+if word1 == word2:
+    count = len(word1)
+else:
+    count = sum(1 for _ in itertools.takewhile(lambda x: x[0] == x[1], zip(word1, word2)))
+print("Количество совпадающих начальных букв:", count)

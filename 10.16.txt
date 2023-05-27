@@ -1,0 +1,13 @@
+import random
+
+# создаем список из всех костей
+dominoes = []
+for i in range(7):
+    for j in range(i, 7):
+        dominoes.append((i, j))
+
+# выбираем случайную кость
+random_domino = random.choice(dominoes)
+
+# выводим результат
+print("Выбрана кость {}-{}".format(random_domino[0], random_domino[1]))

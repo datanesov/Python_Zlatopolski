@@ -1,0 +1,3 @@
+word = "стекляный_"
+correct_word = word.replace("_", "й")
+print(correct_word)

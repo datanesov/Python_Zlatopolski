@@ -1,0 +1,7 @@
+word = "Zlatopolskiy"
+list_word = list(word)
+for i in range(len(word)//2):
+    list_word[i], list_word[-(i+1)] = list_word[-(i+1)], list_word[i]
+new_word = "".join(list_word)
+print(new_word)
+

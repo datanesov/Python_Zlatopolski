@@ -1,0 +1,18 @@
+class1_grades = [4, 5, 3, 2, 5, 4, 3]
+class2_grades = [5, 3, 4, 2, 5, 4, 3]
+
+sum_class1 = 0
+sum_class2 = 0
+
+for grade in class1_grades:
+    sum_class1 += grade
+
+for grade in class2_grades:
+    sum_class2 += grade
+    
+class1_average = sum_class1/len(class1_grades)
+class2_average = sum_class2/len(class2_grades)
+
+print("Средняя оценка в первом классе:", class1_average)
+print("Средняя оценка во втором классе:", class2_average)
+

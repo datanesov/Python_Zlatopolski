@@ -1,0 +1,13 @@
+number = input("Введите четырехзначное число: ")
+has_2_or_7 = '2' in number or '7' in number
+has_3_or_6_or_9 = '3' in number or '6' in number or '9' in number
+
+if has_2_or_7:
+    print("Число содержит цифру 2 или 7.")
+else:
+    print("Число не содержит цифру 2 или 7.")
+    
+if has_3_or_6_or_9:
+    print("Число содержит цифру 3, 6 или 9.")
+else:
+    print("Число не содержит цифру 3, 6 или 9.")

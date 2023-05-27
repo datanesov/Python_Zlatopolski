@@ -1,0 +1,15 @@
+def calculate_s_k():
+    s = 13
+    k = -5
+    d = s + 2
+    s = d
+    k = 2 * s
+    print(f"s = {s}, k = {k}")
+
+    s, k, d = 0, 15, 0
+    d = k - 2
+    k = 3 * d
+    s = k - 50
+    print(f"s = {s}, k = {k}")
+
+calculate_s_k()

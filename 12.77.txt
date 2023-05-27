@@ -1,0 +1,19 @@
+sentence = input('Введите предложение: ')
+word_count = 0
+first_word_end = second_word_start = third_word_start = None
+for i, char in enumerate(sentence):
+    if char == ' ':
+        word_count += 1
+        if word_count == 1:
+            first_word_end = i
+        elif word_count == 2:
+            second_word_start = i + 1
+        elif word_count == 3:
+            third_word_start = i + 1
+            break
+else:
+    print('Ошибка: в предложении меньше 4 слов')
+print(sentence[:first_word_end])
+print(sentence[first_word_end+1:second_word_start])
+print(sentence[second_word_start+1:third_word_start])
+

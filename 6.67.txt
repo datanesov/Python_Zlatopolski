@@ -1,0 +1,8 @@
+import math
+
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+lcm = math.lcm(a, b)
+
+print("Наименьшее общее кратное:", lcm)

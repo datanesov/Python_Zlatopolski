@@ -1,0 +1,4 @@
+
+word = "рпроцессо"
+correct_word = "".join([word[i+1] for i in range(len(word)-1)]) + word[0]
+print(correct_word)

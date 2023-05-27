@@ -1,0 +1,13 @@
+def bisect(a, x, e):
+    # начальные значения
+    y_prev = a
+    y_next = x
+    # пока не достигнута заданная точность
+    while abs(y_next**2 - y_prev**2) > e:
+        y_mid = (y_prev + y_next) / 2
+        # сдвигаем границы отрезка
+        if y_mid**2 < a:
+            y_prev = y_mid
+        else:
+            y_next = y_mid
+    return y_next

@@ -1,0 +1,24 @@
+1) 
+
+s = 25
+s = 55 
+print(s) 
+2) 
+
+s = 5
+s = -2 * s
+s = 0
+print(s) 
+
+3) 
+
+s = -3.5
+s = 4 * s
+print(s) 
+
+4) 
+
+s = 20
+s = -21
+s = 5 * s
+print(s) 

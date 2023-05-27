@@ -1,0 +1,13 @@
+numbers = [1, 2, 3, 8, 5, 8, 7, 8, 9, 10, 0]
+
+count_8 = numbers.count(8)
+
+numbers.append(0)
+count_8_new = numbers.count(8)
+
+numbers[-1] = 8
+count_8_new_8 = numbers.count(8)
+
+print(f"При A = 0 количество максимальных элементов: {count_8_new}")
+print(f"При A = 8 количество максимальных элементов: {count_8_new_8}")
+

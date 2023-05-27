@@ -1,0 +1,19 @@
+x = [True, False]
+y = [True, False]
+
+f1 = lambda X, Y: (not X and not Y)
+f2 = lambda X, Y: (X or (not X and Y))
+f3 = lambda X, Y: ((not X and Y) or Y)
+
+for X in x:
+    for Y in y:
+        print(f1(X, Y))
+        
+for X in x:
+    for Y in y:
+        print(f2(X, Y))
+        
+for X in x:
+    for Y in y:
+        print(f3(X, Y))
+

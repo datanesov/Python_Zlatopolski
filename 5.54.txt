@@ -1,0 +1,13 @@
+
+def an(a, n):
+    if n == 1:
+        return a  # базовый случай
+    else:
+        return a * an(a, n-1)  # рекурсивный вызов
+
+a = float(input("Введите число а: "))
+n = int(input("Введите число n: "))
+
+for i in range(1, n + 1):
+    print(f"a_{i} =", an(a, i))
+

@@ -1,0 +1,68 @@
+import random
+
+def can_move_rook(start, end):
+    if start[0] == end[0] or start[1] == end[1]:
+        return True
+    else:
+        return False
+
+def can_move_knight(start, end):
+    if (abs(start[0]-end[0]) == 2 and abs(start[1]-end[1]) == 1) or (abs(start[0]-end[0]) == 1 and abs(start[1]-end[1]) == 2):
+        return True
+    else:
+        return False
+
+def can_move_bishop(start, end):
+    if abs(start[0]-end[0]) == abs(start[1]-end[1]):
+        return True
+    else:
+        return False
+
+def can_move_queen(start, end):
+    if can_move_rook(start, end) or can_move_bishop(start, end):
+        return True
+    else:
+        return False
+
+def can_move_king(start, end):
+    if abs(start[0]-end[0]) <= 1 and abs(start[1]-end[1]) <= 1:
+        return True
+    else:
+        return False
+
+def generate_pieces():
+    pieces = {'rook':[], 'knight':[], 'bishop':[], 'queen':[], 'king':[]}
+    for i in range(1,9):
+        for j in range(1,9):
+            pieces['rook'].append((i,j))
+            pieces['bishop'].append((i,j))
+            pieces['queen'].append((i,j))
+            pieces['king'].append((i,j))
+    for i in range(1,9):
+        for j in range(1,9):
+            if i+2 < 9 and j+1 < 9:
+                pieces['knight'].append((i,j))
+            if i+2 < 9 and j-1 > 0:
+                pieces['knight'].append((i,j))
+            if i-2 > 0 and j+1 < 9:
+                pieces['knight'].append((i,j))
+            if i-2 > 0 and j-1 > 0:
+                pieces['knight'].append((i,j))
+    return pieces
+
+pieces = generate_pieces()
+
+piece1 = random.choice(list(pieces.keys()))
+start1 = random.choice(pieces[piece1])
+piece2 = random.choice(list(pieces.keys()))
+start2 = random.choice(pieces[piece2])
+end = (random.randint(1,8), random.randint(1,8))
+
+print('Piece 1: {}, Start 1: {}'.format(piece1, start1))
+print('Piece 2: {}, Start 2: {}'.format(piece2, start2))
+print('End: {}'.format(end))
+
+if eval('can_move_{}({}, {})'.format(piece1, start1, end)) and not eval('can_move_{}({}, {})'.format(piece2, start2, end)):
+    print('Piece {} at {} can move to {}'.format(piece1, start1, end))
+else:
+    print('Piece {} at {} cannot move to {}'.format(piece1, start1, end))

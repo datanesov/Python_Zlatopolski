@@ -1,0 +1,4 @@
+sentence = input("Введите предложение: ")
+char1 = input("Введите первый символ: ")
+char2 = input("Введите второй символ: ")
+print([f"{char1}{char2}" for i in range(len(sentence)) if sentence[i] == char1 and i+1 < len(sentence) and sentence[i+1] == char2])

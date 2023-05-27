@@ -1,0 +1,12 @@
+temperature = [20, 21, 23, 22, 25, 24, 26, 27, 28, 22, 
+               24, 20, 21, 23, 26, 27, 29, 30, 31, 20,
+               22, 24, 26, 28, 29, 30, 31, 25, 23, 22]
+
+n = len(temperature)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if(temperature[j] < temperature[j+1]):
+            temperature[j], temperature[j+1] = temperature[j+1], temperature[j]
+
+print("Два самых теплых дня в июле:", temperature[0], "и", temperature[1])
+

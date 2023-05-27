@@ -1,0 +1,3 @@
+word = "вертикаль"
+new_word = word[2:5] + word[0:2]
+print(new_word)

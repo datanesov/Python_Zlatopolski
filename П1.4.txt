@@ -1,0 +1,176 @@
+# а)
+import math
+
+x1 = float(input("Введите x1: "))
+x2 = float(input("Введите x2: "))
+
+result = math.sqrt(x1**2 + x2**2)
+
+print(result)
+# б)
+x1 = float(input("Введите x1: "))
+x2 = float(input("Введите x2: "))
+x3 = float(input("Введите x3: "))
+
+result = x1 * x2 + x1 * x3 + x2 * x3
+
+print(result)
+# в)
+v0, t, a = [float(input("Введите {}:".format(parameter))) for parameter in ["v0", "t", "a"]]
+
+result = v0 * t + a * t ** 2 / 2
+
+print(result)
+# г)
+m, v, h = [float(input("Введите {}:".format(parameter))) for parameter in ["массу", "скорость", "высоту"]]
+g = 9.8
+
+result = m * v ** 2 / (m * g * h)
+
+print(result)
+# д)
+def calculate_resistance(R1, R2):
+    return 1 / R1 + 1 / R2
+
+R1 = float(input("Введите R1: "))
+R2 = float(input("Введите R2: "))
+
+result = calculate_resistance(R1, R2)
+
+print(result)
+# е)
+import math
+
+def calculate_weight(m, g, a):
+    return m * g * math.cos(math.radians(a))
+
+m = float(input("Введите массу: "))
+g = 9.8
+a = float(input("Введите угол: "))
+
+result = calculate_weight(m, g, a)
+
+print(result)
+# ж)
+def calculate_circumference(R):
+    return 2 * math.pi * R
+
+R = float(input("Введите радиус: "))
+
+result = calculate_circumference(R)
+
+print(result)
+
+# з)
+def calculate_quadratic_formula(a, b, c):
+    return b ** 2 - 4 * a * c
+
+a, b, c = [float(input("Введите {}:".format(parameter))) for parameter in ["a", "b", "c"]]
+
+result = calculate_quadratic_formula(a, b, c)
+
+print(result)
+# и)
+def calculate_gravity_force(m1, m2, r):
+    return m1 * m2 * r ** -2
+
+m1, m2, r = [float(input("Введите {}:".format(parameter))) for parameter in ["m1", "m2", "r"]]
+
+result = calculate_gravity_force(m1, m2, r)
+
+print(result)
+# к)
+def calculate_power(I, R):
+    return I ** 2 * R
+
+I, R = [float(input("Введите {}:".format(parameter))) for parameter in ["I", "R"]]
+
+result = calculate_power(I, R)
+
+print(result)
+# л)
+import math
+
+def calculate_function_value(a, b, c, x):
+    return a * math.sin(math.radians(b * x + c)) / (b * x + c)
+
+a, b, c, x = [float(input("Введите {}:".format(parameter))) for parameter in ["a", "b", "c", "x"]]
+
+result = calculate_function_value(a, b, c, x)
+
+print(result)
+
+# м)
+import math
+
+def calculate_distance(a, b, c):
+    return math.sqrt(a ** 2 + b ** 2 - 2 * a * b * math.cos(math.radians(c)))
+
+a, b, c = [float(input("Введите {}:".format(parameter))) for parameter in ["a", "b", "c"]]
+
+result = calculate_distance(a, b, c)
+
+print(result)
+
+# н)
+def calculate_value(a, b, c, d):
+    return a * d + b * c / a * d
+
+a, b, c, d = [float(input("Введите {}:".format(parameter))) for parameter in ["a", "b", "c", "d"]]
+
+result = calculate_value(a, b, c, d)
+
+print(result)
+# о)
+import math
+
+def calculate_value(a, b, c, x):
+    return math.sqrt(a * x ** 2 + b * x + c)
+
+a, b, c, x = [float(input("Введите {}:".format(parameter))) for parameter in ["a", "b", "c", "x"]]
+
+result = calculate_value(a, b, c, x)
+
+print(result)
+
+
+# п)
+import math
+
+def calculate_value(a, b, c, x):
+    return 1 / math.sqrt(a * x ** 2 + b * x + c)
+
+a, b, c, x = [float(input("Введите {}:".format(parameter))) for parameter in ["a", "b", "c", "x"]]
+
+result = calculate_value(a, b, c, x)
+
+print(result)
+# р)
+import math
+
+def calculate_value(x):
+    return (math.sqrt(x + 1) + math.sqrt(x - 1)) / (2 * math.sqrt(x))
+
+x = float(input("Введите значение x: "))
+
+result = calculate_value(x)
+
+print(result)
+# с)
+def calculate_value(x):
+    return abs(x) + abs(x + 1)
+
+x = float(input("Введите значение x: "))
+
+result = calculate_value(x)
+
+print(result)
+# т)
+def calculate_value(x):
+    return abs(1 - abs(x))
+
+x = float(input("Введите значение x: "))
+
+result = calculate_value(x)
+
+print(result)

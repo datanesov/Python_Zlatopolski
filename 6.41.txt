@@ -1,0 +1,16 @@
+num = int(input("Введите натуральное число: "))
+
+max_digit = 0
+min_digit = 9
+
+while num > 0:
+    digit = num % 10
+    if digit > max_digit:
+        max_digit = digit
+    if digit < min_digit:
+        min_digit = digit
+    num //= 10
+
+print("Максимальная цифра:", max_digit)
+print("Минимальная цифра:", min_digit)
+

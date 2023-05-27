@@ -1,0 +1,17 @@
+july1 = [10, 20, 30, 40, 50]
+july2 = [15, 25, 35, 45, 55]
+august1 = [12, 22, 32, 42, 52]
+august2 = [18, 28, 38, 48, 58]
+
+total_july = 0
+for sales in july1 + july2:
+    total_july += sales
+
+total_august = 0
+for sales in august1 + august2:
+    total_august += sales
+
+total_sales = total_july + total_august
+
+print("Total sales for July and August: ", total_sales)
+

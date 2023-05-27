@@ -1,0 +1,14 @@
+def is_multiple_of_b(s, b):
+    return s % b == 0
+
+p = int(input("Введите натуральное число p: "))
+n = int(input("Введите количество чисел: "))
+x = []
+for i in range(n):
+    x.append(int(input("Введите число: ")))
+b = int(input("Введите число b: "))
+s = sum(x)
+if is_multiple_of_b(s, b):
+    print("Сумма чисел x_1, x_2, ..., x_n кратна числу b")
+else:
+    print("Сумма чисел x_1, x_2, ..., x_n не кратна числу b")

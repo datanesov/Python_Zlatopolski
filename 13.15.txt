@@ -1,0 +1,9 @@
+class Employee:
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
+
+employees = [Employee('Иванов', 'ул. Пушкина, д. 10'), Employee('Петров', 'ул. Ленина, д. 5'), Employee('Кузин', 'ул. Гагарина, д. 3'), Employee('Сидоров', 'ул. Мира, д. 7')]
+for employee in employees:
+    if employee.name in ['Кузин', 'Куравлев', 'Кудин', 'Кульков', 'Кубиков']:
+        print(employee.address)

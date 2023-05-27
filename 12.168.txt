@@ -1,0 +1,4 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+result = ["Да" if char in word2 else "Нет" for char in word1]
+print(" ".join(result))

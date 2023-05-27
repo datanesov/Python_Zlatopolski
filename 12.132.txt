@@ -1,0 +1,5 @@
+
+word = "прроцесор"
+# Замена символов
+correct_word = word.replace("рр", "р").replace("со", "с").replace("ор", "орр")
+print(correct_word)

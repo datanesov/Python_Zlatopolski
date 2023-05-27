@@ -1,0 +1,4 @@
+
+array = ['a', 'b', 'c', 'd', 'e']
+index = int(input('Введите индекс элемента: '))
+print(array[index])

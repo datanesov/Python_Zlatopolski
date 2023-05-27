@@ -1,0 +1,26 @@
+# a)
+a = False
+b = False
+c = True
+
+res = (not a or not b) and not c
+
+print(res)
+
+# б)
+a = False
+b = False
+c = True
+
+res = (not a or not b) and (a or b)
+
+print(res)
+
+# в)
+a = False
+b = False
+c = True
+
+res = (a and b) or (a and not c) or not c
+
+print(res)

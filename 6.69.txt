@@ -1,0 +1,20 @@
+rect = (425, 131) # исходный прямоугольник
+squares = [] # список для хранения размеров квадратов
+
+while rect[0] >= 131 and rect[1] >= 131:
+    squares.append(131) # отрезаем квадрат со стороной 131
+    rect = (rect[0]-131, rect[1]-131) # обновляем размеры прямоугольника
+
+while rect[0] > 0 and rect[1] > 0:
+    # находим размер квадрата, на который можно разрезать оставшийся прямоугольник
+    n = 0
+    for i in range(425//32):
+        for j in range(131//32):
+            if rect[0] >= (i+1)*32 and rect[1] >= (j+1)*32:
+                n = max(n, 32)
+
+    squares.append(n)
+    rect = (rect[0] - n, rect[1] - n)
+
+print(squares)
+print("Всего квадратов:", len(squares))

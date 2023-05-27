@@ -1,0 +1,17 @@
+# a)
+arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+arr[2:10] = reversed(arr[2:10])
+print(arr)
+# b)
+arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+k, s = map(int, input("Введите значения k и s: ").split())
+arr[k+1:s] = reversed(arr[k+1:s])
+print(arr)
+# c)
+arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+min_index = arr.index(min(arr))
+max_index = arr.index(max(arr))
+if min_index > max_index:
+    min_index, max_index = max_index, min_index
+arr[min_index:max_index+1] = reversed(arr[min_index:max_index+1])
+print(arr)

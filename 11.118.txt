@@ -1,0 +1,12 @@
+birth_years = [1990, 1975, 1983, 2001, 1989, 1978, 1995, 1991, 1985, 1999, 1979, 1976, 
+                1987, 1994, 1981, 2000, 2002, 1988, 1986, 1996, 1974, 1992, 1998, 
+                1977, 1982, 1993, 2003, 1972, 2004, 1973, 1997]
+
+birth_years_sorted = sorted(birth_years)
+
+min_year = birth_years_sorted[0]
+max_year = birth_years_sorted[-1]
+
+age_diff = max_year - min_year
+
+print(f'The age difference between the oldest and youngest person is {age_diff} years.')

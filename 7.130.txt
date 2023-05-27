@@ -1,0 +1,6 @@
+numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+repeated_number = max(set(numbers), key = numbers.count)
+count = numbers.count(repeated_number)
+
+print(f"Число повторений {repeated_number} равно {count}")

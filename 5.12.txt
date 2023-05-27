@@ -1,0 +1,12 @@
+p0 = 1.29 # плотность на земле
+z = 1.25 * 10**(-4) # коэффициент убывания плотности
+
+def density(h):
+    return p0*math.exp(-z*h)
+
+heights = [h for h in range(0, 1001, 100)]
+densities = [density(h) for h in heights]
+
+print("Высота, м  |  Плотность, кг/м^3")
+for h, p in zip(heights, densities):
+    print("{:^11}|{:12.3f}".format(h, p))

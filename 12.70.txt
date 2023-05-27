@@ -1,0 +1,10 @@
+sentence = input('Введите предложение: ')
+comma_found = False
+for char in sentence:
+    if char == ',':
+        comma_found = True
+        break
+if comma_found:
+    print('В предложении есть запятая')
+else:
+    print('В предложении нет запятой')

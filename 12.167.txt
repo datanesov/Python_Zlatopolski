@@ -1,0 +1,4 @@
+word = input("Введите слово: ")
+double_letters = [char for char in set(word) if word.count(char) == 2]
+print("Две одинаковые буквы в слове:", double_letters)
+

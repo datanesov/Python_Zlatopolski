@@ -1,0 +1,23 @@
+# Ввод данных
+salaries = []
+for i in range(12):
+    print("Введите зарплату работника", i+1, "за каждый месяц первого квартала:")
+    salary = []
+    for j in range(3):
+        month_salary = int(input(f"Зарплата за {j+1} месяц: "))
+        salary.append(month_salary)
+    salaries.append(salary)
+
+# Общая сумма за квартал всем работникам
+total_salary = sum([sum(salary_list) for salary_list in salaries])
+print("Общая сумма, выплаченная за квартал всем работникам:", total_salary)
+
+# Зарплата каждого работника за квартал
+for i in range(12):
+    worker_salary = sum(salaries[i])
+    print(f"Зарплата работника {i+1} за квартал:",  worker_salary)
+
+# Общая зарплата всех работников за каждый месяц
+for j in range(3):
+    month_salary_total = sum([salary_list[j] for salary_list in salaries])
+    print(f"Общая зарплата всех работников за {j+1} месяц:", month_salary_total)

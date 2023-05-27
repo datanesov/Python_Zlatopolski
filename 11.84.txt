@@ -1,0 +1,22 @@
+numbers = [10, -15, 25, 30, -5, 40]
+positive_count = 0
+for num in numbers:
+    if num > 0:
+        positive_count += 1
+
+if positive_count <= 5:
+    print("Количество положительных элементов не превышает 5")
+else:
+    print("Количество положительных элементов больше 5")
+
+multiple_count = 0
+for num in numbers:
+    if num <= 50.55:
+        if num % 4 == 0:
+            multiple_count += 1
+
+if multiple_count > 0:
+    print("Количество элементов, не больших 50.55 и кратных 4, равно", multiple_count)
+else:
+    print("Нет элементов, не больших 50.55 и кратных 4")
+

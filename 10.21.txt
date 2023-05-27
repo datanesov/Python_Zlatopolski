@@ -1,0 +1,28 @@
+import random
+ 
+def get_card():
+    suits = ['пики', 'трефы', 'бубны', 'червы']
+    ranks = ['шестерка', 'семерка', 'восьмерка', 'девятка', 'десятка', 'валет', 'дама', 'король', 'туз']
+    suit = random.choice(suits)
+    rank = random.choice(ranks)
+    return (suit, rank)
+ 
+player1 = get_card()
+player2 = get_card()
+ 
+print(f'Игрок1 выбрал карту: {player1[1]} масти {player1[0]}')
+print(f'Игрок2 выбрал карту: {player2[1]} масти {player2[0]}')
+ 
+ranks_dict = {'шестерка': 6, 'семерка': 7, 'восьмерка': 8, 'девятка': 9, 'десятка': 10, 'валет': 11, 'дама': 12, 'король': 13, 'туз': 14}
+if suits.index(player1[0]) == suits.index(player2[0]):
+    if ranks_dict[player1[1]] > ranks_dict[player2[1]]:
+        print('Игрок1 выиграл')
+    elif ranks_dict[player1[1]] < ranks_dict[player2[1]]:
+        print('Игрок2 выиграл')
+    else:
+        print('Ничья')
+else:
+    if suits.index(player1[0]) > suits.index(player2[0]):
+        print('Игрок1 выиграл')
+    else:
+        print('Игрок2 выиграл')

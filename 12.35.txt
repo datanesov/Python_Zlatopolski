@@ -1,0 +1,7 @@
+word = "Программисты"
+new_word = ''
+for i in range(len(word)//2, len(word)):
+    new_word += word[i]
+for i in range(len(word)//2):
+    new_word += word[i]
+print(new_word)

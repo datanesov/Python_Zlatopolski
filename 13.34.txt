@@ -1,0 +1,34 @@
+athletes = [
+    {'name': 'Alice', 'fencing': 95, 'swimming': 80, 'riding': 75, 'running': 80, 'shooting': 90},
+    {'name': 'Bob', 'fencing': 80, 'swimming': 75, 'riding': 85, 'running': 90, 'shooting': 80},
+    {'name': 'Charlie', 'fencing': 75, 'swimming': 80, 'riding': 80, 'running': 75, 'shooting': 85},
+    {'name': 'David', 'fencing': 85, 'swimming': 90, 'riding': 90, 'running': 85, 'shooting': 95},
+    {'name': 'Eva', 'fencing': 75, 'swimming': 85, 'riding': 80, 'running': 80, 'shooting': 80},
+    {'name': 'Frank', 'fencing': 80, 'swimming': 75, 'riding': 80, 'running': 75, 'shooting': 75},
+    {'name': 'Grace', 'fencing': 90, 'swimming': 90, 'riding': 95, 'running': 95, 'shooting': 90},
+    {'name': 'Harry', 'fencing': 75, 'swimming': 80, 'riding': 85, 'running': 90, 'shooting': 80},
+    {'name': 'Ivy', 'fencing': 85, 'swimming': 90, 'riding': 90, 'running': 80, 'shooting': 80},
+    {'name': 'Jack', 'fencing': 80, 'swimming': 85, 'riding': 80, 'running': 75, 'shooting': 85},
+    {'name': 'Karen', 'fencing': 75, 'swimming': 80, 'riding': 75, 'running': 80, 'shooting': 75},
+    {'name': 'Leo', 'fencing': 80, 'swimming': 75, 'riding': 80, 'running': 75, 'shooting': 75},
+    {'name': 'Mary', 'fencing': 90, 'swimming': 95, 'riding': 85, 'running': 90, 'shooting': 95},
+    {'name': 'Nathan', 'fencing': 80, 'swimming': 85, 'riding': 80, 'running': 75, 'shooting': 80},
+    {'name': 'Olivia', 'fencing': 80, 'swimming': 75, 'riding': 75, 'running': 80, 'shooting': 75},
+    {'name': 'Peter', 'fencing': 95, 'swimming': 90, 'riding': 95, 'running': 90, 'shooting': 90},
+    {'name'
+: 'Rachel', 'fencing': 70, 'swimming': 75, 'riding': 80, 'running': 75, 'shooting': 70},
+    {'name': 'Simon', 'fencing': 85, 'swimming': 90, 'riding': 95, 'running': 85, 'shooting': 90},
+    {'name': 'Tom', 'fencing': 80, 'swimming': 80, 'riding': 80, 'running': 75, 'shooting': 80},
+    {'name': 'Ursula', 'fencing': 90, 'swimming': 95, 'riding': 90, 'running': 90, 'shooting': 85},
+]
+
+max_score = 0
+max_athlete = None
+
+for athlete in athletes:
+    total = athlete['fencing'] + athlete['swimming'] + athlete['riding'] + athlete['running'] + athlete['shooting']
+    if total > max_score:
+        max_score = total
+        max_athlete = athlete
+        
+print('Фамилия спортсмена-победителя:', max_athlete['name'])

@@ -1,0 +1,51 @@
+import numpy as np
+
+# Функция для ввода количества студентов в каждой группе
+def input_students():
+    courses = []
+    for i in range(1, 7):
+        groups = []
+        for j in range(1, 7):
+            num_students = int(input(f"Введите количество студентов в {j} группе {i} курса: "))
+            groups.append(num_students)
+        courses.append(groups)
+    return np.array(courses)
+
+# Функция для определения курса с минимальным количеством студентов
+def find_min_course(courses):
+    num_students = np.sum(courses, axis=1)
+    min_course = np.argmin(num_students) + 1
+    return min_course
+
+# Функция для определения самой малочисленной группы
+def find_min_group(courses):
+    min_group = np.min(courses)
+    min_group_idx = np.where(courses == min_group)
+    min_group_num = (min_group_idx[0][0] + 1, min_group_idx[1][0] + 1)
+    return min_group_num
+
+# Функция для определения номеров самых малочисленных групп по каждому курсу
+def find_min_groups_by_course(courses):
+    min_groups = []
+    for i in range(6):
+        min_group = np.min(courses[i])
+        min_group_num = np.where(courses[i] == min_group)[0][0] + 1
+        min_groups.append(min_group_num)
+    return min_groups
+
+# Ввод количества студентов в каждой группе
+courses = input_students()
+
+# Определение курса с минимальным количеством студентов
+min_course = find_min_course(courses)
+print(f"На {min_course} курсе обучается меньше всего студентов")
+
+# Определение самой малочисленной группы
+min_group_num = find_min_group(courses)
+print(f"Самая малочисленная группа находится на {min_group_num[0]} курсе, в {min_group_num[1]} группе")
+
+# Определение номеров самых малочисленных групп по каждому курсу
+min_groups = find_min_groups_by_course(courses)
+for i in range(6):
+    print(f"Самая малочисленная группа на {i+1} курсе имеет номер {min_groups[i]}")
+

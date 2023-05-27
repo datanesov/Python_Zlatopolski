@@ -1,0 +1,8 @@
+precipitation = [0, 5, 0, 3, 0, 0, 0, 10, 0, 0, 0, 0] # список количества осадков в каждый день мая
+days = 0
+for i in precipitation:
+    if i == 0:
+        days += 1
+    else:
+        break
+print(f"Непрерывно без осадков {days} дней.")

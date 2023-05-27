@@ -1,0 +1,21 @@
+import math
+
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+
+# Определение максимального числа
+if a > b:
+    max_num = a
+else:
+    max_num = b
+
+# Определение минимального числа
+if a < b:
+    min_num = a
+else:
+    min_num = b
+
+print("Максимальное число:", max_num)
+print("Минимальное число:", min_num)
+
+

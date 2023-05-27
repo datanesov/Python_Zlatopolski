@@ -1,0 +1,26 @@
+n = 3  # количество магазинов
+m = 10  # количество дней
+
+# ввод доходов магазинов в список
+income = []
+for i in range(n):
+    row = []
+    for j in range(m):
+        row.append(int(input(f"Введите доход магазина {i+1} за день {j+1}: ")))
+    income.append(row)
+
+# вывод максимального дохода для каждого магазина
+for i in range(n):
+    max_income = max(income[i])
+    max_day = income[i].index(max_income) + 1  # добавляем 1, чтобы получить номер дня (индекс начинается с 0)
+    print(f"Магазин {i+1} получил максимальный доход {max_income} в день {max_day}")
+
+# вывод магазина с максимальным доходом для каждого дня
+for j in range(m):
+    max_income = income[0][j]
+    max_shop = 1
+    for i in range(1, n):
+        if income[i][j] > max_income:
+            max_income = income[i][j]
+            max_shop = i + 1  # добавляем 1, чтобы получить номер магазина (индекс начинается с 0)
+    print(f"В день {j+1} максимальный доход получил магазин {max_shop}")

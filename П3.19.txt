@@ -1,0 +1,15 @@
+a = [True, False]
+b = [True, False]
+
+for A in a:
+  for B in b:
+    print((not(not A and not B) and A))
+    
+for A in a:
+  for B in b:
+    print((not(not A or not B) or A))
+    
+for A in a:
+  for B in b:
+    print((not(not A or not B) and B))
+

@@ -1,0 +1,15 @@
+
+import random
+
+def throw_dice():
+    return random.randint(1, 6)
+
+player1 = throw_dice()
+player2 = throw_dice()
+
+if player1 > player2:
+    print("Player 1 wins with", player1, "points!")
+elif player2 > player1:
+    print("Player 2 wins with", player2, "points!")
+else:
+    print("It's a tie!") 

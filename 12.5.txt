@@ -1,0 +1,9 @@
+def count_characters(string):
+    count = 0
+    for char in string:
+        count += 1
+    return count
+
+club_name = input("Введите название футбольного клуба: ")
+print("Количество символов в названии клуба:", count_characters(club_name))
+

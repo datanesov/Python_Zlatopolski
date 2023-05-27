@@ -1,0 +1,8 @@
+def power_sum(n):
+    if n == 1:
+        return 1
+    else:
+        return n**n + power_sum(n-1)
+
+n = int(input("Введите натуральное число: "))
+print("Сумма ряда:", power_sum(n))

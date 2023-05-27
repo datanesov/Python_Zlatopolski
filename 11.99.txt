@@ -1,0 +1,8 @@
+precipitation = [5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60] # массив осадков
+average_precipitation = sum(precipitation)/len(precipitation) # среднее количество осадков за месяц
+days_with_more_precipitation = [] # список дней с количеством осадков больше среднего
+for day, mm in enumerate(precipitation, 1):
+    if mm > average_precipitation:
+        days_with_more_precipitation.append(day)
+print("Дней с количеством осадков больше среднего за месяц:", len(days_with_more_precipitation))
+print("Это были дни:", ', '.join(map(str, days_with_more_precipitation)))

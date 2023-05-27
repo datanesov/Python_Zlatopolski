@@ -1,0 +1,11 @@
+deposit = 1000
+for i in range(1, 11):
+    increment = deposit * 0.02
+    deposit += increment
+    print(f"Прирост вклада за {i} месяц: {increment:.2f} руб., остаток на счете: {deposit:.2f} руб.")
+print()
+for i in range(3, 13):
+    future_deposit = deposit
+    for j in range(i):
+        future_deposit += future_deposit * 0.02
+    print(f"Сумма вклада через {i} месяцев: {future_deposit:.2f} руб.")

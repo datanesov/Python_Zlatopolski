@@ -1,0 +1,9 @@
+import math
+
+R = 6350  # радиус Земли в км
+
+height = float(input("Введите высоту точки над Землей в км: "))
+
+distance = math.sqrt((2 * R * height) + (height ** 2))  # расстояние до линии горизонта
+
+print(f"Расстояние до линии горизонта: {distance:.2f} км")

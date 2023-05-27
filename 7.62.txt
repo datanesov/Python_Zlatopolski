@@ -1,0 +1,20 @@
+n = int(input("Введите количество чисел: "))
+p = int(input("Введите число p: "))
+k = int(input("Введите число k: "))
+
+count_p = 0
+count_5 = 0
+count_k = 0
+
+for i in range(n):
+    a = int(input("Введите число a: "))
+    if a > p:
+        count_p += 1
+    if a % 10 == 5:
+        count_5 += 1
+    if a % k == 0:
+        count_k += 1
+
+print("Количество чисел, больших p: ", count_p)
+print("Количество чисел, оканчивающих на 5: ", count_5)
+print("Количество чисел, кратных k: ", count_k)

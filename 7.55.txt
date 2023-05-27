@@ -1,0 +1,10 @@
+n = int(input("Введите количество чисел: "))
+a = [int(input("Введите число: ")) for i in range(n)]
+m = int(input("Введите число m: "))
+q = int(input("Введите число q: "))
+sum_a1 = sum([x for x in a if x <= m])
+if sum_a1 > q:
+    print("True")
+else:
+    print("False")
+

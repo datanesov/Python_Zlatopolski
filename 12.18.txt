@@ -1,0 +1,4 @@
+
+word = input("Введите слово: ")
+result = word[2] + word[len(word)-1]
+print(result)

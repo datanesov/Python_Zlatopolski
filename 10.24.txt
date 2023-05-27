@@ -1,0 +1,38 @@
+import random
+
+def generate_random_chess_coordinates():
+    return (random.randint(1, 8), random.randint(1, 8))
+
+def is_rook_threatening(rook_coords, target_coords):
+    if rook_coords[0] == target_coords[0] or rook_coords[1] == target_coords[1]:
+        return True
+    else:
+        return False
+
+def is_bishop_threatening(bishop_coords, target_coords):
+    if abs(bishop_coords[0] - target_coords[0]) == abs(bishop_coords[1] - target_coords[1]):
+        return True
+    else:
+        return False
+
+def is_king_threatening(king_coords, target_coords):
+    if abs(king_coords[0] - target_coords[0]) <= 1 and abs(king_coords[1] - target_coords[1]) <= 1:
+        return True
+    else:
+        return False
+
+def is_queen_threatening(queen_coords, target_coords):
+    if is_rook_threatening(queen_coords, target_coords) or is_bishop_threatening(queen_coords, target_coords):
+        return True
+    else:
+        return False
+
+def generate_valid_coords():
+    while True:
+        a, b, c, d = generate_random_chess_coordinates(), generate_random_chess_coordinates(), generate_random_chess_coordinates(), generate_random_chess_coordinates()
+        if not is_rook_threatening(a, c) and not is_bishop_threatening(a, c) and not is_king_threatening(a, c) and not is_queen_threatening(a, c):
+            return a, b, c, d
+
+a, b, c, d = generate_valid_coords()
+
+print(f"Generated coordinates: {a}, {b}, {c}, {d}")

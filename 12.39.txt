@@ -1,0 +1,4 @@
+word = input("Введите название футбольного клуба: ")
+for letter in word:
+    print(letter)
+

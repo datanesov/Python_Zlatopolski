@@ -1,0 +1,26 @@
+p = int(input("Введите число p: "))
+a = [int(x) for x in input("Введите числа через пробел: ").split()]
+
+last_index = None
+for i in range(len(a)):
+    if a[i] == 10:
+        last_index = i
+
+if last_index is not None:
+    print("Номер последнего числа, равного 10:", last_index)
+else:
+    print("Число 10 не найдено")
+
+p = int(input("Введите число p: "))
+a = [int(x) for x in input("Введите числа через пробел: ").split()]
+
+last_index = None
+for i in range(len(a)-1, -1, -1):
+    if a[i] == 10:
+        last_index = i
+        break
+
+if last_index is not None:
+    print("Номер последнего числа, равного 10:", last_index)
+else:
+    print("Число 10 не найдено")

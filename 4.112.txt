@@ -1,0 +1,14 @@
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+c = int(input("Введите третье число: "))
+
+sum_positive = 0
+
+if a > 0:
+    sum_positive += a
+if b > 0:
+    sum_positive += b
+if c > 0:
+    sum_positive += c
+
+print("Сумма положительных чисел: ", sum_positive)

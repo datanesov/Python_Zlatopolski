@@ -1,0 +1,12 @@
+def check_brackets(s):
+  stack = []
+  for i in s:
+    if i == '(':
+      stack.append(i)
+    elif i == ')':
+      if len(stack) == 0 or stack.pop() != '(':
+        return 'нет'
+  return 'нет, лишняя правая скобка' if '(' in stack else 'да'
+
+s = input("Введите арифметическое выражение: ")
+print(check_brackets(s))

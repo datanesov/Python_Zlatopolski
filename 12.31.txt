@@ -1,0 +1,10 @@
+word = "пробел"
+new_word = ''
+for i in word:
+    if i == 'б':
+        new_word += 'д'
+    elif i == 'е':
+        new_word += 'л'
+    else:
+        new_word += i
+print(new_word)

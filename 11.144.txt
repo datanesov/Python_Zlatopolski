@@ -1,0 +1,12 @@
+
+people_on_floors = [22, 10, 25, 13, 18, 15, 20, 14, 8, 12, 
+                    7, 16, 11, 5, 9]
+
+n = len(people_on_floors)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if(people_on_floors[j] > people_on_floors[j+1]):
+            people_on_floors[j], people_on_floors[j+1] = people_on_floors[j+1], people_on_floors[j]
+
+print("На меньшее всего населенных этажах живут люди:", people_on_floors[0], "и", people_on_floors[1])
+

@@ -1,0 +1,4 @@
+word = "алигортм"
+correct_word = word.replace("т", "").replace("р", "", 1) + "р" + "и"
+print(correct_word)
+

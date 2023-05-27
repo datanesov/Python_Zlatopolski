@@ -1,0 +1,12 @@
+string = input("Введите строку: ")
+substring1 = input("Введите подстроку, которую нужно заменить: ")
+substring2 = input("Введите подстроку, на которую нужно заменить: ")
+newstring = ''
+start = 0
+index = string.find(substring1, start)
+while index != -1:
+    newstring += string[start:index] + substring2
+    start = index + len(substring1)
+    index = string.find(substring1, start)
+newstring += string[start:]
+print("Новая строка:", newstring)

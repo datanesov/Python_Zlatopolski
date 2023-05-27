@@ -1,0 +1,21 @@
+baggage = []
+for i in range(24):
+    num_items = int(input("Введите количество вещей: "))
+    total_weight = float(input("Введите общий вес багажа: "))
+    baggage.append({"num_items": num_items, "total_weight": total_weight})
+
+num_more_than_2 = len([x for x in baggage if x["num_items"] > 2])
+print(f"Количество пассажиров со более чем двумя вещами: {num_more_than_2}")
+
+one_item_less_25 = any(x["num_items"] == 1 and x["total_weight"] < 25 for x in baggage)
+print("Есть ли пассажир со вещью меньше 25 кг и только одной вещью:", one_item_less_25)
+
+avg_num_items = sum(x["num_items"] for x in baggage) / len(baggage)
+num_more_than_avg = len([x for x in baggage if x["num_items"] > avg_num_items])
+print(f"Количество пассажиров с количеством вещей выше среднего: {num_more_than_avg}")
+
+avg_weight_per_item = sum(x["total_weight"] / x["num_items"] for x in baggage) / len(baggage)
+for i, bag in enumerate(baggage):
+    if abs(bag["total_weight"] / bag["num_items"] - avg_weight_per_item) <= 0.5:
+        print(f"Средний вес одной вещи в багаже номер {i}: {bag['total_weight'] / bag['num_items']}")
+        break

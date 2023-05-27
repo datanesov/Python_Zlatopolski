@@ -1,0 +1,14 @@
+import numpy as np
+
+a = int(input("Введите значение a: "))
+b = int(input("Введите значение b: "))
+
+m = np.random.randint(0, 20)
+n = np.random.randint(0, 20)
+
+numbers = np.random.randint(a, b + 1, n)
+floats = np.random.uniform(0, n, m)
+
+print("Случайные натуральные числа m и n:", m, n)
+print("Случайные целые числа в диапазоне от", a, "до", b, ":", numbers)
+print("Случайные вещественные числа неотрицательные и не превосходят n:", floats)

@@ -1,0 +1,4 @@
+angle = float(input("Введите угол поворота часовой стрелки: "))
+hours = int((angle // 30) % 12)
+minutes = int((angle % 30) / 30 * 60)
+print(f"С начала суток прошло {hours} часов {minutes} минут.")

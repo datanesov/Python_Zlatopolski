@@ -1,0 +1,24 @@
+
+numbers = [1.5, 2.0, -3.7, 0.12, 5.9, -2.3, 4.2]
+
+negative_found = False  # флаг, определяющий, найдены ли отрицательные числа
+index_first_negative = 0  # индекс первого отрицательного числа
+index_last_negative = 0  # индекс последнего отрицательного числа
+
+for i in range(len(numbers)):
+    if numbers[i] < 0:
+        negative_found = True
+        index_last_negative = i
+        if not index_first_negative:
+            index_first_negative = i
+
+if negative_found:
+    print("Есть отрицательные числа")
+    print("Первое отрицательное число: ", numbers[index_first_negative])
+    print("Следующие элементы: ", numbers[index_first_negative + 1:])
+    print("Последнее отрицательное число: ", numbers[index_last_negative])
+    print("Элементы перед ним: ", numbers[:index_last_negative])
+else:
+    print("Отрицательных чисел нет")
+
+

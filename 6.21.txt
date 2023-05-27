@@ -1,0 +1,10 @@
+n = int(input("Введите натуральное число больше 9: "))
+count = 0
+while n > 0:
+    count += 1
+    if count == 2:
+        print("Вторая цифра числа {} - {}".format(n, n % 10))
+        break
+    n //= 10
+else:
+    print("{} не содержит второй цифры".format(n))

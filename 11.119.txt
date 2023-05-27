@@ -1,0 +1,7 @@
+scores = [6, 8, 7, 9, 6, 8, 9, 7] # оценки, выставленные судьями
+scores.remove(max(scores)) # удаляем наибольшую оценку
+scores.remove(min(scores)) # удаляем наименьшую оценку
+average_score = sum(scores) / len(scores) # вычисляем среднее арифметическое
+print("Оценка спортсмена:", average_score)
+
+Второй метод решения задачи:

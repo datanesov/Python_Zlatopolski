@@ -1,0 +1,23 @@
+# a)
+arr = [1, 2, 3, 4, 5, 6]
+arr[1], arr[4] = arr[4], arr[1]
+print(arr)
+
+# b)
+arr = [1, 2, 3, 4, 5, 6]
+m, n = 2, 5
+arr[m-1], arr[n-1] = arr[n-1], arr[m-1]
+print(arr)
+
+# c)
+arr = [1, 2, 8, 4, 5, 8]
+max_value = max(arr)
+max_index = arr.index(max_value)
+arr[2], arr[max_index] = arr[max_index], arr[2]
+print(arr)
+# d)
+arr = [1, 2, 3, -4, 5, -4]
+min_value = min(arr)
+min_index = len(arr) - arr[::-1].index(min_value) - 1
+arr[0], arr[min_index] = arr[min_index], arr[0]
+print(arr)

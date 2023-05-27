@@ -1,0 +1,8 @@
+a = float(input("Введите число a: "))
+i = 2
+while True:
+    num = 1 + 1/i
+    if num < a:
+        print("Первое число, меньшее a: ", num)
+        break
+    i += 1

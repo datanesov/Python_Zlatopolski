@@ -1,0 +1,12 @@
+first_sentence = input("Введите первое предложение: ")
+second_sentence = input("Введите второе предложение: ")
+
+first_words = set(first_sentence.split())
+second_words = set(second_sentence.split())
+
+unique_first_words = first_words - second_words
+
+output = [word for word in unique_first_words]
+
+print(output)
+

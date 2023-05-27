@@ -1,0 +1,4 @@
+a = float(input("Введите число a (a ≠ 0): "))
+b = float(input("Введите число b: "))
+x = -b/a
+print("x =", x)

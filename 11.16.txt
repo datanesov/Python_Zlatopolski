@@ -1,0 +1,10 @@
+
+a = int(input("Введите первый член прогрессии: "))
+z = int(input("Введите знаменатель: "))
+
+geometric_progression = []
+for i in range(20):
+    geometric_progression.append(a * (z ** i))
+
+print(geometric_progression)
+

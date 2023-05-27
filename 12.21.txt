@@ -1,0 +1,3 @@
+word = "Программист"
+substring = word[3:7]
+print(substring)

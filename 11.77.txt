@@ -1,0 +1,15 @@
+
+array = [-2, 4, 5, -6, 7, -3, 0, 1, -9, 8]
+
+positive_counter = 0
+negative_counter = 0
+
+for element in array:
+    if element > 0:
+        positive_counter += 1
+    elif element < 0:
+        negative_counter += 1
+
+print("Количество положительных элементов: " + str(positive_counter))
+print("Количество отрицательных элементов: " + str(negative_counter))
+

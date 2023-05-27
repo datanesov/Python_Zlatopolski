@@ -1,0 +1,17 @@
+def count_n(sentence):
+    count = 0
+    for letter in sentence:
+        if letter == 'н':
+            count += 1
+    return count
+
+sentence1 = input("Введите первое предложение: ")
+sentence2 = input("Введите второе предложение: ")
+
+n1 = count_n(sentence1)
+n2 = count_n(sente
+nce2)
+
+print("Количество букв 'н' в первом предложении:", n1)
+print("Количество букв 'н' во втором предложении:", n2)
+print("Общее количество букв 'н':", n1 + n2)

@@ -1,0 +1,39 @@
+
+cars = [
+    {"power": 80, "cost": 45000},
+    {"power": 120, "cost": 60000},
+    {"power": 150, "cost": 75000},
+    {"power": 80, "cost": 50000},
+    {"power": 130, "cost": 65000},
+    {"power": 110, "cost": 57000},
+    {"power": 180, "cost": 90000},
+    {"power": 100, "cost": 53000},
+    {"power": 140, "cost": 68000},
+    {"power": 120, "cost": 62000},
+    {"power": 100, "cost": 50000},
+    {"power": 110, "cost": 55000},
+    {"power": 130, "cost": 66000},
+    {"power": 150, "cost": 79000},
+    {"power": 120, "cost": 61000},
+    {"power": 80, "cost": 42000},
+    {"power": 160, "cost": 85000},
+    {"power": 170, "cost": 92000},
+    {"power": 120, "cost": 62000},
+    {"power": 130, "cost": 64000},
+    {"power": 140, "cost": 70000},
+    {"power": 180, "cost": 95000},
+    {"power": 100, "cost": 55000},
+    {"power": 90, "cost": 47000},
+    {"power": 140, "cost": 70000},
+    {"power": 160, "cost": 80000},
+    {"power": 170, "cost": 89000},
+    {"power": 130, "cost": 63000},
+    {"power": 160, "cost": 81000}
+]
+
+total_cost = 0
+for car in cars:
+    if car["power"] > 100:
+        total_cost += car["cost"]
+
+print(total_cost)

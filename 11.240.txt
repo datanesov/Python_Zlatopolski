@@ -1,0 +1,14 @@
+
+def max_density(masses, volumes):
+    densities = []
+    for i in range(20):
+        densities.append(masses[i] / volumes[i])
+
+    return max(densities)
+
+masses = [30, 40, 10, 25, 15, 35, 20, 5, 50, 45, 18, 23, 32, 27, 12, 38, 42, 8, 16, 28]
+volumes = [25.5, 35.2, 14.3, 30.1, 17.6, 37.8, 22.4, 8.7, 48.9, 41.2, 12.5, 28.9, 33.2, 29.8, 10.9, 39.7, 44.8, 11.6, 19.5, 31.7]
+
+max_density = max_density(masses, volumes)
+
+print("Максимальная плотность материала: ", max_density)

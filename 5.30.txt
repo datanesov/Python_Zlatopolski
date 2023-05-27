@@ -1,0 +1,20 @@
+
+#а) сумма кубов
+sum_cubes = ((40*(40 + 1))/2 - (24*(24 + 1))/2) ** 2
+print(sum_cubes)
+
+#б) сумма квадратов
+a = int(input("Введите значение a: "))
+sum_squares = ((50*(50 + 1))/2 - (a*(a + 1))/2) ** 2
+print(sum_squares)
+
+#в) сумма квадратов
+n = int(input("Введите значение n: "))
+sum_squares = ((n*(n + 1)*(2*n + 1))/6)
+print(sum_squares)
+
+#г) сумма квадратов
+a = int(input("Введите значение a: "))
+b = int(input("Введите значение b: "))
+sum_squares = ((b*(b + 1)*(2*b + 1))/6) - ((a*(a + 1)*(2*a + 1))/6) + a**2
+print(sum_squares)

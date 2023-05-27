@@ -1,0 +1,9 @@
+number = int(input("Введите трехзначное число: "))
+while number > 0:
+    digit = number % 10
+    if digit == 6:
+        print("Цифра 6 входит в число", number)
+        break
+    number //= 10
+else:
+    print("Цифра 6 не входит в число", number)

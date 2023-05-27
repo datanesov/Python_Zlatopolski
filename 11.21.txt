@@ -1,0 +1,10 @@
+import numpy as np
+
+arr = []
+while len(arr) < 20:
+    num = np.random.randint(1, 50)
+    if num not in arr:
+        arr.append(num)
+
+print(arr)
+

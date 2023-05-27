@@ -1,0 +1,4 @@
+text = input('Введите текст:')
+numbers = list(map(int, re.findall('\d+', text)))
+sum_of_numbers = sum(numbers)
+print('Сумма всех чисел:', sum_of_numbers)

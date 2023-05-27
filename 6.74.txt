@@ -1,0 +1,9 @@
+import math
+
+b = int(input("Введите число: "))
+y = math.log(b, 5)
+if y == int(y):
+    print(b, "является степенью числа 5")
+else:
+    print(b, "не является степенью числа 5")
+

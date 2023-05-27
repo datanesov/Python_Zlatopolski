@@ -1,0 +1,15 @@
+
+def celsiusToFahrenheit(celsius):
+    return celsius * 1.8 + 32
+
+def celsiusToKelvin(celsius):
+    return celsius + 273.15
+
+celsius = float(input("Введите значение температуры по Цельсию: "))
+
+fahrenheit = celsiusToFahrenheit(celsius)
+kelvin = celsiusToKelvin(celsius)
+
+print("Температура по Фаренгейту:", fahrenheit)
+print("Температура по Кельвину:", kelvin)
+

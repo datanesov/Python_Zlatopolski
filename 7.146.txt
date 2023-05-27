@@ -1,0 +1,5 @@
+heights = [175, 182, 159, 194, 168, 176, 185]
+max_height = max(heights)
+min_height = min(heights)
+difference = max_height - min_height
+print("Рост самого высокого человека превышает рост самого низкого на", difference, "см")

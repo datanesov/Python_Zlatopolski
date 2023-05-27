@@ -1,0 +1,17 @@
+p = int(input("Введите натуральное число p: "))
+n = int(input("Введите количество чисел c: "))
+c = []
+for i in range(n):
+    c.append(int(input("Введите число c_" + str(i+1) + ": ")))
+m = int(input("Введите число m: "))
+r = int(input("Введите число r: "))
+
+sum_c = 0
+for num in c:
+    if num <= m:
+        sum_c += num
+
+if sum_c % r == 0:
+    print("Сумма чисел, не превышающих m, кратна числу r")
+else:
+    print("Сумма чисел, не превышающих m, не кратна числу r")

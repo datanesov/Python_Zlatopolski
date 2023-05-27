@@ -1,0 +1,16 @@
+x = int(input("Введите число x: "))
+n = int(input("Введите число n: "))
+a_list = []
+for i in range(12):
+    a_list.append(int(input(f"Введите число a{i+1}: ")))
+sum_a = 0
+count_a = 0
+for a in a_list:
+    if a > n:
+        sum_a += a
+        count_a += 1
+if count_a != 0:
+    avg_a = sum_a / count_a
+    print(f"Среднее арифметическое чисел a, больших {n}: {avg_a}")
+else:
+    print(f"Среднее арифметическое чисел a, больших {n}, не может быть вычислено")

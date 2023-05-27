@@ -1,0 +1,36 @@
+grades = [
+    {'name': 'Alice', 'math': 75, 'english': 80, 'physics': 95, 'chemistry': 85},
+    {'name': 'Bob', 'math': 85, 'english': 90, 'physics': 80, 'chemistry': 75},
+    {'name': 'Charlie', 'math': 60, 'english': 75, 'physics': 70, 'chemistry': 80},
+    {'name': 'David', 'math': 95, 'english': 85, 'physics': 75, 'chemistry': 70},
+    {'name': 'Eva', 'math': 80, 'english': 95, 'physics': 85, 'chemistry': 95},
+    {'name': 'Frank', 'math': 70, 'english': 65, 'physics': 80, 'chemistry': 60},
+    {'name': 'Grace', 'math': 90, 'english': 80, 'physics': 75, 'chemistry': 90},
+    {'name': 'Harry', 'math': 75, 'english': 70, 'physics': 85, 'chemistry': 80},
+    {'name': 'Ivy', 'math': 80, 'english': 85, 'physics': 80, 'chemistry': 85},
+    {'name': 'Jack', 'math': 85, 'english': 90, 'physics': 95, 'chemistry': 90},
+    {'name': 'Karen', 'math': 60, 'english': 65, 'physics': 70, 'chemistry': 75},
+    {'name': 'Leo', 'math': 70, 'english': 75, 'physics': 60, 'chemistry': 85},
+    {'name': 'Mary', 'math': 95, 'english': 85, 'physics': 90, 'chemistry': 95},
+    {'name': 'Nathan', 'math': 75, 'english': 70, 'physics': 85, 'chemistry': 80},
+    {'name': 'Olivia', 'math': 80, 'english': 75, 'physics': 60, 'chemistry': 70},
+    {'name': 'Peter', 'math': 90, 'english': 85, 'physics': 80, 'chemistry': 90},
+    {'name': 'Rachel', 'math': 70, 'english': 75, 'physics': 80, 'chemistry': 65},
+    {'name': 'Simon', 'math': 85, 'english': 90, 'physics': 95, 'chemistry': 80},
+    {'name': 'Tom', 'math': 60, 'english': 65, 'physics': 70, 'chemistry': 75},
+    {'name': 'Ursula', 'math': 75, 'english': 80, 'physics': 85, 'chemistry': 90},
+    {'name': 'Violet', 'math': 80, 'english': 90, 'physics': 75, 'chemistry': 80},
+    {'name': 'Wendy', 'math': 95, 'english': 80, 'physics': 70, 'chemistry': 60},
+    {'name': 'Xavier', 'math': 70, 'english': 75, 'physics': 80, 'chemistry': 85},
+]
+
+max_sum = 0
+max_student = None
+
+for student in grades:
+    total = student['math'] + student['english'] + student['physics'] + student['chemistry']
+    if total > max_sum:
+        max_sum = total
+        max_student = student
+        
+print('Фамилия ученика с максимальной суммой оценок:', max_student['name'])

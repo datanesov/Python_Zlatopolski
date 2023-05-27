@@ -1,0 +1,9 @@
+grades = [[5, 4, 3, 5], [3, 4, 5, 5]] #оценки учеников
+sums = [] #сумма оценок каждого ученика
+
+for i in range(len(grades)):
+  sum = sum(grades[i])
+  sums.append(sum)
+
+print("Сумма оценок первого ученика:", sums[0])
+print("Сумма оценок второго ученика:", sums[1])

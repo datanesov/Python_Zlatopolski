@@ -1,0 +1,9 @@
+n = int(input("Введите количество участников: "))
+best_time = None
+best_index = 0
+for i in range(n):
+    time = float(input(f"Введите результат участника {i+1}: "))
+    if best_time is None or time < best_time:
+        best_time = time
+        best_index = i + 1
+print(f"Лучший результат у участника {best_index} со временем {best_time}")

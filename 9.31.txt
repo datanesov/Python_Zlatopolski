@@ -1,0 +1,22 @@
+def is_prime(n):
+    '''Функция для проверки простоты числа'''
+    if n == 1:
+        return False
+    elif n == 2:
+        return True
+    else:
+        for i in range(2, int(n**0.5)+1):
+            if n % i == 0:
+                return False
+        return True
+
+perfect_numbers = []
+for p in range(2, 19):
+    if is_prime(p):
+        mersenne_number = 2**p - 1
+        if is_prime(mersenne_number):
+            perfect_number = 2**(p-1) * mersenne_number
+            if perfect_number < 100000:
+                perfect_numbers.append(perfect_number)
+
+print("Список совершенных чисел в диапазоне до 100000:", perfect_numbers)

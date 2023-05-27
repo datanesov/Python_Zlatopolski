@@ -1,0 +1,8 @@
+numbers = [2, 5, 7, 4, 9, 10, 12, 13, 17]
+
+for i in range(len(numbers)-1):
+    if (numbers[i] % 2 == 1) and (numbers[i+1] % 2 == 1):
+        print(f"Первая пара соседних нечетных чисел: {i} и {i+1}")
+        break
+else:
+    print("В массиве нет соседних нечетных чисел")

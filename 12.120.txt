@@ -1,0 +1,5 @@
+sentence = "This is a sample sentence."
+n1 = 5
+n2 = 10
+new_sentence = sentence[:n1] + sentence[n2+1:]
+print(new_sentence)

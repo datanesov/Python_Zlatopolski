@@ -1,0 +1,7 @@
+n = int(input("Введите количество чисел: "))
+b = []
+for i in range(n):
+    b.append(int(input("Введите число: ")))
+last_index = b.index(max(filter(lambda x: x > 100, b)))
+print("Номер последнего числа, большего 100: ", last_index)
+

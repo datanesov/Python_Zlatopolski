@@ -1,0 +1,16 @@
+def find_last_even_pair(numbers):
+    i = 0
+    while i < len(numbers)-1:
+        if numbers[i] % 2 == 0 and numbers[i+1] % 2 == 0:
+            return i+1
+        i += 1
+    return None
+
+numbers = [1, 5, 6, 8, 2, 10, 4, 7, 9]
+last_even_pair_index = find_last_even_pair(numbers)
+
+if last_even_pair_index is not None:
+    print(numbers[:last_even_pair_index])
+else:
+    print("No even pairs found")
+

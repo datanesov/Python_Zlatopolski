@@ -1,0 +1,15 @@
+p = int(input("Введите p: "))
+def fib(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fib(n-1) + fib(n-2)
+summa = 0
+for i in range(p):
+    summa += fib(i)
+if summa % 2 == 0:
+    print("Сумма первых", p, "членов последовательности Фибоначчи - четное число")
+else:
+    print("Сумма первых", p, "членов последовательности Фибоначчи - нечетное число")

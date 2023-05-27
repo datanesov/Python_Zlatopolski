@@ -1,0 +1,17 @@
+import math
+
+m = int(input('Введите m: '))
+n = int(input('Введите n: '))
+
+# находим НОД
+gcd = math.gcd(m, n)
+
+# проверяем на взаимную простоту
+if gcd != 1:
+    print('Числа не взаимно простые')
+else:
+    # находим все кратные числа
+    i = 1
+    while m*i <= m-n:
+        print(m*i, end=" ")
+        i += 1

@@ -1,0 +1,20 @@
+# a)
+
+deposit = 1000
+for month in range(12):
+    increase = deposit * 0.02
+    if increase > 30:
+        break
+    deposit += increase
+    
+print("Ежемесячное увеличение вклада превысит 30 рублей через", month + 1, "месяцев")
+
+# б)
+
+deposit = 1000
+for month in range(1, 100):
+    deposit += deposit * 0.02
+    if deposit > 1200:
+        break
+    
+print("Размер вклада превысит 1200 рублей через", month, "месяцев")

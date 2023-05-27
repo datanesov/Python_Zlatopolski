@@ -1,0 +1,19 @@
+
+n = int(input("Введите количество спортсменов: "))
+a = []
+for i in range(n):
+    a.append(int(input("Введите результат спортсмена в сотых долях секунды: ")))
+
+best_team = []
+min_sum = float('inf')
+
+for i in range(n-3):
+    for j in range(i+1, n-2):
+        for k in range(j+1, n-1):
+            for m in range(k+1, n):
+                summ = a[i] + a[j] + a[k] + a[m]
+                if summ < min_sum:
+                    best_team = [i, j, k, m]
+                    min_sum = summ
+
+print("Лучшая команда:", best_team[0]+1, best_team[1]+1, best_team[2]+1, best_team[3]+1) 

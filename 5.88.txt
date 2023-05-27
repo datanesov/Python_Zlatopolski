@@ -1,0 +1,10 @@
+s = int(input("Введите значение s: "))
+count = 0
+for num in range(100, 1000):
+    hundreds = num // 100
+    tens = (num // 10) % 10
+    units = num % 10
+    if hundreds + tens + units == s:
+        count += 1
+print("Количество трехзначных чисел с суммой цифр, равной", s, ":", count)
+

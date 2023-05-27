@@ -1,0 +1,51 @@
+import pandas as pd
+
+goals_for = [3, 1, 2, 4, 0, 2, 1, 3, 2, 1, 2, 3, 0, 1, 4, 2, 1, 0, 3, 1]
+goals_against = [0, 2, 1, 1, 2, 0, 3, 0, 2, 1, 1, 0, 1, 2, 1, 0, 3, 2, 1, 0]
+
+results = []
+for i in range(len(goals_for)):
+    if goals_for[i] > goals_against[i]:
+        results.append("Выигрыш")
+    elif goals_for[i] == goals_against[i]:
+        results.append("Ничья")
+    else:
+        results.append("Проигрыш")
+
+data = {"Забито": goals_for, "Пропущено": goals_against, "Результат": results}
+df = pd.DataFrame(data)
+
+# a)
+print(df["Результат"])
+
+# б)
+wins = df.query("Забито > Пропущено")["Результат"].count()
+print("Количество выигрышей:", wins)
+
+# в)
+wins_losses = df["Забито"].gt(df["Пропущено"]).sub(df["Забито"].lt(df["Пропущено"]))
+wins = wins_losses.where(wins_losses > 0, 0).sum()
+losses = wins_losses.where(wins_losses < 0, 0).sum()
+print("Количество выигрышей:", wins)
+print("Количество проигрышей:", losses)
+
+# г)
+df["Выигрышей"] = df["Забито"].gt(df["Пропущено"]).astype(int)
+df["Ничьих"] = df["Забито"].eq(df["Пропущено"]).astype(int)
+df["Проигрышей"] = df["Забито"].lt(df["Пропущено"]).astype(int)
+wins = df["Выигрышей"].sum()
+ties = df["Ничьих"].sum()
+losses = df["Проигрышей"].sum()
+print("Количество выигрышей:", wins)
+print("Количество ничьих:", ties)
+print("Количество проигрышей:", losses)
+
+# д)
+df["Разность мячей"] = df["Забито"].sub(df["Пропущено"]).abs()
+diff_three_or_more = df.query("`Разность мячей` >= 3")["Результат"].count()
+print("Количество игр с разностью забитых и пропущенных мячей >= 3:", diff_three_or_more)
+
+# е)
+df["Очки"] = df.apply(lambda x: 3 if x["Забито"] > x["Пропущено"] else (1 if x["Забито"] == x["Пропущено"] else 0), axis=1)
+points = df["Очки"].sum()
+print("Количество очков:", points)

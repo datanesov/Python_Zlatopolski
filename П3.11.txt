@@ -1,0 +1,24 @@
+# а)
+x = 1
+y = -1
+
+res = x**2 + y**2 <= 4
+
+print(res)
+
+# б)
+x = 1
+y = 2
+
+res = x > 0 or y**2 - 4
+
+print(res)
+
+# в)
+x = 1
+y = 2
+
+res = x > 0 and y**2 != 4
+
+print(res)
+

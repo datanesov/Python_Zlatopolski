@@ -1,0 +1,8 @@
+word = "питон"
+if len(word) % 2 == 0:
+    new_word = word.replace(word[len(word)//2-1:len(word)//2+1], "")
+else:
+    middle_index = len(word)//2
+    new_word = word.replace(word[middle_index], "")
+print(new_word)
+

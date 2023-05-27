@@ -1,0 +1,12 @@
+birth_year = [1995, 1987, 2000, 1976, 1990, 1985, 1968, 1979, 1998, 2003, 
+              1950, 1967, 1945, 1972, 1997, 1980, 2001, 1975, 1983, 1960,
+              1986, 1999, 2005, 1978, 2002, 1992, 1989, 1991, 1969, 1974]
+
+n = len(birth_year)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if(birth_year[j] > birth_year[j+1]):
+            birth_year[j], birth_year[j+1] = birth_year[j+1], birth_year[j]
+
+print("Два самых старших по возрасту человека родились в", birth_year[-1], "и", birth_year[-2], "годах.")
+

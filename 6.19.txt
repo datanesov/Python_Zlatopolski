@@ -1,0 +1,4 @@
+num = input("Введите натуральное число: ")
+digits = list(map(int, num.split()))
+for digit in digits:
+    print(digit)

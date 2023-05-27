@@ -1,0 +1,8 @@
+def print_symbol(symbol, quantity):
+    line = ""
+    for i in range(quantity):
+        line += symbol
+    print(line)
+
+print_symbol("*", 10)
+

@@ -1,0 +1,9 @@
+num = int(input("Введите натуральное число: "))
+digits = [int(d) for d in str(num)]
+reversed_digits = digits[::-1]
+
+if 3 not in digits:
+    print(0)
+else:
+    index = len(digits) - reversed_digits.index(3)
+    print(index)

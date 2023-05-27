@@ -1,0 +1,13 @@
+import math
+
+def is_fibonacci(n):
+    x = 5 * n ** 2
+    if math.sqrt(x - 4) % 1 == 0 or math.sqrt(x + 4) % 1 == 0:
+        return True
+    return False
+
+n = int(input("Введите число: "))
+if is_fibonacci(n):
+    print("Число является членом последовательности Фибоначчи")
+else:
+    print("Число не является членом последовательности Фибоначчи")

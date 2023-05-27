@@ -1,0 +1,21 @@
+def fibonacci_iterative(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        prev = 1
+        curr = 1
+        for i in range(3, n+1):
+            temp = curr
+            curr = prev + curr
+            prev = temp
+        return curr
+
+n = int(input("Введите номер искомого члена последовательности Фибоначчи: "))
+print(f"{n}-й член последовательности Фибоначчи равен {fibonacci_iterative(n)}")
+
+p = int(input("Введите количество членов последовательности Фибоначчи: "))
+fibonacci_sequence = []
+for i in range(1, p+1):
+    fibonacci_sequence.append(fibonacci_iterative(i))
+print(f"Первые {p} членов последовательности Фибоначчи: {fibonacci_sequence}")
+

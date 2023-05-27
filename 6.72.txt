@@ -1,0 +1,21 @@
+class ArithmeticProgression:
+    def __init__(self, first, step):
+        self.first = first
+        self.step = step
+    
+    def __iter__(self):
+        self.current = self.first
+        return self
+    
+    def __next__(self):
+        result = self.current
+        self.current += self.step
+        return result
+
+def check_arithmetic_progression(n, f, s):
+    for i in ArithmeticProgression(f, s):
+        if i == n:
+            return True
+        elif i > n:
+            return False
+    return False

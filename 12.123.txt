@@ -1,0 +1,6 @@
+word = 'слово'
+new_word = ''
+for letter in word:
+    if letter not in new_word:
+        new_word += letter
+print(new_word)

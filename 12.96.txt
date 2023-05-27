@@ -1,0 +1,5 @@
+
+sentence = input("Введите строку: ")
+count = sentence.count("или")
+print("Количество вхождений слова \"или\": ", count)
+

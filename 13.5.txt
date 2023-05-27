@@ -1,0 +1,11 @@
+
+mountains = {
+    'Elbrus': 5642,
+    'Mont Blanc': 4810,
+    'Everest': 8848
+}
+
+for mountain, height in mountains.items():
+    if height > 3000:
+        print(mountain)
+

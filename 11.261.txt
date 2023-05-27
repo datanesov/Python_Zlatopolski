@@ -1,0 +1,31 @@
+words = ["apple", "banana", "cherry", "date", "elderberry"] # пример массива слов
+
+# а)
+average_length = sum(len(word) for word in words) / len(words)
+print("Средняя длина слова: ", average_length)
+
+# б) 
+long_words = len([word for word in words if len(word) > 5])
+print("Количество слов, в которых больше пяти символов: ", long_words)
+
+# в) 
+longest_word = max(words, key=len)
+length_longest_word = len(longest_word)
+print("Количество символов в самом длинном слове: ", length_longest_word)
+
+# г) 
+shortest_word_index = words.index(min(words, key=len))
+print("Номер первого самого короткого слова: ", shortest_word_index)
+
+# д) 
+long_word_length = len(longest_word)
+more_than_long_word = len([word for word in words if len(word) > long_word_length])
+print("Количество символов в слове, больше которого только в самом длинном слове: ", more_than_long_word)
+
+# е)
+k_words = len([word for word in words if word.startswith("k") or word.startswith("K")])
+print("Количество слов, начинающихся на букву «к» или «К»: ", k_words)
+
+sorted_words = sorted(words)
+print("Слова в алфавитном порядке: ", sorted_words)
+

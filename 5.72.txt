@@ -1,0 +1,47 @@
+# а) с использованием цикла:
+
+n = int(input("Введите натуральное число n: "))
+summa = 0
+sin_sum = 0
+for i in range(1, n+1):
+    sin_sum += math.sin(i)
+    summa += 1/sin_sum
+print(summa)
+
+# б) с использованием рекурсии:
+
+def nested_sqrt(n, k):
+    if k == 1:
+        return math.sqrt(2)
+    else:
+        return math.sqrt(2 + nested_sqrt(n, k-1))
+
+n = int(input("Введите количество корней: "))
+summa = nested_sqrt(n, n)
+print(summa)
+
+# в) с использованием списка:
+
+n = int(input("Введите натуральное число n: "))
+cos_list = []
+sin_list = []
+for i in range(1, 2*n+1):
+    if i%2 == 0:
+        cos_list.append(math.cos(i//2))
+    else:
+        sin_list.append(math.sin(i))
+
+summa = 0
+for i in range(n):
+    cos_sum = sum(cos_list[:i+1])
+    sin_sum = sum(sin_list[:2*(i+1)])
+    summa += cos_sum/sin_sum
+print(summa)
+
+# r) с использованием цикла:
+
+n = int(input("Введите натуральное число n: "))
+summa = math.sqrt(3)
+for i in range(2, n+1):
+    summa = math.sqrt(3 + summa)
+print(summa)

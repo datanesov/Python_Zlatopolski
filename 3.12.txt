@@ -1,0 +1,12 @@
+num = int(input("Введите номер квартиры: "))
+
+if num % 20 == 0:
+    floor = num // 20
+    num_order = 20
+else:
+    floor = num // 20 + 1
+    num_order = num % 20
+
+print("Квартира находится на {} этаже".format(floor))
+print("Это {} квартира на этом этаже".format(num_order))
+

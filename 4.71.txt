@@ -1,0 +1,19 @@
+g = 9.8
+a = float(input("Введите угол в градусах: "))
+v0 = float(input("Введите начальную скорость: "))
+R = float(input("Введите расстояние до цели: "))
+H = float(input("Введите высоту цели: "))
+
+a_rad = math.radians(a)
+t = 0
+y = 0
+
+while y >= H:
+    t += 0.1
+    y = v0 * t * math.sin(a_rad) - 0.5 * g * t ** 2
+
+if R - v0 * t * math.cos(a_rad) >= 0:
+    print("Снаряд попадет в цель")
+else:
+    print("Снаряд не попадет в цель")
+

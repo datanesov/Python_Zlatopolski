@@ -1,0 +1,8 @@
+elements = {'медь': 'Cu', 'кислород': 'O', 'углерод': 'C'}
+
+element_name = input("Введите название элемента: ")
+
+if element_name in elements:
+    print("Обозначение элемента:", elements[element_name])
+else:
+    print("Такой элемент не найден")

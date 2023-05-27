@@ -1,0 +1,10 @@
+arr = [2, 5, 1, 0, 8, 1, 4, 3, 1]
+
+min_val = min(arr)  # минимальное значение в массиве
+max_val = max(arr)  # максимальное значение в массиве
+
+min_indexes = [i for i in range(len(arr)) if arr[i] == min_val]  # индексы минимальных элементов
+max_indexes = [i for i in range(len(arr)) if arr[i] == max_val]  # индексы максимальных элементов
+
+print("Минимальные элементы:", min_indexes)
+print("Максимальные элементы:", max_indexes)

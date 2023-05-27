@@ -1,0 +1,7 @@
+birth_years = [1985, 1992, 1982, 2005, 1998, 2003, 1990, 1987]
+
+before_1990 = len([year for year in birth_years if year < 1990])
+after_2000 = len([year for year in birth_years if year > 2000])
+
+print(f"Количество людей, родившихся до 1990 года: {before_1990}")
+print(f"Количество людей, родившихся после 2000 года: {after_2000}")

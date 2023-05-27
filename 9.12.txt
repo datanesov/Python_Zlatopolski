@@ -1,0 +1,34 @@
+def from_input(cls):
+        parallel = int(input("Введите номер параллели: "))
+        klass_A = int(input("Введите количество учеников в классе А: "))
+        klass_B = int(input("Введите количество учеников в классе Б: "))
+        klass_C = int(input("Введите количество учеников в классе В: "))
+        klass_D = int(input("Введите количество учеников в классе Г: "))
+        return cls(parallel, klass_A, klass_B, klass_C, klass_D)
+
+    def __str__(self):
+        return f"Параллель {self.parallel}: класс А - {self.klass_A}, класс Б - {self.klass_B}, класс В - {self.klass_C}, класс Г - {self.klass_D}"
+
+
+school_list = []
+for i in range(11):
+    school_list.append(School.from_input())
+
+# а) сколько учеников учится в самом малочисленном классе школы
+smallest_class_list = [school.smallest_class() for school in school_list]
+smallest_class = min(smallest_class_list)
+print(f"Самый малочисленный класс школы содержит {smallest_class} ученика(ов)")
+
+# б) минимальное значение общего количества учеников, учащихся в классах одной параллели
+total_parallel_list = [school.total_parallel() for school in school_list]
+min_total_parallel = min(total_parallel_list)
+print(f"Минимальное значение общего количества учеников в классах одной параллели: {min_total_parallel}")
+
+# в) минимальное значение общего количества учеников, учащихся в классах А, Б, В и Г
+klass_A_list = [school.klass_A for school in school_list]
+klass_B_list = [school.klass_B for school in school_list]
+klass_C_list = [school.klass_C for school in school_list]
+klass_D_list = [school.klass_D for school in school_list]
+
+min_total_ABCD = min(sum(klass_A_list), sum(klass_B_list), sum(klass_C_list), sum(klass_D_list))
+print(f"Минимальное значение общего количества учеников в классах А, Б, В и Г: {min_total_ABCD}")

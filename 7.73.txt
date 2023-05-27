@@ -1,0 +1,9 @@
+t = int(input("Введите натуральное число t: "))
+x = input("Введите целые числа через пробел: ").split()
+
+t_count = len([xi for xi in x if int(xi) % 3 == 0])
+seven_count = len([xi for xi in x if int(xi) % 7 == 0])
+
+print("Количество чисел, кратных трем: ", t_count)
+print("Количество чисел, кратных семи: ", seven_count)
+

@@ -1,0 +1,8 @@
+num = int(input("Введите число: "))
+digits = str(num)
+for i in range(len(digits)-1):
+    if digits[i] == digits[i+1]:
+        print("Число содержит две одинаковые цифры, стоящие рядом")
+        break
+else:
+    print("Число не содержит двух одинаковых цифр, стоящих рядом")

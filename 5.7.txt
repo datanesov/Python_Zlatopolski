@@ -1,0 +1,6 @@
+# Программа №1 - использование цикла for
+price = 20.4
+for i in range(2, 21):
+    total_price = round(price * i, 2)
+    print(f"{i} шт - {total_price} руб.")
+

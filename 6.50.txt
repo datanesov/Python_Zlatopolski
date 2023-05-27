@@ -1,0 +1,13 @@
+n = int(input("Введите натуральное число: "))
+b = int(input("Введите число b: "))
+
+product_of_digits = 1
+while n > 0:
+    digit = n % 10
+    product_of_digits *= digit
+    n //= 10
+
+if product_of_digits > b:
+    print("Произведение цифр больше b")
+else:
+    print("Произведение цифр не больше b")

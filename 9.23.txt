@@ -1,0 +1,9 @@
+a = int(input("Введите начало промежутка: "))
+b = int(input("Введите конец промежутка: "))
+k = int(input("Введите количество делителей: "))
+
+for num in range(a, b+1):
+    divisors = [i for i in range(1, int(num**0.5)+1) if num % i == 0] # список всех делителей числа
+    divisors += [num//i for i in divisors if i!=1 and num//i!=i] # добавляем все делители второй половины
+    if len(divisors) == k:
+        print(num)

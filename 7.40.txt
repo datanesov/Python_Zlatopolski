@@ -1,0 +1,6 @@
+a = [1, 2, 3, 12, 13, 14]
+summ = 0
+for i in range(len(a)):
+    if a[i] > 10.75:
+        summ += a[i]
+print(summ)

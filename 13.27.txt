@@ -1,0 +1,43 @@
+class Student:
+  def __init__(self, name, math, history, english, biology, chemistry, geography, physics, literature, music, art, physical_education, foreign_language):
+    self.name = name
+    self.math = math
+    self.history = history
+    self.english = english
+    self.biology = biology
+    self.chemistry = chemistry
+    self.geography = geography
+    self.physics = physics
+    self.literature = literature
+    self.music = music
+    self.art = art
+    self.physical_education = physical_education
+    self.foreign_language = foreign_language
+
+students = [
+  Student('student1', 6, 5, 7, 4, 5, 4, 6, 7, 6, 8, 7, 8),
+  Student('student2', 4, 6, 5, 7, 6, 8, 4, 5, 6, 8, 5, 6),
+  Student('student3', 6, 7, 6, 4, 5, 6, 6, 6, 5, 7, 8, 7),
+  Student('student4', 7, 4, 6, 7, 8, 5, 4, 5, 6, 6, 5, 4),
+  Student('student5', 5, 6, 4, 5, 5, 4, 6, 7, 6, 8, 7, 6),
+  Student('student6', 8, 7, 7, 6, 7, 6, 7, 8, 7, 9, 9, 8),
+  Student('student7', 5, 5, 5, 4, 5, 5, 5, 6, 6, 7, 7, 6),
+  Student('student8', 6, 6, 7, 5, 4, 6, 7, 7, 6, 8, 6, 7),
+  Student('student9', 7, 8, 8, 7, 6, 7, 8, 9, 8, 9, 8, 9),
+  Student('student10', 5, 6, 4, 4, 5, 5, 6, 6, 5, 7, 6, 7),
+  Student('student11', 6, 5, 6, 5, 6, 6, 5, 7, 6, 8, 7, 6),
+  Student('student12', 7, 7, 8, 6, 7, 7, 8, 8, 7, 9, 8, 9),
+  Student('student13', 5, 6, 7, 4, 5, 6, 6, 7, 6, 7, 7, 7),
+  Student('student14', 8, 7, 8
+, 7, 8, 7, 9, 9, 8, 9, 9, 9),
+  Student('student15', 4, 5, 6, 5, 4, 6, 5, 6, 5, 8, 6, 7),
+  Student('student16', 6, 7, 5, 6, 7, 6, 7, 8, 7, 8, 9, 8),
+  Student('student17', 7, 8, 8, 7, 6, 7, 8, 9, 8, 9, 8, 9),
+  Student('student18', 4, 5, 6, 5, 4, 7, 5, 5, 6, 7, 5, 6),
+  Student('student19', 5, 6, 4, 4, 5, 6, 6, 6, 5, 7, 5, 7),
+  Student('student20', 6, 5, 6, 5, 6, 6, 5, 7, 6, 8, 7, 6)
+]
+
+avg_grades = {}
+for student in students:
+  avg_grade = (student.math + student.history + student.english + student.biology

@@ -1,0 +1,9 @@
+
+rainfall_data = [5, 10, 0, 7, 3, 0, 2, 0, 0, 4, 6, 8, 0, 1, 0, 9, 2, 0, 3, 4, 5, 6, 0, 1, 0, 0, 4, 5, 2, 0]
+
+zero_days = list(filter(lambda x: x==0, rainfall_data))
+
+if len(zero_days) >= 10:
+    print("Осадков не было 10 дней в месяце")
+else:
+    print("Осадки были в каждый день марта")

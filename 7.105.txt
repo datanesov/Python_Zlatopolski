@@ -1,0 +1,15 @@
+numbers = []
+num = int(input("Enter a number: "))
+while num >= 0:
+    numbers.append(num)
+    num = int(input("Enter a number: "))
+    
+if len(numbers) > 0:
+    first_num = numbers[0]
+    all_equal = all(num == first_num for num in numbers)
+    if all_equal:
+        print("All elements are equal")
+    else:
+        print("Not all elements are equal")
+else:
+    print("Empty sequence")

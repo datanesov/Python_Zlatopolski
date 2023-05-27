@@ -1,0 +1,18 @@
+def calculate_triangle_perimeter(a, b, c):
+    perimeter = a + b + c
+    return perimeter
+
+def calculate_triangle_area(a, b, c):
+    p = calculate_triangle_perimeter(a, b, c) / 2
+    area = (p * (p - a) * (p - b) * (p - c)) ** 0.5
+    return area
+
+def calculate_triangle_properties(a, b, c):
+    perimeter = calculate_triangle_perimeter(a, b, c)
+    area = calculate_triangle_area(a, b, c)
+    return perimeter, area
+
+perimeter1, area1 = calculate_triangle_properties(3, 4, 5)
+perimeter2, area2 = calculate_triangle_properties(6, 8, 10)
+print('Sum of perimeters:', perimeter1 + perimeter2)
+print('Sum of areas:', area1 + area2)

@@ -1,0 +1,10 @@
+def v(i):
+    if i == 1 or i == 2:
+        return 0
+    elif i == 3:
+        return 1.5
+    else:
+        return ((i-1)/(i**2+1))*v(i-2) + v(i-3)
+
+n = int(input("Введите n: "))
+print("v_n =", v(n))

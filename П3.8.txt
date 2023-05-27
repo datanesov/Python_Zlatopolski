@@ -1,0 +1,22 @@
+# a)
+x = False
+y = True
+z = False
+
+res = x and not (z or y) or not z
+
+print(res)
+# б)
+x = False
+y = True
+z = False
+
+res = (not x or not(y or z)) or not z
+# в)
+ = False
+y = True
+z = False
+
+res = (not x and not(y or z)) or not z
+
+print(res)

@@ -1,0 +1,31 @@
+people = [{'height': 164, 'gender': 'F'},
+          {'height': 180, 'gender': 'M'},
+          {'height': 172, 'gender': 'M'},
+          {'height': 167, 'gender': 'F'},
+          {'height': 175, 'gender': 'M'},
+          {'height': 185, 'gender': 'M'},
+          {'height': 170, 'gender': 'F'},
+          {'height': 168, 'gender': 'F'},
+          {'height': 178, 'gender': 'M'},
+          {'height': 182, 'gender': 'M'},
+          {'height': 176, 'gender': 'M'},
+          {'height': 166, 'gender': 'F'},
+          {'height': 183, 'gender': 'M'},
+          {'height': 173, 'gender': 'F'},
+          {'height': 171, 'gender': 'F'},
+          {'height': 179, 'gender': 'M'},
+          {'height': 169, 'gender': 'F'},
+          {'height': 177, 'gender': 'M'},
+          {'height': 181, 'gender': 'M'},
+          {'height': 165, 'gender': 'F'},
+          {'height': 174, 'gender': 'M'},
+          {'height': 187, 'gender': 'M'}]
+
+total_height = 0
+count = 0
+for p in people:
+    if p['gender'] == 'M':
+        total_height += p['height']
+        count += 1
+average_height = total_height / count
+print('Average height of men:', average_height)

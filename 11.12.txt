@@ -1,0 +1,4 @@
+arr = [0] * 20
+for i in range(20):
+    arr[i] = 20-i
+print(arr)

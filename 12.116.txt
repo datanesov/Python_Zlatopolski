@@ -1,0 +1,8 @@
+word = "глинянный"
+correct_word = ""
+for i in range(len(word)):
+    if word[i] == "н" and i != len(word)-1:
+        correct_word += word[i+1]
+    elif i != len(word)-1:
+        correct_word += word[i]
+print(correct_word)

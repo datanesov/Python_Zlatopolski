@@ -1,0 +1,15 @@
+
+array = [10, -4, 12, 56, -4, -89]
+sign = 0
+count = 0
+for i in array:
+    if i == 0:
+        continue
+    if i < 0:
+        s = -1
+    else:
+        s = 1
+    if s != sign and sign != 0:
+        count += 1
+    sign = s
+print(count)

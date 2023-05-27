@@ -1,0 +1,27 @@
+def matrix_fence(a, b):
+    fence_length = 0  # переменная для хранения длины ограждения
+    matrix = [['.' for i in range(b)] for j in range(a)]  # создаем матрицу лужайки
+    count = min(a, b) // 2  # количество квадратов внутри лужайки
+    for i in range(count):
+        # верхняя линия квадрата
+        for j in range(i, b - i - 1):
+            matrix[i][j] = 'x'
+            fence_length += 1
+        # правая линия квадрата
+        for j in range(i, a - i - 1):
+            matrix[j][b - i - 1] = 'x'
+            fence_length += 1
+        # нижняя линия квадрата
+        for j in range(b - i - 1, i, -1):
+            matrix[a - i - 1][j] = 'x'
+            fence_length += 1
+        # левая линия квадрата
+        for j in range(a - i - 1, i, -1):
+            matrix[j][i] = 'x'
+            fence_length += 1
+    # выводим матрицу лужайки
+    for i in range(a):
+        for j in range(b):
+            print(matrix[i][j], end=' ')
+        print()
+    return fence_length

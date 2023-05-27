@@ -1,0 +1,6 @@
+arr = [1, 2, 3, 4, 4, 5, 6, 7, 8]
+
+for i in range(len(arr) - 1):
+  if arr[i] == arr[i+1]:
+    print(f"Пара найдена: {arr[i]} и {arr[i+1]} на позициях {i} и {i+1}")
+    break

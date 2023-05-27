@@ -1,0 +1,17 @@
+classes = [30, 25, 20, 23, 29, 28, 31, 18, 27, 24, 26, 21, 22, 19, 17, 32, 33, 34, 35, 36]
+
+max_class_size = 0
+
+min_class_size = classes[0]
+
+for class_size in classes:
+    if class_size > max_class_size:
+        max_class_size = class_size
+    if class_size < min_class_size:
+        min_class_size = class_size
+        
+diff = max_class_size - min_class_size
+
+print("Самый большой класс имеет", max_class_size, "учеников")
+print("Самый маленький класс имеет", min_class_size, "учеников")
+print("Разница между ними составляет", diff, "учеников")

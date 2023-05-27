@@ -1,0 +1,12 @@
+
+a = float(input("Введите число: "))
+left = 1
+right = 1/a
+while left <= right:
+    middle = (left + right)/2
+    if 1/middle < a:
+        right = middle - 0.0000001 # для уменьшения шага
+    else:
+        left = middle + 0.0000001 # для уменьшения шага
+print("Первое число, меньшее введенного: ", 1/middle)
+

@@ -1,0 +1,21 @@
+
+from functools import cmp_to_key
+
+def compare(x, y):
+    if len(x) > len(y):
+        return 1
+    elif len(x) < len(y):
+        return -1
+    else:
+        return 0
+
+surname1 = input("Введите первую фамилию: ")
+surname2 = input("Введите вторую фамилию: ")
+
+result = cmp_to_key(compare)(surname1, surname2)
+if result == 1:
+    print("Первая фамилия длиннее")
+elif result == -1:
+    print("Вторая фамилия длиннее")
+else:
+    print("Фамилии равной длины")

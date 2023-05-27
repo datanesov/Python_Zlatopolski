@@ -1,0 +1,18 @@
+def search_seven(numbers):
+    for i in range(len(numbers)):
+        if numbers[i] % 7 == 0:
+            return i+1
+    return None
+
+numbers = []
+number = int(input('Введите число: '))
+while number != -1:
+    numbers.append(number)
+    number = int(input('Введите число: '))
+    
+result = search_seven(numbers)
+if result is not None:
+    print('Первое число, кратное 7, находится на позиции', result)
+else:
+    print('Чисел, кратных 7, в последовательности нет')
+    

@@ -1,0 +1,6 @@
+base1 = float(input("Введите длину основания 1: "))
+base2 = float(input("Введите длину основания 2: "))
+height = float(input("Введите высоту трапеции: "))
+
+perimeter = base1 + base2 + 2 * (height ** 2 + (base1 - base2) ** 2) ** 0.5
+print("Периметр равнобедренной трапеции равен:", perimeter)

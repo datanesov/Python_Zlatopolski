@@ -1,0 +1,9 @@
+nums = [3.5, 21, 9.6, 15, 7.2, 11.3, 18, 10.5, 12.7, 8, 6, 14.9, 16.4, 9, 13]
+
+filtered_nums = list(filter(lambda x: x > 10, nums))
+
+if len(filtered_nums) > 0:  # проверка наличия чисел, больших 10
+    avg = sum(filtered_nums) / len(filtered_nums)
+    print("Среднее арифметическое чисел, больших 10:", avg)
+else:
+    print("Чисел, больших 10, нет в списке")

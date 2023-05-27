@@ -1,0 +1,23 @@
+array = [1,2,3,5,7,8,9,10,11,12,13,15,16,17,18,19,20,21,23,25]
+odd_segments = []
+current_segment = []
+
+for num in array:
+    if num % 2 == 1:
+        current_segment.append(num)
+    else:
+        if current_segment:
+            odd_segments.append(current_segment)
+            current_segment = []
+
+if current_segment:
+    odd_segments.append(current_segment)
+
+max_length = 0
+
+for segment in odd_segments:
+    if len(segment) > max_length:
+        max_length = len(segment)
+
+print(max_length)
+

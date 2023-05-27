@@ -1,0 +1,9 @@
+studentsPerClass = [20, 25, 18, 21, 30, 27, 23, 19, 22, 24, 28]
+
+# используем генератор списков для выбора нечетных классов
+oddClasses = [studentsPerClass[i] for i in range(len(studentsPerClass)) if i % 2 == 0]
+
+# общее количество учеников в нечетных классах
+totalStudents = sum(oddClasses)
+
+print("Общее количество учеников в нечетных классах: ", totalStudents)

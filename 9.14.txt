@@ -1,0 +1,45 @@
+def get_total_income(income):
+  return [sum(income[i]) for i in range(3)]
+
+def get_max_income(total_income):
+  return max(total_income)
+
+def get_max_index(total_income):
+  return total_income.index(get_max_income(total_income))+1
+
+income = [[0]*10 for _ in range(3)]
+for i in range(3):
+  print("Введите доходы магазина", i+1)
+  for j in range(10):
+    income[i][j] = float(input("День "+str(j+1)+": "))
+
+total_income = get_total_income(income)
+max_income = get_max_income(total_income)
+max_index = get_max_index(total_income)
+
+print("Магазин", max_index, "получил максимальный общий доход за 10 дней")
+
+def get_daily_income(income):
+  return [sum(income[i][j] for i in range(3)) for j in range(10)]
+
+def get_max_daily_income(daily_income):
+  return max(daily_income)
+
+def get_max_daily_index(daily_income):
+  return daily_income.index(get_max_daily_income(daily_income))+1
+
+daily_income = get_daily_income(income)
+max_daily_income = get_max_daily_income(daily_income)
+max_daily_index = get_max_daily_index(daily_income)
+
+print("Фирма получила максимальный общий доход", max_daily_income, "в", max_daily_index, "день")
+
+def get_max_daily_income_by_shop(income):
+  return [max(income[i]) for i in range(3)]
+
+max_daily_income_by_shop = get_max_daily_income_by_shop(income)
+max_shop_income = get_max_income(max_daily_income_by_shop)
+max_shop_index = get_max_index(max_daily_income_by_shop)
+
+print("Магазин", max_shop_index, "получил максимальный доход", max_shop_income, "за день")
+

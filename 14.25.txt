@@ -1,0 +1,16 @@
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+result = (2 * factorial(5) + 3 * factorial(8)) / (factorial(6) + factorial(4))
+print("Value of the expression:", result)
+
+Программа 2:
+
+from math import factorial
+
+result = (2 * factorial(5) + 3 * factorial(8)) / (factorial(6) + factorial(4))
+print("Value of the expression:", result)

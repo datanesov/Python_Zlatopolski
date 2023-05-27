@@ -1,0 +1,4 @@
+sentence = input("Введите предложение: ")
+first_word = sentence.split()[0]
+o_count = first_word.count("o")
+print("Количество букв о в первом слове:", o_count)

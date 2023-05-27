@@ -1,0 +1,18 @@
+people_mass = [float(input(f"Введите массу {i+1}-го человека: ")) for i in range(int(input("Введите количество людей: ")))]
+
+full_mass = sum(mass for mass in people_mass if mass > 100)
+full_count = sum(1 for mass in people_mass if mass > 100)
+if full_count > 0:
+    full_average = full_mass / full_count
+    print(f"Средняя масса полных людей: {full_average:.2f} кг")
+else:
+    print("Нет полных людей")
+
+other_mass = sum(mass for mass in people_mass if mass <= 100)
+other_count = sum(1 for mass in people_mass if mass <= 100)
+if other_count > 0:
+    other_average = other_mass / other_count
+    print(f"Средняя масса остальных людей: {other_average:.2f} кг")
+else:
+    print("Все люди полные")
+

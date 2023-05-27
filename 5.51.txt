@@ -1,0 +1,37 @@
+# а)
+
+```python
+def calculate_yieldings(start_yielding=20, years=7):
+    yielding = start_yielding
+    for i in range(1, years):
+        yielding *= 1.02
+        yield yielding
+
+for i, y in enumerate(calculate_yieldings(), start=2):
+    print(f"Урожайность за {i} год: {y:.2f} ц/га")
+```
+
+# б)
+
+```python
+def calculate_areas(start_area=100, years=8):
+    area = start_area
+    for i in range(1, years):
+        area *= 1.05
+        yield area
+
+for i, a in enumerate(calculate_areas(start_area=100*1.05**3), start=4):
+    print(f"Площадь участка за {i} год: {a:.2f} га")
+```
+
+# в)
+
+```python
+def calculate_yieldings(start_yielding=20, years=7):
+    yielding = start_yielding
+    for i in range(1, years):
+        yielding *= 1.02
+        yield yielding
+
+total_yielding = sum([100*y for y in calculate_yieldings(years=6)])
+print(f"Урожай за первые 6 лет: {total_yielding:.2f} ц")

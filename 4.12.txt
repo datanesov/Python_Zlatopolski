@@ -1,0 +1,14 @@
+import math
+
+r = float(input("Введите радиус круга: "))
+a = float(input("Введите длину стороны квадрата: "))
+
+s_circle = math.pi * r ** 2
+s_square = a ** 2
+
+if s_circle > s_square:
+    print("Площадь круга больше")
+elif s_circle < s_square:
+    print("Площадь квадрата больше")
+else:
+    print("Площади равны")

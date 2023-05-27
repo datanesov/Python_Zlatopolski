@@ -1,0 +1,14 @@
+scores = [5, 6, 7, 8, 9, 10, 8, 7, 9, 8, 7, 10, 9, 8, 7, 9, 10, 8]
+obligatory_scores = scores[:6]
+free_scores = scores[6:]
+
+obligatory_max = max(obligatory_scores)
+free_max = max(free_scores)
+if obligatory_max > free_max:
+    print("Спортсмен показал лучший результат по обязательной программе.")
+elif obligatory_max < free_max:
+    print("Спортсмен показал лучший результат по произвольной программе.")
+else:
+    print("Спортсмен показал одинаковый результат по обоим программам.")
+
+

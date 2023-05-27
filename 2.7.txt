@@ -1,0 +1,7 @@
+
+edge = float(input("Введите длину ребра куба: "))
+volume = edge ** 3
+surface_area = 6 * (edge ** 2)
+print("Объем куба:", volume)
+print("Площадь боковой поверхности:", surface_area)
+

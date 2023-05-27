@@ -1,0 +1,13 @@
+monitor_cost = 1000
+system_block_cost = 5000
+keyboard_cost = 500
+mouse_cost = 200
+
+# расчет стоимости 3 компьютеров
+total_cost_3 = 3 * (monitor_cost + system_block_cost + keyboard_cost + mouse_cost)
+print("Стоимость трех компьютеров: ", total_cost_3)
+
+# расчет стоимости N компьютеров
+n = int(input("Введите количество компьютеров: "))
+total_cost_n = n * (monitor_cost + system_block_cost + keyboard_cost + mouse_cost)
+print("Стоимость", n, "компьютеров: ", total_cost_n)

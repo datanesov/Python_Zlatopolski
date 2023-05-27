@@ -1,0 +1,4 @@
+sentence = input("Введите предложение: ")
+new_sentence = sentence.replace("бит", "рог")
+print(new_sentence)
+

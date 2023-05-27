@@ -1,0 +1,2 @@
+new_string = '*'*5
+print(new_string)

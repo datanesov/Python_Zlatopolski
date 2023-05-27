@@ -1,0 +1,10 @@
+
+arr = [2, 4, 6, 8, 10]
+num1 = 1
+num2 = 3
+
+if num1 >= len(arr) or num2 >= len(arr):
+    print("Неверный индекс элемента в массиве")
+else:
+    avg = (arr[num1] + arr[num2]) / 2
+    print(f"Среднее арифметическое элементов {arr[num1]} и {arr[num2]} равно {avg}")

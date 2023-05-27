@@ -1,0 +1,19 @@
+employees = [
+    {
+        "surname": input("Введите фамилию: "),
+        "age": int(input("Введите возраст: ")),
+        "status": input("Является ли военнообязанным? (да/нет): ")
+    }
+    for i in range(16)
+]
+
+military_employees = [e for e in employees if e['status'].lower() == "да"]
+not_military_employees = [e for e in employees if e['status'].lower() == "нет"]
+
+youngest = min(military_employees, key=lambda x: x['age'])
+print("Самый младший военнообязанный:", youngest['surname'])
+
+oldest_military = max(military_employees, key=lambda x: x['age'])
+oldest_not_military = max(not_military_employees, key=lambda x: x['age'])
+print("Самый старший военнообязанный:", oldest_military['surname'])
+print("Самый старший невоеннообязанный:", oldest_not_military['surname'])

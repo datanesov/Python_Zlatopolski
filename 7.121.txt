@@ -1,0 +1,10 @@
+k = int(input("Введите количество чисел: "))
+nums = []
+for i in range(k):
+    num = int(input(f"Введите число b{i + 1}: "))
+    nums.append(num)
+
+for i in range(k - 1, -1, -1):
+    if nums[i] < 0:
+        print(f"Номер последнего отрицательного числа: {i + 1}")
+        break

@@ -1,0 +1,6 @@
+
+lst = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+k = 5
+n = lst.pop()
+lst = lst[:k] + [n] + lst[k:]
+print(lst)

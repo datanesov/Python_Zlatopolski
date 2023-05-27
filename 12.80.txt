@@ -1,0 +1,12 @@
+full_path = input("Введите полное имя файла: ")
+parts = []
+current_part = ""
+for char in full_path:
+   if char == "\\":
+      parts.append(current_part)
+      current_part = ""
+   else:
+      current_part += char
+parts.append(current_part)
+for part in parts:
+   print(part)

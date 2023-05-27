@@ -1,0 +1,69 @@
+# a)
+
+num = int(input("Введите число: "))
+sum = 0
+while num > 0:
+    digit = num % 10
+    sum += digit
+    num //= 10
+if sum > 10:
+    print("Cумма цифр больше 10")
+else:
+    print("Cумма цифр меньше или равна 10")
+
+# б)
+
+num = int(input("Введите число: "))
+prod = 1
+while num > 0:
+    digit = num % 10
+    prod *= digit
+    num //= 10
+if prod < 50:
+    print("Произведение цифр меньше 50")
+else:
+    print("Произведение цифр больше или равно 50")
+
+# в)
+
+num = int(input("Введите число: "))
+count = 0
+while num > 0:
+    digit = num % 10
+    count += 1
+    num //= 10
+if count % 2 == 0:
+    print("Количество цифр четное число")
+else:
+    print("Количество цифр нечетное число")
+# г)
+num = int(input("Введите число: "))
+if num >= 1000 and num <= 9999:
+    print("Это четырехзначное число")
+else:
+    print("Это не четырехзначное число")
+# д)
+num = int(input("Введите число: "))
+first = num // 1000
+if first <= 6:
+    print("Первая цифра не превышает 6")
+else:
+    print("Первая цифра больше 6")
+# е)
+num = int(input("Введите число: "))
+first = num // 1000
+last = num % 10
+if first == last:
+    print("Число начинается и заканчивается одной и той же цифрой")
+else:
+    print("Число не начинается и не заканчивается одной и той же цифрой")
+# ж)
+num = int(input("Введите число: "))
+first = num // 1000
+last = num % 10
+if first > last:
+    print("Первая цифра больше последней")
+elif first < last:
+    print("Последняя цифра больше первой")
+else:
+    print("Первая и последняя цифры равны")

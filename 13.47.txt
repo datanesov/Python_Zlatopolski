@@ -1,0 +1,13 @@
+def add_team(scores):
+    scores.append(0)
+    scores.sort(reverse=True)
+    return scores
+
+scores = [50, 44, 39, 36, 32, 28, 25, 22, 20, 18, 16, 15, 13, 12, 10, 9, 8, 5, 3, 2, 1]
+
+new_list = add_team(scores)
+
+# выводим новый список мест
+for i in range(len(new_list)):
+    print(f"Место {i+1}: {new_list[i]} очков")
+

@@ -1,0 +1,12 @@
+
+sentence = input("Введите предложение: ")
+if "," in sentence:
+  count = sentence.index(",")
+  count_n = 0
+  for letter in sentence[:count]:
+    if letter == "н":
+      count_n += 1
+  print("Количество букв н, предшествующих первой запятой: ", count_n)
+else:
+  print("Запятых в предложении нет")
+

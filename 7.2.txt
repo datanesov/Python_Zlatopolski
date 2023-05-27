@@ -1,0 +1,9 @@
+p = int(input("Введите натуральное число p: "))
+a = [float(input("Введите вещественное число a: ")) for _ in range(10)]
+
+sum_a = 0
+for i in a:
+    if isinstance(i, float):
+        sum_a += i
+
+print("Сумма всех вещественных чисел: ", sum_a)

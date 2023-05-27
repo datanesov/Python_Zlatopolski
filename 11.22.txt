@@ -1,0 +1,7 @@
+arr = [-5, 10, 3, 200, 0, 50, -1, 100]
+print("а) Неотрицательные элементы массива:")
+pos_arr = [i for i in arr if i >= 0]
+print(*pos_arr)
+print("б) Элементы массива, не превышающие число 100:")
+lt_hndrd_arr = [i for i in arr if i <= 100]
+print(*lt_hndrd_arr)

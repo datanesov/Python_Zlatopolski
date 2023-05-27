@@ -1,0 +1,7 @@
+text = input('Введите текст:')
+digits = [int(char) for char in text if char.isdigit()]
+sum_of_digits = sum(digits)
+max_digit = max(digits)
+print('Сумма цифр:', sum_of_digits)
+print('Максимальная цифра:', max_digit)
+

@@ -1,0 +1,3 @@
+word = "курсор"
+w = word[0] + word[5] + word[2] + word[3] + word[4] + word[1]
+print(w)

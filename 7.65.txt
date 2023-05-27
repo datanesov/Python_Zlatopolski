@@ -1,0 +1,14 @@
+teams = {
+    'Team 1': {'wins': 5, 'losses': 3},
+    'Team 2': {'wins': 4, 'losses': 4},
+    'Team 3': {'wins': 6, 'losses': 2},
+    'Team 4': {'wins': 3, 'losses': 5},
+    'Team 5': {'wins': 7, 'losses': 1}
+}
+
+count = 0
+for team in teams.keys():
+    if teams[team]['wins'] > teams[team]['losses']:
+        count += 1
+
+print('Количество команд с большим количеством выигрышей:', count)

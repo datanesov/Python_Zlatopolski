@@ -1,0 +1,12 @@
+grades = [4, 5, 3, 4, 5, 4, 5, 4, 2, 4, 5, 4]
+has_three = False
+
+for grade in grades:
+    if grade == 3:
+        has_three = True
+        break
+
+if has_three:
+    print("Среди оценок есть тройка")
+else:
+    print("В оценках нет троек")

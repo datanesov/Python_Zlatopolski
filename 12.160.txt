@@ -1,0 +1,5 @@
+text = input('Введите текст:')
+numbers = list(map(int, re.findall('\d+', text)))
+max_number = max(numbers, default=0)
+print('Максимальное число:', max_number)
+

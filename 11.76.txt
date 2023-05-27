@@ -1,0 +1,13 @@
+grades = [4, 5, 3, 4, 5, 2, 5, 4, 4, 3]
+count_four = 0
+count_five = 0
+
+for grade in grades:
+    if grade == 4:
+        count_four += 1
+    elif grade == 5:
+        count_five += 1
+
+print("Количество четверок:", count_four)
+print("Количество пятерок:", count_five)
+

@@ -1,0 +1,7 @@
+import itertools
+numbers = [1, 3, 5, 2, 4, 7, 6, 9, 11, 13]
+sum = 0
+for x in itertools.takewhile(lambda x: x%2 != 0, numbers):
+   sum += x
+print(sum)
+

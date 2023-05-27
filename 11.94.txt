@@ -1,0 +1,24 @@
+
+boys_height = []
+girls_height = []
+
+# Ввод данных о росте учеников
+while True:
+    height = input("Введите рост ученика (для окончания введите 'q'): ")
+    if height == 'q':
+        break
+    height = int(height)
+    if height < 0:
+        boys_height.append(height)
+    else:
+        girls_height.append(height)
+
+# Вычисление среднего роста мальчиков и девочек
+avg_boys_height = sum(boys_height) / len(boys_height)
+avg_girls_height = sum(girls_height) / len(girls_height)
+
+# Проверка условия
+if avg_boys_height - avg_girls_height > 10:
+    print("Средний рост мальчиков превышает средний рост девочек более чем на 10 см")
+else:
+    print("Средний рост мальчиков не превышает средний рост девочек более чем на 10 см")

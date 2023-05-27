@@ -1,0 +1,10 @@
+
+cars = {
+    'Audi': 220,
+    'BMW': 250,
+    'Mercedes': 280
+}
+
+for car, speed in cars.items():
+    if speed > 180:
+        print(car)

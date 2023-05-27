@@ -1,0 +1,13 @@
+number = int(input("Введите натуральное число: "))
+position = 0
+while number != 0:
+    digit = number % 10 # нашли последнюю цифру числа
+    position += 1 # увеличили счетчик позиции
+    if digit == 8:
+        result = position # запомнили позицию 
+    number //= 10 # убрали последнюю цифру числа
+if position == 0:
+    print(0)
+else:
+    print(result)
+

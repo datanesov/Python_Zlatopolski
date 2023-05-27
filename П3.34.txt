@@ -1,0 +1,32 @@
+#a) 
+def is_rook_threatening(a, b, c, d):
+    if a == c or b == d:
+        return True
+    return False
+
+# б)
+
+def is_bishop_threatening(a, b, c, d):
+    if abs(a - c) == abs(b - d):
+        return True
+    return False
+```
+
+# в)
+def is_king_threatening(a, b, c, d):
+    if abs(a - c) <= 1 and abs(b - d) <= 1:
+        return True
+    return False
+```
+
+# г) 
+def is_queen_threatening(a, b, c, d):
+    if is_rook_threatening(a, b, c, d) or is_bishop_threatening(a, b, c, d):
+        return True
+    return False
+
+# ж)
+def is_knight_threatening(a, b, c, d):
+    if (abs(a - c) == 2 and abs(b - d) == 1) or (abs(a - c) == 1 and abs(b - d) == 2):
+        return True
+    return False

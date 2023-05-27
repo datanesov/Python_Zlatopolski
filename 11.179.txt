@@ -1,0 +1,10 @@
+arr = [11.523, 12.543, 10.989, 14.342, 15.867, 13.342, 16.897, 17.567, 18.231, 20.987, 19.876, 21.345, 22.345, 23.654, 25.543, 24.453, 26.890, 28.234, 30.567, 27.543, 31.897, 32.986, 29.345, 34.564, 33.345, 35.432]
+
+for i in range(len(arr)):
+    min_index = i
+    for j in range(i+1, len(arr)):
+        if arr[j] < arr[min_index]:
+            min_index = j
+    arr[i], arr[min_index] = arr[min_index], arr[i]
+
+print(arr)

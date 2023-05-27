@@ -1,0 +1,15 @@
+
+cities = ["Москва", "Санкт-Петербург", "Екатеринбург"]
+
+longest_city = ""
+shortest_city = cities[0]
+
+for city in cities:
+    if len(city) > len(longest_city):
+        longest_city = city
+    if len(city) < len(shortest_city):
+        shortest_city = city
+
+print("Самый длинный город:", longest_city)
+print("Самый короткий город:", shortest_city)
+

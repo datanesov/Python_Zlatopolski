@@ -1,0 +1,17 @@
+# Функция для проверки, является ли слово палиндромом
+def is_palindrome(word):
+    for i in range(len(word) // 2):
+        if word[i] != word[len(word)-1-i]:
+            return False
+    return True
+
+# Исходные слова
+word1 = "абба"
+word2 = "мадам"
+word3 = "python"
+
+# Проверяем каждое слово на палиндромичность
+if is_palindrome(word1) or is_palindrome(word2) or is_palindrome(word3):
+    print("Хотя бы одно слово является палиндромом")
+else:
+    print("Ни одно слово не является палиндромом")

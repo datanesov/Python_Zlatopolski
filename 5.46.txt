@@ -1,0 +1,29 @@
+# а)
+
+def kth_fraction(k):
+    if k < 1:
+        return None
+    if k == 1:
+        return [1, 1]
+    if k == 2:
+        return [2, 1]
+    fractions = [[1, 1], [2, 1]]
+    for i in range(2, k):
+        prev1 = fractions[i-1]
+        prev2 = fractions[i-2]
+        fractions.append([prev1[0] + prev2[0], prev1[1] + prev2[1]])
+    return fractions[k-1]
+
+# б)
+
+def n_fractions(n):
+    if n == 1:
+        return [[1,1]]
+    if n == 2:
+        return [[1,1], [2,1]]
+    fractions = [[1, 1], [2, 1]]
+    for i in range(2, n):
+        prev1 = fractions[i-1]
+        prev2 = fractions[i-2]
+        fractions.append([prev1[0] + prev2[0], prev1[1] + prev2[1]])
+    return fractions

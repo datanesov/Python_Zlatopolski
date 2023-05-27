@@ -1,0 +1,4 @@
+length = 543 # длина прямоугольника
+square_side = 130 # сторона квадрата
+number_of_squares = length // square_side # количество квадратов
+print("Количество квадратов:", number_of_squares)

@@ -1,0 +1,18 @@
+n = int(input("Введите n: "))
+m = int(input("Введите m: "))
+
+def gcd(a, b): # функция нахождения НОД
+    if a == 0:
+        return b
+    return gcd(b % a, a)
+
+phi = [i for i in range(n)] # инициализируем массив значений функции Эйлера
+
+for p in range(2, n):
+    if phi[p] == p:
+        for i in range(p, n, p):
+            phi[i] = phi[i] // p * (p - 1) # находим значение функции Эйлера для текущего числа
+
+for i in range(2, n):
+    if gcd(i, m) == 1 and phi[i] == i: # проверяем, является ли число взаимно простым с m и является ли оно простым
+        print(i)

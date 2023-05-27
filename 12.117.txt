@@ -1,0 +1,7 @@
+
+word = "коровка"
+new_word = ''
+for i, letter in enumerate(word):
+    if i != 2:
+        new_word += letter
+print(new_word)

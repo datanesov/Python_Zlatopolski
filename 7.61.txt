@@ -1,0 +1,4 @@
+heights = [170, 175, 160, 150, 168, 172, 180, 162, 169, 166, 163, 178]
+less_than_165 = list(filter(lambda h: h < 165, heights))
+print(len(less_than_165))
+

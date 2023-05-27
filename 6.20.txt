@@ -1,0 +1,27 @@
+
+number = input("Введите число: ")
+sum_digits = 0
+mult_digits = 1
+squares_sum = 0
+cubes_sum = 0
+
+for digit in number:
+    sum_digits += int(digit)
+    mult_digits *= int(digit)
+    squares_sum += int(digit)**2
+    cubes_sum += int(digit)**3
+
+num_digits = len(number)
+avg_digits = sum_digits/num_digits
+first_digit = int(number[0])
+last_digit = int(number[-1])
+sum_first_last = first_digit + last_digit
+
+print("Сумма цифр:", sum_digits)
+print("Количество цифр:", num_digits)
+print("Произведение цифр:", mult_digits)
+print("Среднее арифметическое цифр:", avg_digits)
+print("Сумма квадратов цифр:", squares_sum)
+print("Сумма кубов цифр:", cubes_sum)
+print("Первая цифра:", first_digit)
+print("Сумма первой и последней цифр:", sum_first_last)

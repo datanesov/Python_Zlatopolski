@@ -1,0 +1,14 @@
+flat_people = {'Flat 1': 5, 'Flat 2': 2, 'Flat 3': 8, 'Flat 4': 6}
+
+max_people = 0
+max_flat = ''
+
+for flat, people in flat_people.items():
+    if people > max_people:
+        max_people = people
+        max_flat = flat
+    elif people == max_people:
+        if flat > max_flat:
+            max_flat = flat
+
+print(f"The flat with the most people is {max_flat} with {max_people} people.")

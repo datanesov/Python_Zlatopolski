@@ -1,0 +1,9 @@
+cities = {
+    'Rome': 'Italy',
+    'Milan': 'Italy',
+    'Berlin': 'Germany'
+}
+
+for city, country in cities.items():
+    if country == 'Italy':
+        print(city)

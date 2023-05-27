@@ -1,0 +1,5 @@
+rainfall = [5, 10, 3, 8, 15, 9, 4, 10, 7, 13, 6, 12, 11, 7, 2, 8, 14, 6, 9, 3, 11, 7, 10, 6, 9, 8, 12, 14, 5, 7, 10]
+
+max_rainfall_day = rainfall.index(max(rainfall)) + 1
+
+print("The rainiest day of July was day", max_rainfall_day)

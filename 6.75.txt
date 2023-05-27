@@ -1,0 +1,17 @@
+a = 1
+b = 1.5
+tolerance = 0.001
+
+def f(x):
+    return x**3 - 0.2*x**2 - 0.2*x - 1.2
+
+def f_prime(x):
+    return 3*x**2 - 0.4*x - 0.2
+
+x = (a + b) / 2
+while True:
+    x_next = x - f(x) / f_prime(x)
+    if abs(x_next - x) < tolerance:
+        print("Root found:", x_next)
+        break
+    x = x_next

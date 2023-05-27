@@ -1,0 +1,44 @@
+а) def multiply_two(x):
+       return 2 * x
+
+b) import math
+   def sin(x):
+       return math.sin(x)
+
+в) def square(a):
+       return a ** 2
+
+г) import math
+   def sqrt(x):
+       return math.sqrt(x)
+
+д) def absolute(n):
+       return abs(n)
+
+е) import math
+   def calculate_cos(x):
+       return 5 * math.cos(x)
+
+ж) def calculate(a):
+       return 9.5 * a ** 2
+
+з) import math
+   def calculate(x):
+       return 3 * math.sqrt(x)
+
+и) import math
+   def calculate(a, B):
+       return math.sin(a) * math.cos(B) + math.cos(a) * math.sin(B)
+
+к) import math
+   def calculate(a, b):
+       return a * math.sqrt(2 * b)
+
+л) import math
+   def calculate(a, B):
+       return 4 * math.sin(2 * a) * math.cos(B)
+
+м) import math
+   def calculate(x, y):
+       return -5 * math.sqrt(x + math.sqrt(y))
+

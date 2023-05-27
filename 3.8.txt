@@ -1,0 +1,7 @@
+ticket = int(input("Введите номер билета: "))
+if ticket < 1643 or ticket > 3000:
+    print("Номер билета некорректный")
+else:
+    row = (ticket - 1643) // 15 + 1
+    print("Место находится в", row, "ряду")
+

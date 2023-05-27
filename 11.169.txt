@@ -1,0 +1,16 @@
+arr = [170, 165, 160, 155, 150, 145, 140, 135, 130, 125, 120, 115, 110, 105, 100] # исходный массив роста
+
+n = int(input("Введите рост нового ученика: "))
+
+pos = 0
+while pos < len(arr) and arr[pos] > n:
+    pos += 1
+
+arr.append(0)
+
+for i in range(len(arr)-1, pos, -1):
+    arr[i] = arr[i-1]
+
+arr[pos] = n
+
+print(arr)

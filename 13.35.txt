@@ -1,0 +1,17 @@
+teams = [("team1", 23), ("team2", 26), ("team3", 17), ("team4", 31), ("team5", 29), ("team6", 20), ("team7", 25), ("team8", 28), ("team9", 21), ("team10", 27), ("team11", 19), ("team12", 22), ("team13", 24), ("team14", 30), ("team15", 18), ("team16", 33), ("team17", 32), ("team18", 34), ("team19", 16), ("team20", 35)]
+
+max_score = 0
+winner = ""
+
+for team in teams:
+    if team[1] > max_score:
+        max_score = team[1]
+        winner = team[0]
+
+print("Champion:", winner)
+
+teams_without_winner = [team for team in teams if team[0] != winner]
+sorted_teams_without_winner = sorted(teams_without_winner, key=lambda x: x[1], reverse=True)
+
+print("Second place:", sorted_teams_without_winner[0][0])
+print("Third place:", sorted_teams_without_winner[1][0])

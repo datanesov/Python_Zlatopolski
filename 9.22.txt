@@ -1,0 +1,8 @@
+for p in range(2, 23):
+    for q in range(2, 23):
+        for r in range(2, 23):
+            if p != q and p != r and q != r:
+                num = p * q * r
+                if 200 <= num <= 500:
+                    print(num)
+                    

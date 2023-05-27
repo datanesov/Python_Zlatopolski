@@ -1,0 +1,27 @@
+
+people = [{'age': 30, 'gender': 'M'},
+          {'age': 45, 'gender': 'F'},
+          {'age': 25, 'gender': 'M'},
+          {'age': 22, 'gender': 'M'},
+          {'age': 28, 'gender': 'M'},
+          {'age': 32, 'gender': 'F'},
+          {'age': 37, 'gender': 'M'},
+          {'age': 41, 'gender': 'M'},
+          {'age': 33, 'gender': 'F'},
+          {'age': 27, 'gender': 'M'},
+          {'age': 39, 'gender': 'F'},
+          {'age': 50, 'gender': 'M'},
+          {'age': 35, 'gender': 'F'},
+          {'age': 29, 'gender': 'M'},
+          {'age': 24, 'gender': 'F'},
+          {'age': 26, 'gender': 'M'}, 
+          {'age': 43, 'gender': 'F'},
+          {'age': 31, 'gender': 'M'},
+          {'age': 36, 'gender': 'F'},
+          {'age': 48, 'gender': 'M'}]
+
+total_mass = 0
+for p in people:
+    if p['gender'] == 'M':
+        total_mass += p['age'] * 2.5 # 2.5 is an assumed average weight for males
+print('Total mass of males:', total_mass)

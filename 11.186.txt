@@ -1,0 +1,8 @@
+m = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+temp1, temp2, temp3 = m[0], m[11], m[1]
+m[0], m[11], m[1] = m[5], m[7], m[2]
+temp4, temp5 = m[4], m[7]
+m[4], m[7] = m[11], m[5]
+m[2], m[5], m[7] = temp1, temp2, temp3
+m[8], m[10], m[11] = temp4, temp5, m[8]
+print(m)

@@ -1,0 +1,11 @@
+import math
+
+num1 = int(input("Введите первое число: "))
+num2 = int(input("Введите второе число: "))
+
+arith_mean = (abs(num1) + abs(num2)) / 2  # среднее арифметическое модулей
+geom_mean = math.sqrt(abs(num1) * abs(num2))  # среднее геометрическое модулей
+
+print("Среднее арифметическое модулей: ", arith_mean)
+print("Среднее геометрическое модулей: ", geom_mean)
+

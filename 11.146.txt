@@ -1,0 +1,15 @@
+n = 23
+arr = [0] * n
+for i in range(n):
+    arr[i] = int(input("Введите результат бегуна: "))
+best_sum = float("inf")
+best_team = []
+for i in range(n-3):
+    for j in range(i+1, n-2):
+        for k in range(j+1, n-1):
+            for m in range(k+1, n):
+                current_sum = sum(arr[idx] for idx in (i, j, k, m))
+                if current_sum < best_sum:
+                    best_sum = current_sum
+                    best_team = [i+1, j+1, k+1, m+1]
+print("Лучшая команда:", best_team)

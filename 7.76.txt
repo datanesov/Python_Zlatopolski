@@ -1,0 +1,15 @@
+team1_count = 0 #счетчик для подсчета количества удалений команды 1
+team1_time = 0 #счетчик для подсчета времени удалений команды 1
+team2_count = 0 #счетчик для подсчета количества удалений команды 2
+team2_time = 0 #счетчик для подсчета времени удалений команды 2
+for i in range(24):
+    team_number = int(input("Введите номер команды: "))
+    duration = int(input("Введите продолжительность удаления: "))
+    if team_number == 1:
+        team1_count += 1
+        team1_time += duration
+    elif team_number == 2:
+        team2_count += 1
+        team2_time += duration
+print("Команда 1: количество удалений -", team1_count, ", общее время удалений -", team1_time, "минут(ы)")
+print("Команда 2: количество удалений -", team2_count, ", общее время удалений -", team2_time, "минут(ы)")

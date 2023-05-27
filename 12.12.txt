@@ -1,0 +1,6 @@
+word = "Python"
+last_char = ""
+for char in word:
+    if char == word[-1]:
+        last_char = char
+print(last_char)

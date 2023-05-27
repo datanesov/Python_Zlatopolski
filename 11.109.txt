@@ -1,0 +1,5 @@
+arr = [1, 2, 2, 4, 5, 5, 5, 7, 8, 8, 8, 9, 10, 11, 12, 12, 12, 12, 13, 13]
+count = sum([1 for i in range(len(arr)-1) if arr[i] == arr[i+1]])
+print("Количество повторяющихся элементов:", count)
+unique = len(set(arr))
+print("Количество уникальных элементов:", unique)

@@ -1,0 +1,15 @@
+from datetime import datetime
+
+employees = {
+    'Ivanov': ('Moscow', datetime(2017, 5, 15)),
+    'Petrov': ('St. Petersburg', datetime(2015, 8, 25)),
+    'Sidorov': ('Novosibirsk', datetime(2018, 3, 10))
+}
+
+for employee, data in employees.items():
+    experience = datetime.now().year - data[1].year
+    if (datetime.now().month, datetime.now().day) < (data[1].month, data[1].day):
+        experience -= 1
+    if experience >= 3:
+        print(employee, data[0])
+

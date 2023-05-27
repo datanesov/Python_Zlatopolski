@@ -1,0 +1,32 @@
+# a)
+A = True
+B = False
+C = False
+
+result = False
+if not A:
+    result = B
+
+print(result)
+# б)
+A = True
+B = False
+C = False
+
+result = True
+if not B:
+    result = A
+
+print(result) 
+# в)
+A = True
+B = False
+C = False
+
+result = False
+if A and B:
+    result = True
+elif C:
+    result = True
+
+print(result)

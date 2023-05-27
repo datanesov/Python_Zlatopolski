@@ -1,0 +1,6 @@
+a_values = range(2, 18)
+t_values = [3*a for a in a_values]
+z_values = [4.3*t**2 - 8*t + 13 for t in t_values]
+
+for a, t, z in zip(a_values, t_values, z_values):
+    print("a =", a, "\t t =", t, "\t z =", z)

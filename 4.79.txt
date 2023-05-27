@@ -1,0 +1,12 @@
+import math
+
+a = float(input("Введите значение стороны а: "))
+b = float(input("Введите значение стороны b: "))
+c = float(input("Введите значение стороны c: "))
+
+if math.isclose(a + b, c, rel_tol=1e-9) or math.isclose(a + c, b, rel_tol=1e-9) or math.isclose(b + c, a, rel_tol=1e-9):
+    print("Треугольник не существует")
+elif a <= 0 or b <= 0 or c <= 0:
+    print("Треугольник не существует")
+else:
+    print("Треугольник существует")

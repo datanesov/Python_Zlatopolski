@@ -1,0 +1,10 @@
+a = int(input("Введите первое число: "))
+b = int(input("Введите второе число: "))
+
+summa = a + b
+raznost = a - b
+proizvedenie = a * b
+chastnoe = a / b
+sred_arifm = (a + b) / 2
+
+print(f"{a}+{b}={summa} {a}-{b}={raznost} {a}*{b}={proizvedenie} {a}/{b}={chastnoe} ({a}+{b})/2={sred_arifm}")

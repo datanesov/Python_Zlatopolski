@@ -1,0 +1,19 @@
+students = [['Ivanov', 4, 5, 3, 4], 
+            ['Petrov', 3, 4, 4, 5], 
+            ['Sidorov', 5, 3, 4, 4], 
+            ['Novikov', 4, 4, 4, 4]]
+
+new_student = ['Kuznetsov', 5, 5, 3, 4] # новый ученик
+
+position = 2 # позиция, на которую нужно вставить нового ученика
+
+for student in students:
+    student.insert(position, new_student[students.index(student)+1]) # вставляем оценки нового ученика на нужную позицию
+
+students.append(new_student) # добавляем нового ученика в конец таблицы
+
+# выводим измененную таблицу на экран
+for student in students:
+    for grade in student:
+        print(grade, end=' ')
+    print()

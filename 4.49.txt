@@ -1,0 +1,13 @@
+number = int(input("Введите двузначное число: "))
+a = int(input("Введите цифру а: "))
+
+if 3 in [int(x) for x in str(number)]:
+    print("Введенное число содержит цифру 3")
+else:
+    print("Введенное число не содержит цифру 3")
+
+if a in [int(x) for x in str(number)]:
+    print("Введенное число содержит цифру", a)
+else:
+    print("Введенное число не содержит цифру", a)
+

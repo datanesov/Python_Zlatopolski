@@ -1,0 +1,18 @@
+
+time = 0
+penalty_time = 0
+
+for i in range(100): # Предполагаем, что игра не может продолжаться более 100 удалений
+    delete_time = int(input("Введите время удаления игрока (2, 5 или 10 минут): "))
+    if delete_time == 0:
+        break
+    elif delete_time == 2:
+        time += 2
+    elif delete_time == 5:
+        time += 5
+    elif delete_time == 10:
+        time += 10
+    penalty_time += delete_time
+    
+print("Общее число удалений:", penalty_time)
+print("Общее штрафное время:", time)

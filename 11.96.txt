@@ -1,0 +1,6 @@
+
+arr = [1, 5, 3, 6, 2, 9]
+average = (max(arr) + min(arr)) / 2
+result = [i for i in range(len(arr)) if arr[i] > average]
+print(len(result))
+

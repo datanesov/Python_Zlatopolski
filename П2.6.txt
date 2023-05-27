@@ -1,0 +1,7 @@
+a = 9.4
+b = 15.1
+temp = a
+a = b
+b = temp
+print("a =", a)
+print("b =", b)

@@ -1,0 +1,14 @@
+areas = [5, 3, 2, 4, 1, 2.5, 6, 1.5, 3.5, 2]
+harvests = [30, 35, 25, 22, 27, 28, 31, 26, 24, 23]
+
+total_area = 0
+total_harvest = 0
+
+for i in range(len(areas)):
+    total_area += areas[i]
+    total_harvest += areas[i] * harvests[i]
+
+average_harvest = total_harvest / total_area
+
+print("Total wheat harvested:", total_harvest, "centners")
+print("Average wheat harvest per hectare:", average_harvest, "centners")

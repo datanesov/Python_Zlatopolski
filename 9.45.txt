@@ -1,0 +1,15 @@
+def sum_of_digits(n):
+    sum = 0
+    while n > 0:
+        sum += n % 10
+        n //= 10
+    return sum
+
+def squared_sum_equals_m(m, n):
+    result = []
+    for i in range(n):
+        if sum_of_digits(i)**2 == m:
+            result.append(i)
+    return result
+
+print(squared_sum_equals_m(16, 100))

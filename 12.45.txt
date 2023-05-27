@@ -1,0 +1,5 @@
+
+symbol = input("Введите символ для составления строки: ")
+length = int(input("Введите длину строки: "))
+new_string = symbol*length
+print(new_string)

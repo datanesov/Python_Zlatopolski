@@ -1,0 +1,22 @@
+import random
+from collections import Counter
+
+results100 = Counter()
+results1000 = Counter()
+
+for i in range(100):
+    result = random.randint(1, 6)
+    results100[result] += 1
+
+for i in range(1000):
+    result = random.randint(1, 6)
+    results1000[result] += 1
+
+print("Относительная частота появления каждого числа при 100 бросаниях:")
+for i in range(1, 7):
+    print("Число", i, "-", round(results100[i] / 100, 2))
+
+print("\nОтносительная частота появления каждого числа при 1000 бросаниях:")
+for i in range(1, 7):
+    print("Число", i, "-", round(results1000[i] / 1000, 2))
+

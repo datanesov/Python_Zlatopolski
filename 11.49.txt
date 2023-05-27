@@ -1,0 +1,8 @@
+
+rainfall = [2, 0, 1, 0, 3, 1, 2, 2, 0, 1, 1, 0]
+total = 0
+for i in rainfall:
+    total += i
+average = total / len(rainfall)
+print("Среднее количество осадков в феврале:", average)
+

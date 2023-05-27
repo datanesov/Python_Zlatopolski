@@ -1,0 +1,12 @@
+number = int(input("Введите двузначное число: "))
+sum_of_digits = (number // 10) + (number % 10)
+
+if sum_of_digits >= 10:
+    print("Сумма его цифр является двузначным числом")
+else:
+    print("Сумма его цифр не является двузначным числом")
+    
+if number > sum_of_digits:
+    print("Сумма его цифр меньше, чем число", number)
+else:
+    print("Сумма его цифр больше, чем число", number)

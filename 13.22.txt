@@ -1,0 +1,6 @@
+import pandas as pd
+
+df = pd.DataFrame({'school': ['school 1', 'tech 1', 'school 2', 'tech 2', 'tech 3', 'school 3', 'school 4', 'tech 4', 'school 5', 'school 6', 'tech 5', 'tech 6', 'school 7', 'tech 7', 'school 8'],
+                   'students': [100, 50, 80, 75, 60, 90, 85, 70, 95, 70, 60, 55, 80, 65, 75]})
+total_students = df.loc[df['school'].str.contains('school'), 'students'].sum()
+print('Total number of students in schools:', total_students)

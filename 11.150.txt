@@ -1,0 +1,15 @@
+# a)
+arr = [1, 2, 3, 4, 5]
+arr = list(map(lambda x: x - 20, arr))
+print(arr)
+# b)
+arr = [1, 2, 3, 4, 5]
+last = arr[-1]
+for i in range(len(arr)):
+    arr[i] *= last
+print(arr)
+# c)
+arr = [1, 2, 3, 4, 5]
+b = 10
+arr = list(map(lambda x: x + b, arr))
+print(arr)

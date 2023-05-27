@@ -1,0 +1,34 @@
+games = [(2, 1), (1, 1), (0, 2), (3, 2), (2, 0), (1, 3), (1, 0), (2, 2), (0, 1), (2, 3),
+         (0, 2), (1, 0), (1, 1), (3, 0), (2, 1), (1, 1), (0, 3), (2, 0), (1, 2), (3, 1)]
+
+# a) Результаты игр
+results = ["Выигрыш" if game[0] > game[1] else "Ничья" if game[0] == game[1] else "Проигрыш" for game in games]
+print("Результаты игр:", results)
+
+# б) Количество выигрышей
+wins = sum([1 for game in games if game[0] > game[1]])
+print("Количество выигрышей:", wins)
+
+# в) Количество выигрышей и проигрышей
+wins_losses = {"Выигрыш": 0, "Проигрыш": 0}
+[wins_losses.update({"Выигрыш": wins_losses["Выигрыш"] +1}) if game[0] > game[1] else wins_losses.update({"Проигрыш": \
+wins_losses["Проигрыш"] + 1}) for game in games]
+print("Количество выигрышей:", wins_losses["Выигрыш"])
+print("Количество проигрышей:", wins_losses["Проигрыш"])
+
+# г) Количество выигрышей, ничьих и проигрышей
+wins_draws_losses = {"Выигрыш": 0, "Ничья": 0, "Проигрыш": 0}
+[wins_draws_losses.update({"Выигрыш": wins_draws_losses["Выигрыш"] +1}) if game[0] > game[1] else \
+wins_draws_losses.update({"Ничья": wins_draws_losses["Ничья"] + 1}) if game[0] == game[1] else \
+wins_draws_losses.update({"Проигрыш": wins_draws_losses["Проигрыш"] + 1}) for game in games]
+print("Количество выигрышей:", wins_draws_losses["Выигрыш"])
+print("Количество ничьих:", wins_draws_losses["Ничья"])
+print("Количество проигрышей:", wins_draws_losses["Проигрыш"])
+
+# д) Количество игр, где разница забитых и пропущенных мячей была большей либо равной трем
+count = sum([1 for game in games if abs(game[0] - game[1]) >= 3])
+print("Количество игр с разницей в три и более мячей:", count)
+
+# е) Общее количество очков
+points = sum([3 if game[0] > game[1] else 1 if game[0] == game[1] else 0 for game in games])
+print("Общее количество очков:", points)

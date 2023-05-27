@@ -1,0 +1,15 @@
+
+
+scores = {'Team A': 75, 'Team B': 81, 'Team C': 67, 'Team D': 91, 'Team E': 87, 'Team F': 70}
+sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+
+print("Teams sorted by score:")
+for team, score in sorted_scores:
+    print(team, " - ", score)
+
+if sorted_scores == sorted(scores.items(), key=lambda x: x[1]):
+    print("Teams are listed in order of their places in the championship.")
+else:
+    print("Teams are not listed in order of their places in the championship.")
+
+

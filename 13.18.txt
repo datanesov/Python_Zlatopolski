@@ -1,0 +1,22 @@
+class Student:
+    def __init__(self, last_name, first_name, address, school, class_num):
+        self.last_name = last_name
+        self.first_name = first_name
+        self.address = address
+        self.school = school
+        self.class_num = class_num
+
+students = [
+    Student("Ivanov", "Ivan", "Lenina 1", 5, 9),
+    Student("Petrov", "Petr", "Pushkina 2", 5, 11),
+    Student("Sidorov", "Sidor", "Gogolya 3", 7, 10),
+    Student("Kuznetsov", "Kuzma", "Lenina 4", 7, 11),
+    Student("Smirnov", "Sergey", "Mayakovskogo 5", 9, 11)
+]
+
+senior_students = []
+for student in students:
+    if student.class_num >= 10:
+        senior_students.append({"last_name": student.last_name, "first_name": student.first_name, "address": student.address})
+
+print(senior_students)

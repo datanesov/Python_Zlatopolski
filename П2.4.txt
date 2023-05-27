@@ -1,0 +1,14 @@
+class Calculation:
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
+    def solve(self):
+        b = -self.a/2 * self.b
+        v = b + self.a * 2
+        return v
+
+a = 40
+b = 10
+calc = Calculation(a, b)
+v = calc.solve()
+print(v)

@@ -1,0 +1,10 @@
+sequence = []
+for i in range(100):
+    num = int(input("Введите число: "))
+    if num == 100:
+        break
+    sequence.append(num)
+if 666 in sequence:
+    print("Число 666 есть в последовательности на позиции", sequence.index(666)+1)
+else:
+    print("Число 666 отсутствует в последовательности")

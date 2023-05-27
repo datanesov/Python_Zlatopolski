@@ -1,0 +1,3 @@
+sentence = input().split()[:10]
+arr = [word for word in sentence]
+print(arr)

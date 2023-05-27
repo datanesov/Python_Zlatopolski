@@ -1,0 +1,6 @@
+from random import choice
+
+options = ['Орел', 'Решка']
+result = choice(options)
+
+print(result)

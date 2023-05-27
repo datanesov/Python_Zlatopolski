@@ -1,0 +1,7 @@
+from collections import OrderedDict
+
+arr = [1, 2, 3, 4, 2, 3, 5, 6, 1]
+
+res = list(OrderedDict.fromkeys(arr))
+
+print(res)

@@ -1,0 +1,22 @@
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def get_area(self):
+        if self.x > 0 and self.y > 0:
+            return "I"
+        elif self.x < 0 and self.y > 0:
+            return "II"
+        else:
+            return None
+
+x = float(input("Введите значение координаты x: "))
+y = float(input("Введите значение координаты y: "))
+
+point = Point(x, y)
+area = point.get_area()
+if area:
+    print(f"Точка принадлежит области {area}")
+else:
+    print("Точка не принадлежит ни одной из областей")

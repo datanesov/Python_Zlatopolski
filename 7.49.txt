@@ -1,0 +1,12 @@
+days = int(input("Введите количество дней в месяце: "))
+rainfall = []
+for i in range(1, days+1):
+    value = int(input(f"Введите количество осадков за {i}-й день: "))
+    rainfall.append(value)
+
+total_rainfall = 0
+for i in range(1, days+1, 2):
+    total_rainfall += rainfall[i-1]
+
+print(f"Общее количество осадков, выпавших на четных днях: {total_rainfall}")
+

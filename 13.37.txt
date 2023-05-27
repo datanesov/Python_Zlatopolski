@@ -1,0 +1,37 @@
+employees = [] # список для хран
+ения данных о сотрудниках
+
+# ввод данных о каждом сотруднике
+for i in range(20):
+    name = input("Введите фамилию сотрудника " + str(i + 1) + ": ")
+    salary = int(input("Введите зарплату сотрудника " + str(i + 1) + ": "))
+    gender = input("Введите пол сотрудника " + str(i + 1) + " (м/ж): ")
+    employees.append((name, salary, gender))
+
+# сортировка списка по убыванию зарплаты
+employees.sort(key=lambda x: x[1], reverse=True)
+
+# поиск фамилии мужчины с самой большой зарплатой
+i = 0
+while employees[i][2] != "м":
+    i += 1
+max_salary_man_name = employees[i][0]
+
+# поиск фамилии мужчины и женщины с самой маленькой зарплатой
+min_salary = employees[-1][1] # минимальная зарплата
+min_salary_man_name = "" # фамилия мужчины с минимальной зарплатой
+min_salary_woman_name = "" # фамилия женщины с минимальной зарплатой
+for employee in employees:
+    if employee[1] == min_salary:
+        if employee[2] == "м":
+            min_salary_man_name = employee[0]
+        else:
+            min_salary_woman_name = employee[0]
+    else:
+        break
+
+# вывод результатов
+print("Мужчина с самой большой зарплатой:", max_salary_man_name)
+
+print("Мужчина с самой маленькой зарплатой:", min_salary_man_name)
+print("Женщина с самой маленькой зарплатой:", min_salary_woman_name)

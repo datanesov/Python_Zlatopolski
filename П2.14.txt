@@ -1,0 +1,8 @@
+s = 0
+k = 0
+for i in range(1024):
+    s += 10
+    k += 1
+    if s >= 1024:
+        break
+print(k)

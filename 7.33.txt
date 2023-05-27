@@ -1,0 +1,13 @@
+def calculate_average(precipitation_list):
+    total_precipitation = sum(precipitation_list)
+    avg_precipitation = total_precipitation / len(precipitation_list)
+    return avg_precipitation
+
+jan_precipitation = [25, 30, 40, 20, 10, 15, 35, 45, 20, 10, 30, 50]
+mar_precipitation = [20, 35, 25, 15, 10, 20, 30, 40, 10, 5, 25, 45]
+
+jan_avg_precipitation = calculate_average(jan_precipitation)
+mar_avg_precipitation = calculate_average(mar_precipitation)
+
+print("Среднедневное количество осадков в январе:", jan_avg_precipitation)
+print("Среднедневное количество осадков в марте:", mar_avg_precipitation)

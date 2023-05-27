@@ -1,0 +1,10 @@
+heights = [8848, 6190, 5633, 5510, 5500, 5209, 5010, 4810, 4750, 4695, 4478, 4392, 4368, 4322, 4276, 4167, 4166, 4085, 4049, 4000]
+new_height = int(input("Введите новую высоту: "))
+index = int(input("Введите индекс, после которого нужно вставить новую высоту: "))
+new_heights = []
+for i in range(len(heights)):
+new_heights.append(heights[i])
+if index >= len(heights)-1:
+    new_heights.append(new_height)
+print(new_heights)
+

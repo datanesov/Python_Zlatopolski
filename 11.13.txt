@@ -1,0 +1,9 @@
+import numpy as np
+
+n = int(input("Введите n: "))
+arr = np.zeros(n-20)
+
+for i in range(21, n+1):
+    arr[i-21] = 2**i
+
+print(arr)

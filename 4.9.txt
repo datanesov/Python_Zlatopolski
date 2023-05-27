@@ -1,0 +1,8 @@
+num_list = []
+num_list.append(float(input("Введите первое число: ")))
+num_list.append(float(input("Введите второе число: ")))
+
+num_list.sort()
+print("Максимальное число: ", num_list[1])
+print("Минимальное число: ", num_list[0])
+

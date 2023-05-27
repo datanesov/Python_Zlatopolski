@@ -1,0 +1,9 @@
+num = int(input('Введите натуральное число: '))
+if num % 10 == 3 or num // 10 == 3:
+    print('В числе есть цифра 3')
+else:
+    print('В числе нет цифры 3')
+if '2' in str(num) and '5' in str(num):
+    print('В числе есть цифры 2 и 5')
+else:
+    print('В числе нет цифр 2 и 5')

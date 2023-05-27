@@ -1,0 +1,11 @@
+
+a = int(input("Введите a: "))
+b = int(input("Введите b: "))
+ 
+summa = 0
+ 
+for i in range(a, b + 1):
+    if i % 4 == 0:
+        summa += i
+ 
+print("Сумма чисел, кратных четырем:", summa)

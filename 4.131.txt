@@ -1,0 +1,10 @@
+a1, b1, c1 = map(float, input().split())
+a2, b2, c2 = map(float, input().split())
+
+middle1 = (a1 + b1 + c1 - max(a1, b1, c1) - min(a1, b1, c1)) / 1
+middle2 = (a2 + b2 + c2 - max(a2, b2, c2) - min(a2, b2, c2)) / 1
+
+result = (middle1 + middle2) / 2
+
+print(result)
+

@@ -1,0 +1,5 @@
+
+a = [5, 3, -2, 1, 7, -4, 6]
+s = sum([a[i] * (-1) ** i for i in range(len(a))])
+print(s)
+

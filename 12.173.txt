@@ -1,0 +1,4 @@
+words = [input("Введите слово: ") for _ in range(3)]
+unique_letters = set("".join(words))
+result = [char for char in unique_letters if sum(word.count(char) == 1 for word in words) == 1]
+print(" ".join(result))

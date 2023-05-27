@@ -1,0 +1,15 @@
+def max_even_subseq_rec(n, d):
+    if n == 1:
+        if d[0] % 2 == 0:
+            return 1
+        else:
+            return 0
+    else:
+        if d[n-1] % 2 != 0:
+            return max_even_subseq_rec(n-1, d)
+        else:
+            return max(max_even_subseq_rec(n-1, d), max_even_subseq_rec(n-1, d[:n-1]) + 1)
+
+n = int(input("Введите длину последовательности: "))
+d = list(map(int, input("Введите последовательность чисел через пробел: ").split()))
+print("Наибольшая длина отрезка из четных чисел:", max_even_subseq_rec(n, d))

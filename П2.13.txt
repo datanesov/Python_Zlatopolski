@@ -1,0 +1,10 @@
+def gcd(a, b):
+    if(a == 0):
+        return b
+    else:
+        return gcd(b % a, a)
+
+x = 55
+y = 75
+
+print(gcd(x, y))

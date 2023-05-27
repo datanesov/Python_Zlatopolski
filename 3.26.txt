@@ -1,0 +1,11 @@
+number = int(input("Введите трехзначное число: "))
+a = number // 100
+b = (number % 100) // 10
+c = number % 10
+print(f"Число {number} может быть переставлено следующими способами:")
+print(f"{a}{b}{c}")
+print(f"{a}{c}{b}")
+print(f"{b}{a}{c}")
+print(f"{b}{c}{a}")
+print(f"{c}{a}{b}")
+print(f"{c}{b}{a}")

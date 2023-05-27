@@ -1,0 +1,3 @@
+sentence = input().split()
+duplicates = set([word for word in sentence if sentence.count(word)>1])
+print(" ".join(duplicates))

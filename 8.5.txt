@@ -1,0 +1,16 @@
+import math
+
+a = float(input("Введите число a: "))
+n = 2
+
+numbers = []
+
+while True:
+  number = 1 + 1/n
+  if number >= a:
+    numbers.append(number)
+  else:
+    break
+  n += 1
+
+print(numbers)

@@ -1,0 +1,8 @@
+sentence = input('Введите предложение: ')
+word = ''
+for char in reversed(sentence):
+    if char != ' ':
+        word = char + word
+    else:
+        break
+print(word)

@@ -1,0 +1,7 @@
+import math
+
+a = float(input('Введите первое число: '))
+b = float(input('Введите второе число: '))
+if math.sqrt(b) < a:
+    b *= 5
+print(f'Первое число: {a}, второе число: {b}')

@@ -1,0 +1,12 @@
+sentence = input('Введите предложение (не менее 7 слов): ')
+word_count = 0
+for i, char in enumerate(sentence):
+    if char == ' ':
+        word_count += 1
+        if word_count == 7:
+            break
+        print(sentence[:i])
+        sentence = sentence[i+1:]
+else:
+    print('Ошибка: в предложении меньше 7 слов')
+

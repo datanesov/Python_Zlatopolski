@@ -1,0 +1,33 @@
+import math
+
+def prime_factors(n):
+    i = 2
+    factors = []
+    while i * i <= n:
+        if n % i:
+            i += 1
+        else:
+            n //= i
+            factors.append(i)
+    if n > 1:
+        factors.append(n)
+    return factors
+
+a = int(input("Введите начало интервала: "))
+b = int(input("Введите конец интервала: "))
+max_div = 0
+max_div_num = a
+for num in range(a, b+1):
+    factors = prime_factors(num)
+    div_count = 1
+    for i in range(len(factors)-1):
+        if factors[i] == factors[i+1]:
+            div_count += 1
+        else:
+            div_count += 1
+            if i == len(factors)-2:
+                div_count += 1
+    if div_count > max_div:
+        max_div = div_count
+        max_div_num = num
+print("Число", max_div_num, "имеет наибольшее количество делителей -", max_div)

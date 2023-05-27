@@ -1,0 +1,30 @@
+cars = [{'price': 10000, 'age': 3},
+        {'price': 8000, 'age': 5},
+        {'price': 15000, 'age': 7},
+        {'price': 12000, 'age': 10},
+        {'price': 9500, 'age': 1},
+        {'price': 6500, 'age': 4},
+        {'price': 9000, 'age': 2},
+        {'price': 11000, 'age': 9},
+        {'price': 18000, 'age': 12},
+        {'price': 13500, 'age': 6},
+        {'price': 20000, 'age': 8},
+        {'price': 7000, 'age': 11},
+        {'price': 16000, 'age': 14},
+        {'price': 10000, 'age': 13},
+        {'price': 17000, 'age': 2},
+        {'price': 13000, 'age': 5},
+        {'price': 19000, 'age': 4},
+        {'price': 14000, 'age': 3},
+        {'price': 8500, 'age': 7},
+        {'price': 12000, 'age': 10}]
+
+total_price = 0
+count = 0
+for c in cars:
+    if c['age'] > 6:
+        total_price += c['price']
+        count += 1
+average_price = total_price / count
+
+print('Average price of cars older than 6 years:', average_price)

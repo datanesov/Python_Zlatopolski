@@ -1,0 +1,7 @@
+num1 = 47
+num2 = 52
+num3 = 150
+
+print(num1, end='  ')
+print(num2, end='  ')
+print(num3)

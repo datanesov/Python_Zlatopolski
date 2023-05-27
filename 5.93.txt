@@ -1,0 +1,16 @@
+def sum_divisors(num, i=1, sum_divisors=0):
+    if i == num:
+        return sum_divisors
+    elif num % i == 0:
+        sum_divisors += i
+    return sum_divisors(num, i+1, sum_divisors)
+
+num = int(input("Введите число: "))
+sum_d = sum_divisors(num) - num
+
+# Проверяем, является ли число совершенным
+if sum_d == num:
+    print("Число", num, "является совершенным")
+else:
+    print("Число", num, "не является совершенным")
+

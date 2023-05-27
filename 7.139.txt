@@ -1,0 +1,7 @@
+speeds = [180, 200, 190, 170, 205, 175, 195, 185, 210, 160, 215, 170, 200, 185, 195, 175, 185, 190, 180, 175]
+fastest_car = speeds[0] 
+for speed in speeds:
+    if speed > fastest_car:
+        fastest_car = speed 
+print(f"Самый быстрый автомобиль может ехать со скоростью {fastest_car} км/ч")
+

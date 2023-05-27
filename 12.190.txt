@@ -1,0 +1,38 @@
+
+sentence = input("Введите предложение: ")
+words = sentence.split()
+
+def replace_a_with_o(word):
+    return word.replace('a', 'o')
+
+def remove_duplicates_except_last(word):
+    last_letter = word[-1]
+    return word.replace(last_letter, '', word.count(last_letter)-1)
+
+def keep_only_first_occurrences(word):
+    unique = ''
+    for letter in word:
+        if letter not in unique:
+            unique += letter
+    return unique
+
+def remove_middle_letter_if_longest(word, longest_word_length):
+    if len(word) == longest_word_length:
+        middle_index = len(word) // 2
+        return word[:middle_index] + word[middle_index+1:]
+    else:
+        return word
+
+output = []
+
+longest_word_length = max([len(w) for w in words])
+
+for word in words:
+    new_word = replace_a_with_o(word)
+    new_word = remove_duplicates_except_last(new_word)
+    new_word = keep_only_first_occurrences(new_word)
+    new_word = remove_middle_letter_if_longest(new_word, longest_word_length)
+    output.append(new_word)
+            
+print(output)
+

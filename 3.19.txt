@@ -1,0 +1,5 @@
+
+num = input("Введите трехзначное число: ")
+for digit in num:
+    print(digit + ",", end="")
+

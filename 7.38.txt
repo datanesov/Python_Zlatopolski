@@ -1,0 +1,24 @@
+districts = {
+    'district1': {'population': 10, 'density': 2},
+    'district2': {'population': 12, 'density': 3},
+    'district3': {'population': 8, 'density': 1},
+    'district4': {'population': 15, 'density': 2.5},
+    'district5': {'population': 7, 'density': 1.5},
+    'district6': {'population': 9, 'density': 2},
+    'district7': {'population': 6, 'density': 1},
+    'district8': {'population': 11, 'density': 3},
+    'district9': {'population': 13, 'density': 1.5},
+    'district10': {'population': 16, 'density': 2},
+    'district11': {'population': 14, 'density': 2.5},
+    'district12': {'population': 10, 'density': 2}
+}
+
+total_area = 0
+
+for district in districts.values():
+    population = district['population'] * 1000 # переводим в общее число жителей
+    density = district['density']
+    area = population / density # вычисляем площадь района
+    total_area += area # добавляем к общей площади
+
+print("Общая площадь территории: {:.2f} км2".format(total_area))

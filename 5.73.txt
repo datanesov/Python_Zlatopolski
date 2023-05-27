@@ -1,0 +1,12 @@
+import math
+
+l = 4.5  # длина палки
+x = 3    # расстояние от стены
+angle = math.atan(x/l)  # угол между палкой и стеной
+step = 0.2  # шаг изменения координаты скольжения
+
+while x < l:
+    hypotenuse = math.sqrt(l**2 - x**2)  # гипотенуза треугольника
+    angle += math.asin(step/hypotenuse)  # угол между полом и палкой
+    print(math.degrees(angle))
+    x += step  # увеличиваем координату скольжения на шаг

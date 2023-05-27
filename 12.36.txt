@@ -1,0 +1,7 @@
+word = input("Введите слово из 12 букв: ")
+first = word[:4]
+second = word[4:8]
+third = word[8:]
+new_word = third + first + second
+print(new_word)
+

@@ -1,0 +1,4 @@
+x = float(input("Введите число x: "))
+fx = sin(x) if (x > 0.2 and x < 0.9) else 1
+print("f(x) =", fx)
+

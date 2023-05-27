@@ -1,0 +1,7 @@
+fibonacci = [0, 1]
+
+for i in range(8):
+    num = fibonacci[-1] + fibonacci[-2]
+    fibonacci.append(num)
+
+print(fibonacci)

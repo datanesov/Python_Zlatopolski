@@ -1,0 +1,8 @@
+import random
+
+nums = [random.randint(0, 1) for i in range(50)]
+zeros = nums.count(0)
+ones = nums.count(1)
+
+print("Number of zeros: ", zeros)
+print("Number of ones: ", ones)

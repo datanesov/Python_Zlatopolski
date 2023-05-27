@@ -1,0 +1,10 @@
+m = [2, 4, 6, 8, 10, 12]
+n = [0] * len(m)
+
+for i in range(len(m)):
+    if i % 2 == 0:
+        n[i] = m[i] / (i+1)
+    else:
+        n[i] = i * m[i]
+
+print(n)

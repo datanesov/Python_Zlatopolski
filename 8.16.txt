@@ -1,0 +1,8 @@
+import math
+m = 0.8
+for i in range(1, 10000):
+    a = i/(i+1)
+    if a < m:
+        print('{:.2f}'.format(a), end=' ')
+    else:
+        break

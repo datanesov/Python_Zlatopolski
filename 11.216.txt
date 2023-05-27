@@ -1,0 +1,8 @@
+
+grades = [5, 5, 5, 5, 5, 4, 4, 3, 2, 1]
+count = 0
+
+for grade in grades:
+    count += (grade == 5)
+
+print(f"Количество учеников с оценкой 5: {count}")

@@ -1,0 +1,27 @@
+num1 = [0] * 30
+num2 = [0] * 30
+diff_num = [0] * 30
+
+# Заполнение массива num1 случайным 30-значным числом
+for i in range(30):
+    num1[i] = randint(0, 9)
+
+# Заполнение массива num2 на основе num1 случайным образом
+for i in range(30):
+    num2[i] = num1[i] if i < 15 else randint(0, 9)
+
+# Вычитание чисел поэлементно с переносом старшего разряда
+carry = 0
+for i in range(29, -1, -1):
+    d = num1[i] - num2[i] - carry
+    if d < 0:
+        d += 10
+        carry = 1
+    else:
+        carry = 0
+    diff_num[i] = d
+
+# Вывод результатов
+print("Первое число: ", *num1, sep="")
+print("Второе число: ", *num2, sep="")
+print("Разность: ", *diff_num, sep="")

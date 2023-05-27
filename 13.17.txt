@@ -1,0 +1,16 @@
+class Person:
+    def __init__(self, name, phone):
+        self.name = name
+        self.phone = phone
+
+phonebook = [Person('Иванов', '111-11-11'), Person('Петров', '222-22-22'), Person('Сидоров', '333-33-33')]
+query = input('Введите номер телефона или фамилию: ')
+found = False
+for person in phonebook:
+    if query == person.name or query == person.phone:
+        print(person.name if query == person.phone else person.phone)
+        found = True
+        break
+if not found:
+    print('Такой человек или номер не найден')
+

@@ -1,0 +1,9 @@
+results = [12, 14, 15, 11, 13, 16, 10, 17, 18, 19, 20, 8, 9, 21, 7, 6, 22, 5, 23, 4, 24, 25, 3, 2, 1]
+
+print("Список результатов гонки:", results)
+winner = results[0]
+for result in results:
+    if result > winner:
+        winner = result
+print("Победитель гонки:", winner)
+

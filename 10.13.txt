@@ -1,0 +1,15 @@
+import random
+
+player1_score = 0
+player2_score = 0
+
+for i in range(2):
+    player1_score += random.randint(1, 6)
+    player2_score += random.randint(1, 6)
+
+if player1_score > player2_score:
+    print("Игрок 1 выиграл!")
+elif player2_score > player1_score:
+    print("Игрок 2 выиграл!")
+else:
+    print("Ничья!")

@@ -1,0 +1,8 @@
+import numpy as np
+
+x_vals = np.arange(4, 29)
+t_vals = x_vals + 3
+y_vals = 3*t_vals**2 + 4.87*t_vals - 3
+
+for i in range(len(x_vals)):
+    print(f"x={x_vals[i]}, y={y_vals[i]}")

@@ -1,0 +1,32 @@
+num = int(input("Введите натуральное число: "))
+
+max_digit = 0
+max_index_from_end = 0
+max_index_from_begin = 0
+
+min_digit = 10
+min_index_from_end = 0
+min_index_from_begin = 0
+
+i = 0
+while num > 0:
+    digit = num % 10
+    i += 1
+
+    if digit > max_digit:
+        max_digit = digit
+        max_index_from_end = i
+
+    if digit < min_digit:
+        min_digit = digit
+        min_index_from_end = i
+
+    num //= 10
+
+max_index_from_begin = i - max_index_from_end + 1
+min_index_from_begin = i - min_index_from_end + 1
+
+print("Порядковый номер максимальной цифры (от конца числа):", max_index_from_end)
+print("Порядковый номер максимальной цифры (от начала числа):", max_index_from_begin)
+print("Порядковый номер минимальной цифры (от конца числа):", min_index_from_end)
+print("Порядковый номер минимальной цифры (от начала числа):", min_index_from_begin)

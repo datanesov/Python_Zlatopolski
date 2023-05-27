@@ -1,0 +1,12 @@
+
+sentence = input("Введите предложение: ")
+count1 = sentence.find(",")
+if count1 != -1:
+  count2 = sentence[count1+1:].find(",") + count1 + 1
+  if count2 != -1:
+    print(sentence[count1+1:count2])
+  else:
+    print(sentence[count1+1:])
+else:
+  print("В предложении нет запятых")
+

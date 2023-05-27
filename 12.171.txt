@@ -1,0 +1,5 @@
+word1 = input("Введите первое слово: ")
+word2 = input("Введите второе слово: ")
+unique_letters = set(word1) & set(word2)
+result = [char for char in unique_letters if word1.count(char) == 1 and word2.count(char) == 1]
+print(" ".join(result))

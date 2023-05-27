@@ -1,0 +1,28 @@
+import random
+
+score_you = 0
+score_comp = 0
+
+print("Введите количество раундов: ")
+rounds = int(input())
+
+for i in range(rounds):
+  print("Раунд", i+1)
+  print("Выберите чет (введите 2) или нечет (введите 1): ")
+  choice = int(input())
+
+  computer_choice = random.choice([1, 2])
+
+  if choice == computer_choice:
+    print("Вы угадали!")
+    score_you += 1
+  else:
+    print("Вы не угадали.")
+    score_comp += 1
+
+print("Счет", score_you, ":", score_comp, end=" ")
+
+if score_you > score_comp:
+  print("в вашу пользу. Вы выиграли!")
+else:
+  print("в пользу компьютера. Вы проиграли!")

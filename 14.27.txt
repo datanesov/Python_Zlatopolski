@@ -1,0 +1,19 @@
+
+def num_of_digits(n):
+    count = 0
+    while n > 0:
+        count += 1
+        n //= 10
+    return count
+
+num1 = int(input("Enter the first natural number:"))
+num2 = int(input("Enter the second natural number:"))
+count1 = num_of_digits(num1)
+count2 = num_of_digits(num2)
+if count1 > count2:
+    print("First number has more digits")
+elif count1 < count2:
+    print("Second number has more digits")
+else:
+    print("Both numbers have equal number of digits")
+

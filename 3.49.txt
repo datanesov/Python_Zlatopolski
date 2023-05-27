@@ -1,0 +1,8 @@
+import math
+
+angle = float(input("Введите угол между часовой стрелкой и лучом: "))
+minute_angle = angle * 60 % 360
+hours = int(angle / (2 * math.pi / 12))
+minutes = int(minute_angle / 6)
+print(f"Минутная стрелка образует угол {minute_angle} с лучом.")
+print(f"С начала суток прошло {hours} часов {minutes} минут.")

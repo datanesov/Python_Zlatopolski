@@ -1,0 +1,22 @@
+# Ввод оценок учеников
+# Каждая строка таблицы - список из 3 оценок для одного ученика
+marks = []
+for i in range(15):
+    row = input("Введите оценки для ученика №" + str(i+1) + " через пробел: ").split()
+    row = [int(x) for x in row]  # Преобразование строковых значений в целочисленные
+    marks.append(row)
+
+# Общее количество пятерок
+fives = sum([row.count(5) for row in marks])
+print("Общее количество пятерок:", fives)
+
+# Количество троек у каждого ученика
+threes = [row.count(3) for row in marks]
+for i in range(len(threes)):
+    print("Ученик №" + str(i+1) + " имеет " + str(threes[i]) + " тройки")
+
+# Количество двоек по каждому предмету
+twos = [sum([row[i] == 2 for row in marks]) for i in range(3)]
+print("Количество двоек по первому предмету:", twos[0])
+print("Количество двоек по второму предмету:", twos[1])
+print("Количество двоек по третьему предмету:", twos[2])

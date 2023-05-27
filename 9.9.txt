@@ -1,0 +1,12 @@
+rom numpy import array, amax
+
+# создаем двумерный массив для баллов
+scores = array([[int(input(f"Введите баллы игрока {i+1} за занятое место №{j+1}: ")) for j in range(5)] for i in range(8)])
+
+# находим максимальную оценку в массиве
+max_score = amax(scores)
+print(f"Максимальная оценка в таблице: {max_score}")
+
+# находим сумму баллов победителя
+winner_score = max([sum(scores[i]) for i in range(8)])
+print(f"Победитель набрал {winner_score} баллов")

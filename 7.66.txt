@@ -1,0 +1,3 @@
+numbers = [float(input()) for _ in range(int(input()))]
+count = len(list(itertools.takewhile(lambda x: x < 0, numbers)))
+print(count)

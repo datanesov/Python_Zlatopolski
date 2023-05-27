@@ -1,0 +1,12 @@
+
+a = float(input("Введите вещественное число a: "))
+left = 1.0
+right = a - 1.0
+
+while left <= right:
+    mid = (left + right) / 2
+    if 1 + 1/mid < a:
+        print(1 + 1/mid)
+        left = mid + 1
+    else:
+        right = mid - 1

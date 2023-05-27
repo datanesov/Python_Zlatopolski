@@ -1,0 +1,25 @@
+a = float(input("Введите первое число: "))
+b = float(input("Введите второе число: "))
+c = float(input("Введите третье число: "))
+
+if a <= b and a <= c:
+  smallest_1 = a
+  if b <= c:
+    smallest_2 = b
+  else:
+    smallest_2 = c
+elif b <= a and b <= c:
+  smallest_1 = b
+  if a <= c:
+    smallest_2 = a
+  else:
+    smallest_2 = c
+else:
+  smallest_1 = c
+  if a <= b:
+    smallest_2 = a
+  else:
+    smallest_2 = b
+
+product = smallest_1 * smallest_2
+print("Произведение двух наименьших чисел: ", product)

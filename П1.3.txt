@@ -1,0 +1,28 @@
+# a)
+expr = "a/b/c"
+result = expr.replace("/", " / ")
+print(result)
+# б)
+expr = "a+b/c"
+result = expr.replace("/", " / ")
+print(result)
+# в)
+expr = "(a+b)/c"
+result = expr.replace("/", " / ")
+print(result)
+# г)
+expr = "a*b/(c+2)"
+result = expr[0] + " * " + expr[2] + " / " + "(" + expr[4] + " + 2" + ")"
+print(result)
+# д)
+expr = "a/b*(c-3)/d"
+result = "(" + expr[0] + " / " + expr[2] + ") * (" + expr[4] + " - 3) / " + expr[6]
+print(result)
+# е)
+expr = "(a/3+b/2)/b+c/(2+b)"
+numerator = "(" + expr[1] + " / 3" + " + " + expr[3] + " / 2" + ")"
+denominator1 = expr[5] + " + " + expr[7]
+denominator2 = "2 + " + expr[7]
+result = numerator + " / " + denominator1 + " + " + expr[9] + " / " + denominator2
+print(result)
+

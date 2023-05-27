@@ -1,0 +1,12 @@
+temperature = [-13, -12, -10, -8, -6, -5, -2, 0, 1, -9, 
+               -11, -14, -15, -16, -7, -4, -1, 2, 3, -17, 
+               -19, -20, -18, -5, -3, 0, 1, -6, -8, -9]
+
+n = len(temperature)
+for i in range(n):
+    for j in range(0, n-i-1):
+        if(temperature[j] > temperature[j+1]):
+            temperature[j], temperature[j+1] = temperature[j+1], temperature[j]
+
+print("Два самых холодных дня в феврале:", temperature[0], "и", temperature[1])
+

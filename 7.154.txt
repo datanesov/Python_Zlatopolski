@@ -1,0 +1,19 @@
+sequence = [1, 1, 1, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5]
+
+max_count = 0
+count = 1
+last = None
+
+for num in sequence:
+    if num == last:
+        count += 1
+    else:
+        if count > max_count:
+            max_count = count
+        count = 1
+        last = num
+
+if count > max_count:
+    max_count = count
+
+print("Наибольшее количество подряд идущих одинаковых элементов:", max_count)

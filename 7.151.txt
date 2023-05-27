@@ -1,0 +1,13 @@
+def find_shortest_segment(sequence):
+    min_length = len(sequence) + 1
+    for i in range(len(sequence)):
+        for j in range(i, len(sequence)):
+            if all(x == 0 for x in sequence[i:j+1]):
+                current_length = j - i + 1
+                if current_length < min_length:
+                    min_length = current_length
+
+    return min_length
+
+sequence = [1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0]
+print(find_shortest_segment(sequence))  # 3

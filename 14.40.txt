@@ -1,0 +1,45 @@
+def get_days_in_month(month, year):
+    days_in_month = {
+        1: 31,
+        2: 28 if year % 4 != 0 or (year % 100 == 0 and year % 400 != 0) else 29,
+        3: 31,
+        4: 30,
+        5: 31,
+        6: 30,
+        7: 31,
+        8: 31,
+        9: 30,
+        10: 31,
+        11: 30,
+        12: 31
+    }
+    return days_in_month[month]
+
+def get_previous_day(g, m, n):
+    if n == 1:
+        if m == 1:
+            previous_date = (g-1, 12, 31)
+        else:
+            days_in_previous_month = get_days_in_month(m-1, g)
+            previous_date = (g, m-1, days_in_previous_month)
+    else:
+        previous_date = (g, m, n-1)
+    return previous_date
+
+def get_next_day(g, m, n):
+    days_in_month = get_days_in_month(m, g)
+    if n == days_in_month:
+        if m == 12:
+            next_date = (g+1, 1, 1)
+        else:
+            next_date = (g, m+1, 1)
+    else:
+        next_date = (g, m, n+1)
+    return next_date
+
+year = 2021
+month = 4
+day = 15
+
+print(get_previous_day(year, month, day))
+print(get_next_day(year, month, day))

@@ -1,0 +1,24 @@
+magazines = [{'price': 10.5, 'edition': 5000},
+             {'price': 7, 'edition': 8000},
+             {'price': 15, 'edition': 10000},
+             {'price': 12, 'edition': 2000},
+             {'price': 9, 'edition': 6000},
+             {'price': 8, 'edition': 4000},
+             {'price': 11, 'edition': 3000},
+             {'price': 13.5, 'edition': 15000},
+             {'price': 17, 'edition': 9000},
+             {'price': 6, 'edition': 12000},
+             {'price': 14, 'edition': 1000},
+             {'price': 7.5, 'edition': 7000},
+{'price': 16, 'edition': 11000},
+             {'price': 5, 'edition': 2500},
+             {'price': 6.5, 'edition': 30000}]
+
+total_price = 0
+count = 0
+for m in magazines:
+    if m['edition'] < 10000:
+        total_price += m['price']
+        count += 1
+average_price = total_price / count
+print('Average price of magazines with edition less than 10000:', average_price)

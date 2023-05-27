@@ -1,0 +1,13 @@
+m = int(input("Введите количество чисел: "))
+numbers = []
+for i in range(m):
+    num = int(input("Введите число: "))
+    numbers.append(num)
+
+filtered_numbers = list(filter(lambda x: str(x)[-2:] == "12", numbers))
+
+if len(filtered_numbers) > 0:
+    last_index = numbers.index(filtered_numbers[-1])
+    print("Номер последнего числа, оканчивающегося на 12:", last_index)
+else:
+    print("В заданном наборе чисел нет чисел, оканчивающихся на 12.")

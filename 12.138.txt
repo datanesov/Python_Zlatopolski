@@ -1,0 +1,6 @@
+
+word = "слово"
+s = 3
+k = 5
+correct_word = word[0:s] + word[k-1] + word[s:k-1] + word[k:]
+print(correct_word)

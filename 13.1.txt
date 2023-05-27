@@ -1,0 +1,6 @@
+
+table1 = ['Ivanov', 'Petrov', 'Sidorov']
+table2 = ['Alexey', 'Dmitry', 'Sergey']
+
+for i in range(len(table1)):
+    print(table1[i], table2[i])

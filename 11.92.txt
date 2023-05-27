@@ -1,0 +1,12 @@
+
+heights = [-150, 170, -145, 165, 155, -140, 180, -130, -135, 175, 160, -150, 170, 165, -140, -130, 150, 180, -135, 170, -145, 155, 175]
+
+boys = list(filter(lambda x: x < 0, heights))
+girls = list(filter(lambda x: x >= 0, heights))
+
+boys_avg_height = sum(map(abs, boys)) / len(boys)
+girls_avg_height = sum(girls) / len(girls)
+
+print("Average height of boys:", boys_avg_height)
+print("Average height of girls:", girls_avg_height)
+

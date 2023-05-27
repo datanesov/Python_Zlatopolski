@@ -1,0 +1,10 @@
+summa = 0
+count = 0
+ 
+for i in iter(int, 0):
+    number = int(input("Введите число: "))
+    summa += number
+    count += 1
+ 
+print("Сумма чисел:", summa)
+print("Количество чисел:", count)

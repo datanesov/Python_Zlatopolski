@@ -1,0 +1,12 @@
+lst = [1, 5, -7, 9, 3, -2]
+neg_index = None
+pos_index = None
+
+try:
+    neg_index = lst.index(next(x for x in lst if x < 0))
+    pos_index = len(lst) - lst[::-1].index(next(x for x in lst[::-1] if x > 0)) - 1
+    lst[neg_index], lst[pos_index] = lst[pos_index], lst[neg_index]
+except StopIteration:
+    pass
+
+print(lst)

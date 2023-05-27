@@ -1,0 +1,17 @@
+
+from sympy.solvers import solve
+from sympy import Symbol
+
+x = Symbol('x') # общее количество голов скота
+b = Symbol('b') # количество быков
+c = Symbol('c') # количество коров
+t = Symbol('t') # количество телят
+
+# решаем систему уравнений
+solution = solve([b + c + t - x, 10*b + 5*c + 0.5*t - 100], (b, c, t))
+
+# выводим результаты
+print("Bulls:", round(solution[b]))
+print("Cows:", round(solution[c]))
+print("Calves:", round(solution[t]))
+

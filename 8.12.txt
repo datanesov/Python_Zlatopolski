@@ -1,0 +1,11 @@
+def sum_n(n):
+    if n == 1:
+        return 1
+    else:
+        return sum_n(n-1) + 1/n
+
+a = float(input("Введите число a: "))
+n = 1
+while sum_n(n) <= a:
+    n += 1
+print(n)

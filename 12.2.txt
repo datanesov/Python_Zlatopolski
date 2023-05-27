@@ -1,0 +1,5 @@
+
+info = {}
+info["state"] = input("Введите название государства: ")
+info["capital"] = input("Введите название столицы: ")
+print("Столица государства {state} - город {capital}".format(**info))
